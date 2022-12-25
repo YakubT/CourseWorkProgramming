@@ -26,8 +26,8 @@ namespace CourseWork.src.main.cs.ViewModels
         public void Execute(object parameter)
         {
             double tg = ((((MouseEventArgs)parameter).GetPosition(receiver.Window).Y -
-                receiver.Window.Height * 23 / 24) /
-                (((MouseEventArgs)parameter).GetPosition(receiver.Window).X - receiver.Window.Width * 16 / 24));
+                receiver.Window.ActualHeight * 23 / 24) /
+                (((MouseEventArgs)parameter).GetPosition(receiver.Window).X - receiver.Window.ActualWidth* 16 / 24));
             double angle = 180*Math.Atan(Math.Abs(tg))/Math.PI;
             if (tg > 0)
             {
@@ -46,6 +46,30 @@ namespace CourseWork.src.main.cs.ViewModels
         public GunRotateCommand RotateGunCommand { get;}
         
         private double angle;
+
+        private double width;
+
+        private double height;
+
+        public double Width
+        {
+            get => width;
+            set
+            {
+                width = value;
+                OnPropertyChanged(nameof(Width));
+            }
+        }
+
+        public double Height
+        {
+            get => height;
+            set
+            {
+                height= value;
+                OnPropertyChanged(nameof(Height));
+            }
+        }
         public double Angle
         {
             get => angle;
@@ -59,6 +83,8 @@ namespace CourseWork.src.main.cs.ViewModels
         {
             this.window = window;
             RotateGunCommand = new GunRotateCommand(this);
+            Height = 450;
+            Width = 800; 
 
         }
 
