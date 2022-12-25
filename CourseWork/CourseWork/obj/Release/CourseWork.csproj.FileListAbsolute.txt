@@ -5,7 +5,6 @@ C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgram
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\src\main\cs\Views\Field.g.cs
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\src\main\cs\Views\MainWindow.g.cs
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\App.g.cs
-C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\CourseWork_Content.g.cs
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\CourseWork_MarkupCompile.cache
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\CourseWork_MarkupCompile.lref
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\src\main\cs\Views\Field.baml
@@ -16,3 +15,7 @@ C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgram
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\CourseWork.csproj.CoreCompileInputs.cache
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\CourseWork.exe
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\CourseWork.pdb
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Release\Microsoft.Xaml.Behaviors.dll
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Release\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Release\Microsoft.Xaml.Behaviors.xml
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Release\CourseWork.csproj.CopyComplete

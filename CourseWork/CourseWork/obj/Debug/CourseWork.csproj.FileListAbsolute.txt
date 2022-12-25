@@ -19,3 +19,7 @@ C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgram
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\CourseWork.csproj.CopyComplete
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\CourseWork.exe.manifest
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\CourseWork.application
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\CourseWork.exe.manifest
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\CourseWork.application

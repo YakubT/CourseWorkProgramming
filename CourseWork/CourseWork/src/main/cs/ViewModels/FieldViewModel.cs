@@ -47,29 +47,6 @@ namespace CourseWork.src.main.cs.ViewModels
         
         private double angle;
 
-        private double width;
-
-        private double height;
-
-        public double Width
-        {
-            get => width;
-            set
-            {
-                width = value;
-                OnPropertyChanged(nameof(Width));
-            }
-        }
-
-        public double Height
-        {
-            get => height;
-            set
-            {
-                height= value;
-                OnPropertyChanged(nameof(Height));
-            }
-        }
         public double Angle
         {
             get => angle;
@@ -83,8 +60,6 @@ namespace CourseWork.src.main.cs.ViewModels
         {
             this.window = window;
             RotateGunCommand = new GunRotateCommand(this);
-            Height = 450;
-            Width = 800; 
 
         }
 
