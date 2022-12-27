@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseWork" xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="ППО симулятор" Height="450" Width="800" WindowStartupLocation="CenterOwner" MinWidth="800" MinHeight="450">
+        Title="ППО симулятор" Height="450" Width="800" WindowStartupLocation="CenterOwner" MinWidth="800" MinHeight="450" WindowStyle="None" WindowState="Maximized">
     <Window.Background>
         <ImageBrush/>
     </Window.Background>
@@ -13,8 +13,11 @@
         <i:EventTrigger EventName="MouseMove">
             <i:InvokeCommandAction Command="{Binding RotateGunCommand}" PassEventArgsToCommand="True"/>
         </i:EventTrigger>
+        <i:EventTrigger EventName="MouseDown">
+            <i:InvokeCommandAction Command="{Binding PatronStartFly}"/>
+        </i:EventTrigger>
     </i:Interaction.Triggers>
-    <Grid>
+    <Grid x:Name="grid">
         <Grid.Background>
             <ImageBrush ImageSource="/CourseWork;component/src/main/resources/background.jpg"/>
         </Grid.Background>
@@ -162,7 +165,7 @@
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="16" Grid.Row="13" Grid.RowSpan="10"  Source="/CourseWork;component/src/main/resources/gun.png" Margin="0,0,0.2,0.2" Stretch="Fill" RenderTransformOrigin="0.462,0.874">
+        <Image Grid.Column="15" Grid.Row="12" Grid.RowSpan="11"  Source="/CourseWork;component/src/main/resources/gun.png" Margin="13.2,17.2,10,0.4" Stretch="Fill" RenderTransformOrigin="0.462,0.874" Grid.ColumnSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -172,7 +175,7 @@
                 </TransformGroup>
 
             </Image.RenderTransform>
-            
+
         </Image>
 
         <Image Grid.Column="8" Grid.Row="18" Grid.ColumnSpan="9" Grid.RowSpan="6" Source="/CourseWork;component/src/main/resources/ppo_car.png" Stretch="Fill"/>

@@ -69,6 +69,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -87,7 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="src\main\cs\Models\Gun.cs" />
+    <Compile Include="src\main\cs\Models\Patron.cs" />
+    <Compile Include="src\main\cs\Models\Patron1.cs" />
+    <Compile Include="src\main\cs\Models\utility\PhysicalConstants.cs" />
+    <Compile Include="src\main\cs\Models\Vector.cs" />
     <Compile Include="src\main\cs\ViewModels\FieldViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\BaseViewModel.cs" />
     <Compile Include="src\main\cs\Views\MainWindow.xaml.cs">
@@ -161,6 +165,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="src\main\resources\ppo_rocket1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
