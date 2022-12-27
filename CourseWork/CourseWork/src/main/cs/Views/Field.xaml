@@ -165,7 +165,7 @@
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="15" Grid.Row="12" Grid.RowSpan="11"  Source="/CourseWork;component/src/main/resources/gun.png" Margin="13.2,17.2,10,0.4" Stretch="Fill" RenderTransformOrigin="0.462,0.874" Grid.ColumnSpan="2">
+        <Image Grid.Column="15" Grid.Row="12" Grid.RowSpan="11"  Source="/CourseWork;component/src/main/resources/gun.png" Margin="13.2,17.2,0,0.8" Stretch="Fill" RenderTransformOrigin="0.462,0.874" Grid.ColumnSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

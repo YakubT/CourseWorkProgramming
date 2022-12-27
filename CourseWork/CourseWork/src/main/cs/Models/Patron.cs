@@ -54,11 +54,13 @@ namespace CourseWork.src.main.cs.Models
             speed.X *= (link.Window.ActualWidth / 24.0);
             speed.Y *= (link.Window.ActualWidth / 24.0);
             timer.Interval = TimeSpan.FromMilliseconds(20);
-            cooridinates = new Vector(link.Window.ActualWidth * 15.55 / 24.0, link.Window.Height * 1.5 / 24.0);
+            cooridinates = new Vector(link.Window.ActualWidth * 16 / 24.0 + link.Window.ActualWidth * 5 *Math.Sin(angle * Math.PI / 180) / 24.0, 
+                link.Window.Height * 1.5/ 24.0 + link.Window.ActualWidth * 5 * Math.Cos(angle * Math.PI / 180) / 24.0);
             img.Margin = new Thickness(cooridinates.X, 0, 0, cooridinates.Y);
             img.RenderTransformOrigin = new Point(0.5, 0.5);
             img.Width = Width * link.Window.ActualWidth / 24;
             img.Height = Height * link.Window.ActualHeight / 24;
+            img.Visibility = Visibility.Hidden;
             timer.Tick += (object sender, EventArgs e) => 
             {
                 speed.Y -= PhysicalConstants.g*(link.Window.ActualWidth / 24.0) * timer.Interval.Milliseconds/1000.0; 
@@ -83,6 +85,7 @@ namespace CourseWork.src.main.cs.Models
                 img.Height = Height * link.Window.ActualHeight / 24;
                 if (cooridinates.X > link.Window.ActualWidth + img.Width || cooridinates.Y > link.Window.ActualHeight + img.ActualHeight)
                     timer.Stop();
+                img.Visibility = Visibility.Visible;
                 //MessageBox.Show(cooridinates.Y.ToString());
             };
             timer.Start();

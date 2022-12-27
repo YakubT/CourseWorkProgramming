@@ -11,7 +11,7 @@ namespace CourseWork.src.main.cs.Models
     {
         static Patron1()
         {
-            p = 40;
+            p = 20;
         }
         public override void SetDisplayProperites()
         {
