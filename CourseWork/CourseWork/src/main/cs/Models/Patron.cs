@@ -83,15 +83,18 @@ namespace CourseWork.src.main.cs.Models
                 img.RenderTransform = new RotateTransform(angle2);
                 img.Width = Width * link.Window.ActualWidth / 24;
                 img.Height = Height * link.Window.ActualHeight / 24;
-                if (cooridinates.X > link.Window.ActualWidth + img.Width || cooridinates.Y > link.Window.ActualHeight + img.ActualHeight)
+                if (cooridinates.X > link.Window.ActualWidth + img.Width || cooridinates.Y > link.Window.ActualHeight + img.ActualHeight
+                 || cooridinates.X+img.Width<0)
                 {
-                    timer.Stop();
+                    
                     Grid grid = (Grid)link.Window.FindName("grid");
                     grid.Children.Remove(img);
                     img = null;
+                    GC.Collect(0);
+                    GC.Collect(1);
+                    GC.Collect(2);
                     GC.WaitForPendingFinalizers();
-                    GC.Collect();
-                    
+                    timer.Stop();
                 }
                 else
                 img.Visibility = Visibility.Visible;
