@@ -29,8 +29,8 @@ namespace CourseWork.src.main.cs.ViewModels
         public void Execute(object parameter)
         {
             double tg = ((((MouseEventArgs)parameter).GetPosition(receiver.Window).Y -
-                receiver.Window.ActualHeight * 23 / 24) /
-                (((MouseEventArgs)parameter).GetPosition(receiver.Window).X - receiver.Window.ActualWidth* 16 / 24));
+                receiver.Window.ActualHeight * 21.5 / 24) /
+                (((MouseEventArgs)parameter).GetPosition(receiver.Window).X - receiver.Window.ActualWidth* 16.45/ 24.0));
             double angle = 180*Math.Atan(Math.Abs(tg))/Math.PI;
             if (tg > 0)
             {
