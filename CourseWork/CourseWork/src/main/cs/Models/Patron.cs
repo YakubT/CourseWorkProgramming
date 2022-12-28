@@ -84,7 +84,16 @@ namespace CourseWork.src.main.cs.Models
                 img.Width = Width * link.Window.ActualWidth / 24;
                 img.Height = Height * link.Window.ActualHeight / 24;
                 if (cooridinates.X > link.Window.ActualWidth + img.Width || cooridinates.Y > link.Window.ActualHeight + img.ActualHeight)
+                {
                     timer.Stop();
+                    Grid grid = (Grid)link.Window.FindName("grid");
+                    grid.Children.Remove(img);
+                    img = null;
+                    GC.WaitForPendingFinalizers();
+                    GC.Collect();
+                    
+                }
+                else
                 img.Visibility = Visibility.Visible;
                 //MessageBox.Show(cooridinates.Y.ToString());
             };

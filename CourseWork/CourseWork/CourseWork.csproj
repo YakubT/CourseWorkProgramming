@@ -146,13 +146,19 @@
     <Folder Include="src\test\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\ppo_car.png" />
+    <Resource Include="src\main\resources\ppo_car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\gun.png" />
+    <Resource Include="src\main\resources\gun.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\background.jpg" />
+    <Resource Include="src\main\resources\background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -167,7 +173,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\ppo_rocket1.png" />
+    <Resource Include="src\main\resources\ppo_rocket1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,13 +11,13 @@ namespace CourseWork.src.main.cs.Models
     {
         static Patron1()
         {
-            p = 20;
+            p = 30;
         }
         public override void SetDisplayProperites()
         {
             width = 0.5;
             height = 3;
-            img = new BitmapImage(new Uri(@"C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\src\main\resources\ppo_rocket1.png"));
+            img = new BitmapImage(new Uri("/src/main/resources/ppo_rocket1.png", UriKind.Relative));
         }
         public override void SetStartSpeed(double angle)
         {

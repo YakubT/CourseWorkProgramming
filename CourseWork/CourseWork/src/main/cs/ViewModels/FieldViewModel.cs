@@ -75,6 +75,7 @@ namespace CourseWork.src.main.cs.ViewModels
             img.HorizontalAlignment = HorizontalAlignment.Left;
             img.VerticalAlignment = VerticalAlignment.Bottom;
             patron.StartFly(receiver.Angle, img, receiver);
+           
 
         }
     }
