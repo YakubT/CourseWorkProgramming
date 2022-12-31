@@ -100,13 +100,20 @@ namespace CourseWork.src.main.cs.ViewModels
         }
         public void Execute(object parameter)
         {
-            if (((MouseWheelEventArgs)parameter).Delta > 0)
+            try
+            {
+                if (((MouseWheelEventArgs)parameter).Delta > 0)
+                {
+                    receiver.WheelType = (receiver.WheelType + 1) % 2;
+                }
+                else
+                {
+                    receiver.WheelType = (receiver.WheelType - 1 + 2) % 2;
+                }
+            }
+            catch(InvalidCastException e)
             {
                 receiver.WheelType = (receiver.WheelType + 1) % 2;
-            }
-            else
-            {
-                receiver.WheelType = (receiver.WheelType -1+2) % 2;
             }
         }
     }

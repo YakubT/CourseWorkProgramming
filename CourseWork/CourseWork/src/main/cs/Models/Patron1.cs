@@ -21,7 +21,7 @@ namespace CourseWork.src.main.cs.Models
         }
         public override void SetStartSpeed(double angle)
         {
-            p = 30;
+            p = 40;
             SetSpeedUsingAngleAndModule(p, angle);
         }
     }

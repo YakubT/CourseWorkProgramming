@@ -13,10 +13,13 @@
         <i:EventTrigger EventName="MouseMove">
             <i:InvokeCommandAction Command="{Binding RotateGunCommand}" PassEventArgsToCommand="True"/>
         </i:EventTrigger>
-        <i:EventTrigger EventName="MouseDown">
+        <i:EventTrigger EventName="MouseLeftButtonDown">
             <i:InvokeCommandAction Command="{Binding PatronStartFly}"/>
         </i:EventTrigger>
         <i:EventTrigger EventName="MouseWheel">
+            <i:InvokeCommandAction Command="{Binding WheelScroll}" PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="MouseRightButtonDown">
             <i:InvokeCommandAction Command="{Binding WheelScroll}" PassEventArgsToCommand="True"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
