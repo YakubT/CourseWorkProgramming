@@ -1,0 +1,5 @@
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\src\test\cs\unit\obj\Debug\net5.0\unit.csproj.AssemblyReference.cache
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\src\test\cs\unit\obj\Debug\net5.0\unit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\src\test\cs\unit\obj\Debug\net5.0\unit.AssemblyInfoInputs.cache
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\src\test\cs\unit\obj\Debug\net5.0\unit.AssemblyInfo.cs
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\src\test\cs\unit\obj\Debug\net5.0\unit.csproj.CoreCompileInputs.cache

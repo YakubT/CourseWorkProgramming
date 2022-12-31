@@ -16,6 +16,9 @@
         <i:EventTrigger EventName="MouseDown">
             <i:InvokeCommandAction Command="{Binding PatronStartFly}"/>
         </i:EventTrigger>
+        <i:EventTrigger EventName="MouseWheel">
+            <i:InvokeCommandAction Command="{Binding WheelScroll}" PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid x:Name="grid">
         <Grid.Background>
@@ -178,7 +181,7 @@
 
         </Image>
 
-        <Image Grid.Column="8" Grid.Row="18" Grid.ColumnSpan="9" Grid.RowSpan="6" Source="/CourseWork;component/src/main/resources/ppo_car.png" Stretch="Fill"/>
+        <Image x:Name="car" Grid.Column="8" Grid.Row="18" Grid.ColumnSpan="9" Grid.RowSpan="6" Source="/CourseWork;component/src/main/resources/ppo_car.png" Stretch="Fill"/>
 
     </Grid>
 </Window>

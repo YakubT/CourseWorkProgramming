@@ -61,7 +61,10 @@ namespace CourseWork.src.main.cs.ViewModels
         }
         public void Execute(object parameter)
         {
-            Patron patron = new Patron1();
+            CreatorPatron[] creators = new CreatorPatron[2];
+            creators[0] = new CreatorPatron1();
+            creators[1] = new CreatorPatron2();
+            Patron patron = creators[receiver.WheelType].Create();
             Image img = new Image();
             img.Stretch = System.Windows.Media.Stretch.Fill;
             img.Visibility = Visibility.Visible;
@@ -79,14 +82,46 @@ namespace CourseWork.src.main.cs.ViewModels
 
         }
     }
+
+    public class WheelScroll : ICommand
+    {
+        private FieldViewModel receiver;
+
+        public event EventHandler CanExecuteChanged;
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public WheelScroll(FieldViewModel receiver)
+        {
+            this.receiver = receiver;
+        }
+        public void Execute(object parameter)
+        {
+            if (((MouseWheelEventArgs)parameter).Delta > 0)
+            {
+                receiver.WheelType = (receiver.WheelType + 1) % 2;
+            }
+            else
+            {
+                receiver.WheelType = (receiver.WheelType -1+2) % 2;
+            }
+        }
+    }
     public class FieldViewModel : BaseViewModel
     {
         private Window window;
         public GunRotateCommand RotateGunCommand { get;}
 
         public PatronStartFly PatronStartFly { get; }
+
+        public WheelScroll WheelScroll { get; }
         
         private double angle;
+
+        private uint wheelType = 0; 
 
         public double Angle
         {
@@ -97,11 +132,18 @@ namespace CourseWork.src.main.cs.ViewModels
                 OnPropertyChanged(nameof(Angle));
             }
         }
+
+        public uint WheelType
+        {
+            get => wheelType;
+            set => wheelType = value;
+        }
         public FieldViewModel(Window window)
         {
             this.window = window;
             RotateGunCommand = new GunRotateCommand(this);
             PatronStartFly = new PatronStartFly(this);
+            WheelScroll = new WheelScroll(this);
         }
 
         public Window Window { get => window; }

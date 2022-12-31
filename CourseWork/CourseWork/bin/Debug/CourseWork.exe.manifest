@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CourseWork.exe" size="26339768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CourseWork.exe" size="26346424">
       <assemblyIdentity name="CourseWork" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>STFJv4mQOeYog/w2OWP63nfDbHB1eSghs+ih1H8d6J0=</dsig:DigestValue>
+        <dsig:DigestValue>sJ3gmeisOmopGQYBQlYfUlFwPzxB1ayiXhMyLM2G6tU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,6 +62,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>uGTanYhBSHfOqbGgFhRiZaX7nQ4S9Nux3MwMyZgRmlQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nunit.framework.dll" size="488960">
+      <assemblyIdentity name="nunit.framework" version="3.13.3.0" publicKeyToken="2638CD05610744EB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>MiMzsyN7I+8GoB1OrVDO0lRql+g6icxtEgOOba7lrvA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
