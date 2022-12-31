@@ -10,7 +10,7 @@ namespace CourseWork.src.main.cs.Models
 {
     public class Plain1 : AbstractPlain
     {
-        public Plain1(FieldViewModel viewModel): base(viewModel) { this.coordinates.Y = 22; }
+        public Plain1(FieldViewModel viewModel) : base(viewModel) { }
         protected override void SetSize()
         {
             width = 4;
