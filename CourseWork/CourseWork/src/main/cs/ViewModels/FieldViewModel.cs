@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using System.Windows.Threading;
 
 namespace CourseWork.src.main.cs.ViewModels
 {
@@ -64,7 +65,7 @@ namespace CourseWork.src.main.cs.ViewModels
             CreatorPatron[] creators = new CreatorPatron[2];
             creators[0] = new CreatorPatron1();
             creators[1] = new CreatorPatron2();
-            Patron patron = creators[receiver.WheelType].Create();
+            AbstractPatron patron = creators[receiver.WheelType].Create();
             Image img = new Image();
             img.Stretch = System.Windows.Media.Stretch.Fill;
             img.Visibility = Visibility.Visible;
@@ -78,7 +79,8 @@ namespace CourseWork.src.main.cs.ViewModels
             img.HorizontalAlignment = HorizontalAlignment.Left;
             img.VerticalAlignment = VerticalAlignment.Bottom;
             patron.StartFly(receiver.Angle, img, receiver);
-           
+
+            
 
         }
     }
@@ -115,6 +117,8 @@ namespace CourseWork.src.main.cs.ViewModels
             {
                 receiver.WheelType = (receiver.WheelType + 1) % 2;
             }
+
+            
         }
     }
     public class FieldViewModel : BaseViewModel
@@ -145,12 +149,39 @@ namespace CourseWork.src.main.cs.ViewModels
             get => wheelType;
             set => wheelType = value;
         }
+
+        DispatcherTimer dispatcherTimer;
         public FieldViewModel(Window window)
         {
             this.window = window;
             RotateGunCommand = new GunRotateCommand(this);
             PatronStartFly = new PatronStartFly(this);
             WheelScroll = new WheelScroll(this);
+
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
+            dispatcherTimer.Tick += (s, e) =>
+             {
+                 AbstractPlain plain = new Plain1(this);
+                 Image img2 = new Image();
+                 img2.Stretch = System.Windows.Media.Stretch.Fill;
+                 img2.Visibility = Visibility.Visible;
+                 Grid grid2 = (Grid)this.Window.FindName("grid");
+
+                 grid2.Children.Add(img2);
+                 Grid.SetRow(img2, 0);
+                 Grid.SetColumn(img2, 0);
+                 Grid.SetRowSpan(img2, 24);
+                 Grid.SetColumnSpan(img2, 24);
+                 Grid.SetZIndex(img2, -1);
+                 img2.HorizontalAlignment = HorizontalAlignment.Left;
+                 img2.VerticalAlignment = VerticalAlignment.Bottom;
+                 Random rnd = new Random();
+                 plain.IsFromRight = Convert.ToBoolean(rnd.Next(2));
+                 plain.Fly(img2);
+             };
+            dispatcherTimer.Start();
+           
         }
 
         public Window Window { get => window; }

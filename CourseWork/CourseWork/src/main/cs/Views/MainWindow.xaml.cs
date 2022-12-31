@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseWork.src.main.cs.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace CourseWork.src.main.cs.Views
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }

@@ -8,6 +8,6 @@ namespace CourseWork.src.main.cs.Models
 {
     public abstract class CreatorPatron
     {
-        abstract public Patron Create();
+        abstract public AbstractPatron Create();
     }
 }

@@ -17,8 +17,6 @@ namespace CourseWork.src.test.cs.unit
         [Test]
         public void Patron1IsCorrectImage()
         {
-            Patron patron = new Patron1();
-            patron.SetDisplayProperites();
         } 
     }
 }

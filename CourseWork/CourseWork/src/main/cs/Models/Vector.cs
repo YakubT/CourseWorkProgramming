@@ -12,6 +12,7 @@ namespace CourseWork.src.main.cs.Models
 
         public double Y { get; set; }
 
+        public Vector() { }
         public Vector (double x, double y)
         {
             X = x;

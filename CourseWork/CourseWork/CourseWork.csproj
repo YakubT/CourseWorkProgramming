@@ -98,9 +98,14 @@
     <Compile Include="src\main\cs\Models\CreatorPatron.cs" />
     <Compile Include="src\main\cs\Models\CreatorPatron1.cs" />
     <Compile Include="src\main\cs\Models\CreatorPatron2.cs" />
-    <Compile Include="src\main\cs\Models\Patron.cs" />
+    <Compile Include="src\main\cs\Models\interfaces\FlyDirectionState.cs" />
+    <Compile Include="src\main\cs\Models\LeftFlyDirectionState.cs" />
+    <Compile Include="src\main\cs\Models\AbstractPatron.cs" />
     <Compile Include="src\main\cs\Models\Patron1.cs" />
     <Compile Include="src\main\cs\Models\Patron2.cs" />
+    <Compile Include="src\main\cs\Models\AbstractPlain.cs" />
+    <Compile Include="src\main\cs\Models\Plain1.cs" />
+    <Compile Include="src\main\cs\Models\RightFlyDirectionState.cs" />
     <Compile Include="src\main\cs\Models\utility\PhysicalConstants.cs" />
     <Compile Include="src\main\cs\Models\Vector.cs" />
     <Compile Include="src\main\cs\ViewModels\FieldViewModel.cs" />
@@ -191,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="src\main\resources\rockets\ppo_rocket1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="src\main\resources\plains\mig_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="src\main\resources\plains\mig_31_mirror.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

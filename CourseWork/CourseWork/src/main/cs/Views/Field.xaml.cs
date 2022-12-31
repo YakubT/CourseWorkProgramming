@@ -1,4 +1,5 @@
-﻿using CourseWork.src.main.cs.ViewModels;
+﻿using CourseWork.src.main.cs.Models;
+using CourseWork.src.main.cs.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -24,7 +25,8 @@ namespace CourseWork
        {
             InitializeComponent();
             DataContext = new FieldViewModel(this);
-       }
+
+        }
 
         
     }

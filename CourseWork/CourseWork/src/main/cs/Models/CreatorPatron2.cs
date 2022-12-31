@@ -8,7 +8,7 @@ namespace CourseWork.src.main.cs.Models
 {
     public class CreatorPatron2 : CreatorPatron
     {
-        public override Patron Create()
+        public override AbstractPatron Create()
         {
             return new Patron2();
         }

@@ -10,16 +10,16 @@ using System.Windows.Media.Imaging;
 
 namespace CourseWork.src.main.cs.Models
 {
-    public class Patron1 : Patron
+    public class Patron1 : AbstractPatron
     {
-        public override void SetDisplayProperites()
+        protected override void SetDisplayProperites()
         {
             width = 0.5;
             height = 3;
             img = new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket1.png", UriKind.Relative));
             
         }
-        public override void SetStartSpeed(double angle)
+        protected override void SetStartSpeed(double angle)
         {
             p = 40;
             SetSpeedUsingAngleAndModule(p, angle);
