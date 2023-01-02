@@ -1,6 +1,8 @@
 ﻿using CourseWork.src.main.cs.Models;
+using CourseWork.src.main.cs.Models.utility;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,9 +31,12 @@ namespace CourseWork.src.main.cs.ViewModels
         }
         public void Execute(object parameter)
         {
+            double xGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunX"]);
+            double yGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunY"]);
+            double heightGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunHeight"]);
             double tg = ((((MouseEventArgs)parameter).GetPosition(receiver.Window).Y -
-                receiver.Window.ActualHeight * 21.5 / 24) /
-                (((MouseEventArgs)parameter).GetPosition(receiver.Window).X - receiver.Window.ActualWidth* 16.45/ 24.0));
+                receiver.Window.ActualHeight * (24-yGun) / 24) /
+                (((MouseEventArgs)parameter).GetPosition(receiver.Window).X - receiver.Window.ActualWidth*xGun / 24.0));
             double angle = 180*Math.Atan(Math.Abs(tg))/Math.PI;
             if (tg > 0)
             {
@@ -70,14 +75,8 @@ namespace CourseWork.src.main.cs.ViewModels
             img.Stretch = System.Windows.Media.Stretch.Fill;
             img.Visibility = Visibility.Visible;
             Grid grid = (Grid)receiver.Window.FindName("grid");
-            grid.Children.Add(img);
-            Grid.SetRow(img,0);
-            Grid.SetColumn(img,0);
-            Grid.SetRowSpan(img,24);
-            Grid.SetColumnSpan(img,24);
-            Grid.SetZIndex(img, -1);
-            img.HorizontalAlignment = HorizontalAlignment.Left;
-            img.VerticalAlignment = VerticalAlignment.Bottom;
+            FrameworkElement o = (FrameworkElement)img;
+            CanvasUtility.addToGrid(o, grid);
             patron.StartFly(receiver.Angle, img, receiver);
 
             

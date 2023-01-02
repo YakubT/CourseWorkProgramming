@@ -2,6 +2,7 @@
 using CourseWork.src.main.cs.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,9 @@ namespace CourseWork.src.main.cs.Models
 {
     public abstract class AbstractPatron
     {
+        protected double demage;
 
-        static protected double p;
+        protected double p;
 
         protected Vector coordinates;
 
@@ -54,8 +56,12 @@ namespace CourseWork.src.main.cs.Models
             speed.X *= (link.Window.ActualWidth / 24.0);
             speed.Y *= (link.Window.ActualWidth / 24.0);
             timer.Interval = TimeSpan.FromMilliseconds(20);
-            coordinates = new Vector(link.Window.ActualWidth * 16.12 / 24.0 + (link.Window.Height) * 8 *Math.Sin(angle * Math.PI / 180) / 24.0, 
-                link.Window.Height * 1.5/ 24.0 + (link.Window.Height) * 8 * Math.Cos(angle * Math.PI / 180) / 24.0);
+            double xGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunX"]);
+            double yGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunY"]);
+            double heightGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunHeight"]);
+            double weightGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunWidth"]);
+            coordinates = new Vector(link.Window.ActualWidth * (xGun-0.3) / 24.0 +(heightGun+weightGun) * link.Window.ActualHeight*Math.Sin(angle * Math.PI / 180) / 24.0, 
+                link.Window.ActualHeight *yGun/ 24.0+ heightGun* link.Window.ActualHeight * Math.Cos(angle * Math.PI / 180) / 24.0);
             img.Margin = new Thickness(coordinates.X, 0, 0, coordinates.Y);
             img.RenderTransformOrigin = new Point(0.5, 0.5);
             img.Width = Width * link.Window.ActualWidth / 24;

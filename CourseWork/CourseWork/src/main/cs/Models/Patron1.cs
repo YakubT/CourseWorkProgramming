@@ -12,10 +12,14 @@ namespace CourseWork.src.main.cs.Models
 {
     public class Patron1 : AbstractPatron
     {
+        public Patron1()
+        {
+            demage = 7.5;
+        }
         protected override void SetDisplayProperites()
         {
-            width = 0.5;
-            height = 3;
+            width = 0.45;
+            height = 2;
             img = new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket1.png", UriKind.Relative));
             
         }

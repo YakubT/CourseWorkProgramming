@@ -98,80 +98,80 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="34*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="34*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="34*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="34*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="34*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="42*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="23*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="34*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
-            <ColumnDefinition>
+            <ColumnDefinition Width="33*">
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="15" Grid.Row="12" Grid.RowSpan="11"  Source="/CourseWork;component/src/main/resources/gun.png" Margin="33.2,17.2,0,0.8" Stretch="Fill" RenderTransformOrigin="0.535,0.832" Grid.ColumnSpan="2">
+        <Image Grid.Column="14" Grid.Row="17" Grid.RowSpan="6" Grid.ColumnSpan="2" Source="/CourseWork;component/src/main/resources/gun.png" Margin="0.4,17.4,34.2,0.8" Stretch="Fill" RenderTransformOrigin="0.535,0.832" HorizontalAlignment="Center">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -184,7 +184,7 @@
 
         </Image>
 
-        <Image x:Name="car" Grid.Column="8" Grid.Row="18" Grid.ColumnSpan="9" Grid.RowSpan="6" Source="/CourseWork;component/src/main/resources/ppo_car.png" Stretch="Fill"/>
+        <Image x:Name="car" Grid.Column="10" Grid.Row="20" Grid.ColumnSpan="6" Grid.RowSpan="4" Source="/CourseWork;component/src/main/resources/ppo_car.png" Stretch="Fill" Margin="0.4,0.2,33.2,0.2"/>
 
     </Grid>
 </Window>

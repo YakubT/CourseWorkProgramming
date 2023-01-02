@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CourseWork.exe" size="26554808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CourseWork.exe" size="26556856">
       <assemblyIdentity name="CourseWork" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>X3S83Vyh2+ZFMqc5OG3rxkYEtNuhLL0Yw2Q5UmL2RMw=</dsig:DigestValue>
+        <dsig:DigestValue>SdKbb2DuXDooAM1DA/LgitWJtKLzXlQFqBnetwELSdQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -77,13 +77,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="CourseWork.exe.config" size="189">
+  <file name="CourseWork.exe.config" size="366">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+      <dsig:DigestValue>CKgyavXhQR8Cwga026n0SsR+ygIcYtaf078xDetIi5I=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
