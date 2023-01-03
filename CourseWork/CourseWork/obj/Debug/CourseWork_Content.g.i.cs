@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("src/main/resources/ppo_rocket1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("src/main/resources/sounds/exploison.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("src/main/resources/sounds/boom.wav")]
 
 

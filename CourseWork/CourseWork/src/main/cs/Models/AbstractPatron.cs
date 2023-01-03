@@ -3,7 +3,9 @@ using CourseWork.src.main.cs.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -38,6 +40,9 @@ namespace CourseWork.src.main.cs.Models
 
         public double Width { get => width; }
 
+
+        public double Demage { get => demage; set => demage = value; }
+
         protected void SetSpeedUsingAngleAndModule (double p, double angle )
         {
             speed = new Vector(p * Math.Cos(Math.PI/2-angle*Math.PI/180),p * Math.Sin(Math.PI / 2 - angle * Math.PI / 180));
@@ -46,13 +51,32 @@ namespace CourseWork.src.main.cs.Models
         protected abstract void SetStartSpeed(double angle);
 
         protected abstract void SetDisplayProperites();
+
+        DispatcherTimer timer;
+
+        Image img2;
+        public void Abort(FieldViewModel link)
+        {
+            Grid grid = (Grid)link.Window.FindName("grid");
+            grid.Children.Remove(img2);
+            img = null;
+            GC.Collect(0);
+            GC.Collect(1);
+            GC.Collect(2);
+            GC.WaitForPendingFinalizers();
+            link.patrons.Remove(this);
+            timer.Stop();
+        }
         public void StartFly(double angle, Image img, FieldViewModel link)
         {
+            SoundPlayer soundPlayer = new SoundPlayer();
+            soundPlayer.Stream = Properties.Resources.boom1;
+            soundPlayer.Play();
             SetStartSpeed(angle);
             SetDisplayProperites();
-         
+            img2 = img;
             img.Source = this.img;
-            DispatcherTimer timer = new DispatcherTimer();
+             timer = new DispatcherTimer();
             speed.X *= (link.Window.ActualWidth / 24.0);
             speed.Y *= (link.Window.ActualWidth / 24.0);
             timer.Interval = TimeSpan.FromMilliseconds(20);
@@ -63,10 +87,11 @@ namespace CourseWork.src.main.cs.Models
             coordinates = new Vector(link.Window.ActualWidth * (xGun-0.3) / 24.0 +(heightGun+weightGun) * link.Window.ActualHeight*Math.Sin(angle * Math.PI / 180) / 24.0, 
                 link.Window.ActualHeight *yGun/ 24.0+ heightGun* link.Window.ActualHeight * Math.Cos(angle * Math.PI / 180) / 24.0);
             img.Margin = new Thickness(coordinates.X, 0, 0, coordinates.Y);
-            img.RenderTransformOrigin = new Point(0.5, 0.5);
+            img.RenderTransformOrigin = new Point(0.5, 0);
             img.Width = Width * link.Window.ActualWidth / 24;
             img.Height = Height * link.Window.ActualHeight / 24;
             img.Visibility = Visibility.Hidden;
+            link.patrons.Add(this);
             timer.Tick += (object sender, EventArgs e) => 
             {
                 speed.Y -= PhysicalConstants.g*(link.Window.ActualWidth / 24.0) * timer.Interval.Milliseconds/1000.0; 
@@ -90,20 +115,15 @@ namespace CourseWork.src.main.cs.Models
                 img.Width = Width * link.Window.ActualWidth / 24;
                 img.Height = Height * link.Window.ActualHeight / 24;
                 if (coordinates.X > link.Window.ActualWidth + img.Width || coordinates.Y > link.Window.ActualHeight + img.ActualHeight
-                 || coordinates.X+img.Width<0)
+                 || coordinates.X + img.Width < 0)
                 {
-                    
-                    Grid grid = (Grid)link.Window.FindName("grid");
-                    grid.Children.Remove(img);
-                    img = null;
-                    GC.Collect(0);
-                    GC.Collect(1);
-                    GC.Collect(2);
-                    GC.WaitForPendingFinalizers();
-                    timer.Stop();
+                    Abort(link);
+
                 }
                 else
-                img.Visibility = Visibility.Visible;
+                {
+                    img.Visibility = Visibility.Visible;
+                }
                 //MessageBox.Show(cooridinates.Y.ToString());
             };
             timer.Start();

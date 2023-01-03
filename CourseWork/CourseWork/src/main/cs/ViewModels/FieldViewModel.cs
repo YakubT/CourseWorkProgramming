@@ -122,6 +122,10 @@ namespace CourseWork.src.main.cs.ViewModels
     }
     public class FieldViewModel : BaseViewModel
     {
+        public List<AbstractPlain> plainsList = new List<AbstractPlain>();
+
+        public List<AbstractPatron> patrons = new List<AbstractPatron>();
+
         private Window window;
         public GunRotateCommand RotateGunCommand { get;}
 
@@ -159,6 +163,7 @@ namespace CourseWork.src.main.cs.ViewModels
 
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
+
             dispatcherTimer.Tick += (s, e) =>
              {
                  AbstractPlain plain = new Plain1(this);
@@ -180,7 +185,33 @@ namespace CourseWork.src.main.cs.ViewModels
                  plain.Fly(img2);
              };
             dispatcherTimer.Start();
-           
+            DispatcherTimer dispatcherTimer2 = new DispatcherTimer();
+            dispatcherTimer2.Interval = TimeSpan.FromMilliseconds(2);
+            dispatcherTimer2.Tick += (s, e) =>
+              {
+                  for (int i = 0; i<plainsList.Count;i++)
+                  {
+                      for (int j = 0; j < patrons.Count; j++)
+                      {
+                          if (check(plainsList[i],patrons[j]))
+                          {
+                              plainsList[i].health -= patrons[j].Demage;
+                              patrons[j].Abort(this);
+                          }
+                      }
+                  }
+              };
+            dispatcherTimer2.Start();
+        }
+        
+        public bool check(AbstractPlain abstractPlain, AbstractPatron abstractPatron)
+        {
+            double cos = abstractPatron.Speed.X / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
+            double sin = abstractPatron.Speed.Y / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
+            return (abstractPatron.Coordinates.X < (abstractPlain.Coordinates.X  + abstractPlain.Width +Math.Abs(abstractPatron.Height*cos)/2.0) * Window.ActualWidth / 24.0
+                 && abstractPatron.Coordinates.X > (abstractPlain.Coordinates.X- Math.Abs(abstractPatron.Height * cos)/2.0) * Window.ActualWidth / 24.0
+                 && abstractPatron.Coordinates.Y < (abstractPlain.Coordinates.Y + abstractPlain.Height + Math.Abs(abstractPatron.Height *sin)) * Window.ActualHeight / 24.0
+                 && abstractPatron.Coordinates.Y > (abstractPlain.Coordinates.Y- Math.Abs(abstractPatron.Height * sin)) * Window.ActualHeight / 24.0);
         }
 
         public Window Window { get => window; }

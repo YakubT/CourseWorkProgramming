@@ -3,7 +3,9 @@ using CourseWork.src.main.cs.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,7 +26,7 @@ namespace CourseWork.src.main.cs.Models
 
         protected FieldViewModel viewModel;
 
-        protected Vector coordinates =new Vector();
+        public Vector coordinates =new Vector();
 
         protected double height;
 
@@ -95,25 +97,36 @@ namespace CourseWork.src.main.cs.Models
             healthBar.blackBar.Fill = new SolidColorBrush(Colors.Black);
             img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
             healthBar.indicator.Margin =  healthBar.blackBar.Margin = new Thickness((coordinates.X+width/4) * viewModel.Window.ActualWidth / 24.0, 0, 0, (coordinates.Y+0.8) * viewModel.Window.ActualHeight / 24.0);
-           
-            
+            img.RenderTransformOrigin = new Point(0, 0);
             timer.Interval= TimeSpan.FromMilliseconds(15);
             img.Visibility = Visibility.Visible;
+            viewModel.plainsList.Add(this);
             timer.Tick += (sender, e) =>
             {
-
                 coordinates.X += speed * timer.Interval.TotalSeconds;
                 img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
-                healthBar.indicator.Margin = healthBar.blackBar.Margin = new Thickness((coordinates.X + width/4) * viewModel.Window.ActualWidth / 24.0, 0, 0, (coordinates.Y + 0.8) * viewModel.Window.ActualHeight / 24.0);
-                if (coordinates.X>24+2*width|| coordinates.X < -2*width)
+                healthBar.indicator.Margin =healthBar.blackBar.Margin = new Thickness((coordinates.X + width/4) * viewModel.Window.ActualWidth / 24.0, 0, 0, (coordinates.Y + 0.8) * viewModel.Window.ActualHeight / 24.0);
+                healthBar.indicator.Width = Math.Max(health / maxHealth * healthBar.blackBar.Width,0);
+                if (coordinates.X>24+2*width|| coordinates.X < -2*width || health<=0)
                 {
+                   
+                    if (health<=0)
+                    {
+                        SoundPlayer soundPlayer = new SoundPlayer();
+                        soundPlayer.Stream = Properties.Resources.exploison;
+                        soundPlayer.Play();
+                    }
+                    Thread.Sleep(200);
                     grid.Children.Remove(img);
+                    grid.Children.Remove(healthBar.blackBar);
+                    grid.Children.Remove(healthBar.indicator);
                     timer.Stop();
                     GC.Collect(0);
                     GC.Collect(1);
                     GC.Collect(2);
                     GC.WaitForPendingFinalizers();
                     timer.Stop();
+                    viewModel.plainsList.Remove(this);
                 }
             };
             timer.Start();

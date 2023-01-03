@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CourseWork.exe" size="26556856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CourseWork.exe" size="26820536">
       <assemblyIdentity name="CourseWork" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SdKbb2DuXDooAM1DA/LgitWJtKLzXlQFqBnetwELSdQ=</dsig:DigestValue>
+        <dsig:DigestValue>RbUFg3uh7ktM8+GAomC7GmQ+oe5CAv869mROMLMMHUk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -77,13 +77,31 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="CourseWork.exe.config" size="366">
+  <file name="CourseWork.exe.config" size="1202">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>CKgyavXhQR8Cwga026n0SsR+ygIcYtaf078xDetIi5I=</dsig:DigestValue>
+      <dsig:DigestValue>lHjBrzLPWINfV01FcE40jeeKyeqGGBhRDIy5tzCwRMc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="src\main\resources\sounds\boom.wav" size="327784">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OoDXKunzSzZJ5xhAHBDDEk7q3sZ/CqjAaZSUkaG2Q90=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="src\main\resources\sounds\exploison.wav" size="225384">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8F4XEBIYpDRFs0+wbD57rqhWiafOnfgRhhLFsSeyhYY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
