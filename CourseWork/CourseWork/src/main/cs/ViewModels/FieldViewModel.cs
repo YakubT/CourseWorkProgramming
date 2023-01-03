@@ -204,14 +204,53 @@ namespace CourseWork.src.main.cs.ViewModels
             dispatcherTimer2.Start();
         }
         
+        public double Soriented(Models.Vector a,Models.Vector b, Models.Vector c)
+        {
+            return (a.X - b.X) * (b.Y + a.Y) / 2.0+(c.X - a.X) * (c.Y + a.Y) / 2.0+ (b.X - c.X) * (b.Y + c.Y) / 2.0;
+        }
         public bool check(AbstractPlain abstractPlain, AbstractPatron abstractPatron)
         {
             double cos = abstractPatron.Speed.X / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
             double sin = abstractPatron.Speed.Y / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
-            return (abstractPatron.Coordinates.X < (abstractPlain.Coordinates.X  + abstractPlain.Width +Math.Abs(abstractPatron.Height*cos)/2.0) * Window.ActualWidth / 24.0
-                 && abstractPatron.Coordinates.X > (abstractPlain.Coordinates.X- Math.Abs(abstractPatron.Height * cos)/2.0) * Window.ActualWidth / 24.0
-                 && abstractPatron.Coordinates.Y < (abstractPlain.Coordinates.Y + abstractPlain.Height + Math.Abs(abstractPatron.Height *sin)) * Window.ActualHeight / 24.0
-                 && abstractPatron.Coordinates.Y > (abstractPlain.Coordinates.Y- Math.Abs(abstractPatron.Height * sin)) * Window.ActualHeight / 24.0);
+
+            Models.Vector v1, v2,v3,v4,v5,v6;
+            v1 = new Models.Vector();
+            v2 = new Models.Vector();
+            v3 = new Models.Vector();
+            v4 = new Models.Vector();
+            v5 = new Models.Vector();
+            v6 = new Models.Vector();
+            v1.X = abstractPatron.Coordinates.X + abstractPatron.Height* window.ActualHeight/24.0 / 2.0 * cos;
+            v1.Y = abstractPatron.Coordinates.Y + abstractPatron.Height * window.ActualHeight/24.0 / 2.0 * sin;
+            v2.X = abstractPatron.Coordinates.X - abstractPatron.Height * window.ActualHeight/24.0 / 2.0 * cos;
+            v2.Y = abstractPatron.Coordinates.Y - abstractPatron.Height * window.ActualHeight/24.0 / 2.0 * sin;
+            v3.X = abstractPlain.Coordinates.X * window.ActualWidth/24.0;
+            v3.Y = abstractPlain.Coordinates.Y * window.ActualHeight/24.0;
+            v4.X = (abstractPlain.Coordinates.X+abstractPlain.Width) * window.ActualWidth/24.0;
+            v4.Y = abstractPlain.Coordinates.Y * window.ActualHeight/24.0;
+            v5.X = (abstractPlain.Coordinates.X + abstractPlain.Width) * window.ActualWidth/24.0;
+            v5.Y = (abstractPlain.Coordinates.Y+abstractPlain.Height) * window.ActualHeight/24.0;
+            v6.X = abstractPlain.Coordinates.X * window.ActualWidth/24.0;
+            v6.Y = (abstractPlain.Coordinates.Y + abstractPlain.Height) * window.ActualHeight/24.0;
+            if ((Soriented(v1, v3, v4)) * (Soriented(v2, v3, v4))<=0 && (Soriented(v3, v1, v2)) * (Soriented(v4, v1, v2)) <= 0)
+            {
+                return true;
+            }
+            if ((Soriented(v1, v6, v5)) * (Soriented(v2, v6, v5)) <= 0 && (Soriented(v6, v1, v2)) * (Soriented(v5, v1, v2))<=0)
+            {
+                
+                return true;
+            }
+            if ((Soriented(v1, v3, v6)) * (Soriented(v2, v3, v6)) <= 0 && (Soriented(v3, v1, v2)) * (Soriented(v6, v1, v2)) <= 0)
+            {
+                
+                return true;
+            }
+            if ((Soriented(v1, v4, v5)) * (Soriented(v2, v4, v5)) <= 0 && (Soriented(v4, v1, v2)) * (Soriented(v5, v1, v2)) <= 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public Window Window { get => window; }

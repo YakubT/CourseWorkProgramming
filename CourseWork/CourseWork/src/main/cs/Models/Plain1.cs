@@ -20,7 +20,7 @@ namespace CourseWork.src.main.cs.Models
 
         protected override void SetSpeed()
         {
-            speed = 8;
+            speed = 6.2;
         }
     }
 }

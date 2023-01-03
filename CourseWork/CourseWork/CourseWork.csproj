@@ -207,8 +207,11 @@
     <Resource Include="src\main\resources\plains\mig_31_mirror.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="src\main\resources\black.png" />
     <Content Include="src\main\resources\sounds\exploison.wav" />
-    <Resource Include="src\main\resources\fire.png" />
+    <Resource Include="src\main\resources\fire.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="src\main\resources\sounds\boom.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

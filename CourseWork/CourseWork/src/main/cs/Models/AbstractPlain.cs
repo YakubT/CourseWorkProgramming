@@ -74,6 +74,43 @@ namespace CourseWork.src.main.cs.Models
         protected abstract void SetSpeed();
 
         protected abstract void SetSize();
+
+        private void finish(Grid grid, Image img)
+        {
+            grid.Children.Remove(img);
+            grid.Children.Remove(healthBar.blackBar);
+            grid.Children.Remove(healthBar.indicator);
+            GC.Collect(0);
+            GC.Collect(1);
+            GC.Collect(2);
+            GC.WaitForPendingFinalizers();
+            viewModel.plainsList.Remove(this);
+        }
+
+        public void end(Image bah, Image img, Grid grid)
+        {
+            //MessageBox.Show("Hello");
+            bah.Stretch = Stretch.Fill;
+            bah.Source = new BitmapImage(new Uri("\\src\\main\\resources\\fire.png", UriKind.Relative));
+            bah.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
+            bah.Width = Width * viewModel.Window.ActualWidth / 24;
+            bah.Height = 2 * Height * viewModel.Window.ActualHeight / 24;
+            Grid.SetZIndex(bah, 1);
+            CanvasUtility.addToGrid(bah, grid);
+            bah.Visibility = Visibility.Visible;
+            SoundPlayer soundPlayer = new SoundPlayer();
+            soundPlayer.Stream = Properties.Resources.exploison;
+            soundPlayer.Play();
+            DispatcherTimer timer2 = new DispatcherTimer();
+            timer2.Interval = TimeSpan.FromMilliseconds(400);
+            timer2.Tick += (o, s) => { 
+                grid.Children.Remove(bah);
+                finish(grid, img);
+                timer2.Stop(); };
+
+            timer2.Start();
+          
+        }
         public void Fly(Image img)
         {
             SetSpeed();
@@ -84,7 +121,9 @@ namespace CourseWork.src.main.cs.Models
             img.Height = Height * viewModel.Window.ActualHeight / 24;
             Grid grid = (Grid)viewModel.Window.FindName("grid");
             healthBar = new HealthBar();
-            healthBar.blackBar = new Rectangle();
+            healthBar.blackBar = new Image();
+            healthBar.blackBar.Source = new BitmapImage(new Uri("\\src\\main\\resources\\black.png", UriKind.Relative));
+            healthBar.blackBar.Stretch = Stretch.Fill;
             healthBar.indicator = new Rectangle();
             CanvasUtility.addToGrid(healthBar.blackBar, grid);
             CanvasUtility.addToGrid(healthBar.indicator, grid);
@@ -94,39 +133,30 @@ namespace CourseWork.src.main.cs.Models
             img.VerticalAlignment = VerticalAlignment.Bottom;
             DispatcherTimer timer = new DispatcherTimer();
             healthBar.indicator.Fill = new SolidColorBrush(Colors.Green);
-            healthBar.blackBar.Fill = new SolidColorBrush(Colors.Black);
             img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
             healthBar.indicator.Margin =  healthBar.blackBar.Margin = new Thickness((coordinates.X+width/4) * viewModel.Window.ActualWidth / 24.0, 0, 0, (coordinates.Y+0.8) * viewModel.Window.ActualHeight / 24.0);
             img.RenderTransformOrigin = new Point(0, 0);
             timer.Interval= TimeSpan.FromMilliseconds(15);
             img.Visibility = Visibility.Visible;
+            Image bah = new Image();
+            img.RenderTransformOrigin = new Point(0, 1);
             viewModel.plainsList.Add(this);
-            timer.Tick += (sender, e) =>
+            timer.Tick += async (sender, e) =>
             {
                 coordinates.X += speed * timer.Interval.TotalSeconds;
                 img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
                 healthBar.indicator.Margin =healthBar.blackBar.Margin = new Thickness((coordinates.X + width/4) * viewModel.Window.ActualWidth / 24.0, 0, 0, (coordinates.Y + 0.8) * viewModel.Window.ActualHeight / 24.0);
                 healthBar.indicator.Width = Math.Max(health / maxHealth * healthBar.blackBar.Width,0);
-                if (coordinates.X>24+2*width|| coordinates.X < -2*width || health<=0)
+
+                if (health <= 0)
                 {
-                   
-                    if (health<=0)
-                    {
-                        SoundPlayer soundPlayer = new SoundPlayer();
-                        soundPlayer.Stream = Properties.Resources.exploison;
-                        soundPlayer.Play();
-                    }
-                    Thread.Sleep(200);
-                    grid.Children.Remove(img);
-                    grid.Children.Remove(healthBar.blackBar);
-                    grid.Children.Remove(healthBar.indicator);
                     timer.Stop();
-                    GC.Collect(0);
-                    GC.Collect(1);
-                    GC.Collect(2);
-                    GC.WaitForPendingFinalizers();
+                    end(bah, img, grid);
+                }
+                if (coordinates.X>24+2*width|| coordinates.X < -2*width)
+                { 
+                    finish(grid,img);
                     timer.Stop();
-                    viewModel.plainsList.Remove(this);
                 }
             };
             timer.Start();
