@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CourseWork.src.main.cs.Models
 {
-    public class CreatorPlain2:CreatorPlain
+    public class CreatorPlain2:CreatorEmeny
     {
-        public override AbstractPlain Create()
+        public override Enemy Create()
         {
             return new Plain2();
         }

@@ -129,9 +129,11 @@ namespace CourseWork.src.main.cs.ViewModels
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/mig_31.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/mig_31_mirror.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/plain2.png", UriKind.Relative))),
-            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/plain2_mirror.png", UriKind.Relative)))
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/plain2_mirror.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/dron1.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/dron1_2.png", UriKind.Relative))),
         };
-        public List<AbstractPlain> plainsList = new List<AbstractPlain>();
+        public List<Enemy> enemyList = new List<Enemy>();
 
         public List<AbstractPatron> patrons = new List<AbstractPatron>();
 
@@ -172,13 +174,22 @@ namespace CourseWork.src.main.cs.ViewModels
 
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
-            CreatorPlain[] creators = new CreatorPlain[2];
+            CreatorEmeny[] creators = new CreatorEmeny[3];
             creators[0] = new CreatorPlain1();
             creators[1] = new CreatorPlain2();
+            creators[2] = new CreatorDron();
             dispatcherTimer.Tick += (s, e) =>
              {
                  Random rnd = new Random();
-                 AbstractPlain plain = creators[rnd.Next(2)].Create();
+                 Enemy plain = creators[rnd.Next(3)].Create();
+                 if (plain is AbstractDron)
+                 {
+                     plain.heightOfFly = rnd.Next(15, 18)+rnd.NextDouble();
+                 }
+                 else
+                 {
+                     plain.heightOfFly = rnd.Next(18, 22)+ rnd.NextDouble();
+                 }
                  plain.viewModel = this;
                  Image img2 = new Image();
                  img2.Stretch = System.Windows.Media.Stretch.Fill;
@@ -198,16 +209,16 @@ namespace CourseWork.src.main.cs.ViewModels
              };
             dispatcherTimer.Start();
             DispatcherTimer dispatcherTimer2 = new DispatcherTimer();
-            dispatcherTimer2.Interval = TimeSpan.FromMilliseconds(2);
+            dispatcherTimer2.Interval = TimeSpan.FromMilliseconds(1);
             dispatcherTimer2.Tick += (s, e) =>
               {
-                  for (int i = 0; i<plainsList.Count;i++)
+                  for (int i = 0; i<enemyList.Count;i++)
                   {
                       for (int j = 0; j < patrons.Count; j++)
                       {
-                          if (check(plainsList[i],patrons[j]))
+                          if (check(enemyList[i],patrons[j]))
                           {
-                              plainsList[i].health -= patrons[j].Demage;
+                              enemyList[i].health -= patrons[j].Demage;
                               patrons[j].Abort(this);
                           }
                       }
@@ -220,7 +231,7 @@ namespace CourseWork.src.main.cs.ViewModels
         {
             return (a.X - b.X) * (b.Y + a.Y) / 2.0+(c.X - a.X) * (c.Y + a.Y) / 2.0+ (b.X - c.X) * (b.Y + c.Y) / 2.0;
         }
-        public bool check(AbstractPlain abstractPlain, AbstractPatron abstractPatron)
+        public bool check(Enemy abstractPlain, AbstractPatron abstractPatron)
         {
             double cos = abstractPatron.Speed.X / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
             double sin = abstractPatron.Speed.Y / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
