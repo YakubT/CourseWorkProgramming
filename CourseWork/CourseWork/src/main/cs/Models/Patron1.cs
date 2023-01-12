@@ -14,11 +14,11 @@ namespace CourseWork.src.main.cs.Models
     {
         public Patron1()
         {
-            demage = 7.5;
+            demage = 1;
         }
         protected override void SetDisplayProperites()
         {
-            width = 0.45;
+            width = 0.15;
             height = 2;
             img = fieldViewModel.flyWeightSprites[0].GetBitmap;
             

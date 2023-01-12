@@ -98,9 +98,15 @@
     </ApplicationDefinition>
     <Compile Include="src\main\cs\Models\CreatorPatron.cs" />
     <Compile Include="src\main\cs\Models\CreatorPatron1.cs" />
+    <Compile Include="src\main\cs\Models\CreatorPatron3.cs" />
     <Compile Include="src\main\cs\Models\CreatorPatron2.cs" />
+    <Compile Include="src\main\cs\Models\CreatorPlain.cs" />
+    <Compile Include="src\main\cs\Models\CreatorPlain2.cs" />
+    <Compile Include="src\main\cs\Models\CreatorPlain1.cs" />
     <Compile Include="src\main\cs\Models\FlyWeightSprite.cs" />
     <Compile Include="src\main\cs\Models\HealthBar.cs" />
+    <Compile Include="src\main\cs\Models\Patron3.cs" />
+    <Compile Include="src\main\cs\Models\Plain2.cs" />
     <Compile Include="src\main\cs\Models\utility\CanvasUtility.cs" />
     <Compile Include="src\main\cs\Models\interfaces\FlyDirectionState.cs" />
     <Compile Include="src\main\cs\Models\LeftFlyDirectionState.cs" />
@@ -209,6 +215,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="src\main\resources\black.png" />
+    <Resource Include="src\main\resources\rockets\ppo_rocket3.png" />
+    <Resource Include="src\main\resources\plains\plain2.png" />
+    <Resource Include="src\main\resources\plains\plain2_mirror.png" />
     <Content Include="src\main\resources\sounds\exploison.wav" />
     <Resource Include="src\main\resources\fire.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

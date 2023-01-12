@@ -11,7 +11,7 @@ namespace CourseWork.src.main.cs.Models
     {
         public Patron2()
         {
-            demage = 15;
+            demage = 2;
         }
         protected override void SetDisplayProperites()
         {
@@ -22,7 +22,7 @@ namespace CourseWork.src.main.cs.Models
 
         protected override void SetStartSpeed(double angle)
         {
-            p = 20;
+            p = 40;
             SetSpeedUsingAngleAndModule(p, angle);
    
         }

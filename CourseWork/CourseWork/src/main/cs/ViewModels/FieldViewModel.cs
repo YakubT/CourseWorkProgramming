@@ -67,9 +67,10 @@ namespace CourseWork.src.main.cs.ViewModels
         }
         public void Execute(object parameter)
         {
-            CreatorPatron[] creators = new CreatorPatron[2];
+            CreatorPatron[] creators = new CreatorPatron[3];
             creators[0] = new CreatorPatron1();
             creators[1] = new CreatorPatron2();
+            creators[2] = new CreatorPatron3();
             AbstractPatron patron = creators[receiver.WheelType].Create();
             Image img = new Image();
             img.Stretch = System.Windows.Media.Stretch.Fill;
@@ -105,16 +106,16 @@ namespace CourseWork.src.main.cs.ViewModels
             {
                 if (((MouseWheelEventArgs)parameter).Delta > 0)
                 {
-                    receiver.WheelType = (receiver.WheelType + 1) % 2;
+                    receiver.WheelType = (receiver.WheelType + 3) % 3;
                 }
                 else
                 {
-                    receiver.WheelType = (receiver.WheelType - 1 + 2) % 2;
+                    receiver.WheelType = (receiver.WheelType - 1 + 3) % 3;
                 }
             }
             catch(InvalidCastException e)
             {
-                receiver.WheelType = (receiver.WheelType + 1) % 2;
+                receiver.WheelType = (receiver.WheelType + 1) % 3;
             }
 
             
@@ -124,8 +125,12 @@ namespace CourseWork.src.main.cs.ViewModels
     {
         public FlyWeightSprite[] flyWeightSprites = {new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket1.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket2.png", UriKind.Relative))),
+            new  FlyWeightSprite (new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket3.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/mig_31.png", UriKind.Relative))),
-            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/mig_31_mirror.png", UriKind.Relative))) };
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/mig_31_mirror.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/plain2.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/plain2_mirror.png", UriKind.Relative)))
+        };
         public List<AbstractPlain> plainsList = new List<AbstractPlain>();
 
         public List<AbstractPatron> patrons = new List<AbstractPatron>();
@@ -167,10 +172,14 @@ namespace CourseWork.src.main.cs.ViewModels
 
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
-
+            CreatorPlain[] creators = new CreatorPlain[2];
+            creators[0] = new CreatorPlain1();
+            creators[1] = new CreatorPlain2();
             dispatcherTimer.Tick += (s, e) =>
              {
-                 AbstractPlain plain = new Plain1(this);
+                 Random rnd = new Random();
+                 AbstractPlain plain = creators[rnd.Next(2)].Create();
+                 plain.viewModel = this;
                  Image img2 = new Image();
                  img2.Stretch = System.Windows.Media.Stretch.Fill;
                  img2.Visibility = Visibility.Visible;
@@ -184,7 +193,6 @@ namespace CourseWork.src.main.cs.ViewModels
                  Grid.SetZIndex(img2, -1);
                  img2.HorizontalAlignment = HorizontalAlignment.Left;
                  img2.VerticalAlignment = VerticalAlignment.Bottom;
-                 Random rnd = new Random();
                  plain.IsFromRight = Convert.ToBoolean(rnd.Next(2));
                  plain.Fly(img2);
              };

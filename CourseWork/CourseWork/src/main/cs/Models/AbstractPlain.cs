@@ -28,7 +28,7 @@ namespace CourseWork.src.main.cs.Models
 
         public BitmapImage spriteMirror;
 
-        protected FieldViewModel viewModel;
+        public FieldViewModel viewModel;
 
         public Vector coordinates =new Vector();
 
@@ -52,12 +52,17 @@ namespace CourseWork.src.main.cs.Models
 
         public Vector Coordinates { get => coordinates; }
 
-        public AbstractPlain(FieldViewModel viewModel)
+        public AbstractPlain()
         {
-            this.viewModel = viewModel;
             flyDirectionState = new FlyDirectionState[2];
             flyDirectionState[0] = new LeftFlyDirectionState();
             flyDirectionState[1] = new RightFlyDirectionState();
+
+        }
+
+        public AbstractPlain(FieldViewModel viewModel):this()
+        {
+            this.viewModel = viewModel;
         }
 
         public void PlainPutLeft()
@@ -94,7 +99,6 @@ namespace CourseWork.src.main.cs.Models
 
         public void end(Image bah, Image img, Grid grid)
         {
-            //MessageBox.Show("Hello");
             bah.Stretch = Stretch.Fill;
             bah.Source = new BitmapImage(new Uri("\\src\\main\\resources\\fire.png", UriKind.Relative));
             bah.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
