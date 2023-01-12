@@ -24,6 +24,10 @@ namespace CourseWork.src.main.cs.Models
 
         public BitmapImage sprite;
 
+        public BitmapImage sprite1;
+
+        public BitmapImage spriteMirror;
+
         protected FieldViewModel viewModel;
 
         public Vector coordinates =new Vector();
@@ -73,7 +77,8 @@ namespace CourseWork.src.main.cs.Models
 
         protected abstract void SetSpeed();
 
-        protected abstract void SetSize();
+        protected abstract void SetDisplayProperty();
+
 
         private void finish(Grid grid, Image img)
         {
@@ -114,7 +119,7 @@ namespace CourseWork.src.main.cs.Models
         public void Fly(Image img)
         {
             SetSpeed();
-            SetSize();
+            SetDisplayProperty();
             flyDirectionState[Convert.ToInt32(IsFromRight)].StartFlyPreprocessing(this);
             img.Source = sprite;
             img.Width = Width * viewModel.Window.ActualWidth / 24;

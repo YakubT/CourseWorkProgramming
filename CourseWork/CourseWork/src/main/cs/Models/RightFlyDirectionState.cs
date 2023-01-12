@@ -15,7 +15,7 @@ namespace CourseWork.src.main.cs.Models
             plain.AntiSpeed();
             plain.PlainPutRight();
             plain.Coordinates.Y = 21;
-            plain.sprite = new BitmapImage(new Uri("/src/main/resources/plains/mig_31_mirror.png", UriKind.Relative));
+            plain.sprite = plain.spriteMirror;
         }
     }
 }

@@ -18,6 +18,8 @@ namespace CourseWork.src.main.cs.Models
 {
     public abstract class AbstractPatron
     {
+        protected FieldViewModel fieldViewModel;
+
         protected double demage;
 
         protected double p;
@@ -69,6 +71,7 @@ namespace CourseWork.src.main.cs.Models
         }
         public void StartFly(double angle, Image img, FieldViewModel link)
         {
+            fieldViewModel = link;
             SoundPlayer soundPlayer = new SoundPlayer();
             soundPlayer.Stream = Properties.Resources.boom1;
             soundPlayer.Play();

@@ -20,7 +20,7 @@ namespace CourseWork.src.main.cs.Models
         {
             width = 0.45;
             height = 2;
-            img = new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket1.png", UriKind.Relative));
+            img = fieldViewModel.flyWeightSprites[0].GetBitmap;
             
         }
         protected override void SetStartSpeed(double angle)

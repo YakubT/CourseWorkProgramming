@@ -122,6 +122,10 @@ namespace CourseWork.src.main.cs.ViewModels
     }
     public class FieldViewModel : BaseViewModel
     {
+        public FlyWeightSprite[] flyWeightSprites = {new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket1.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket2.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/mig_31.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/mig_31_mirror.png", UriKind.Relative))) };
         public List<AbstractPlain> plainsList = new List<AbstractPlain>();
 
         public List<AbstractPatron> patrons = new List<AbstractPatron>();

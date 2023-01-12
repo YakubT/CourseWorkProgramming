@@ -99,6 +99,7 @@
     <Compile Include="src\main\cs\Models\CreatorPatron.cs" />
     <Compile Include="src\main\cs\Models\CreatorPatron1.cs" />
     <Compile Include="src\main\cs\Models\CreatorPatron2.cs" />
+    <Compile Include="src\main\cs\Models\FlyWeightSprite.cs" />
     <Compile Include="src\main\cs\Models\HealthBar.cs" />
     <Compile Include="src\main\cs\Models\utility\CanvasUtility.cs" />
     <Compile Include="src\main\cs\Models\interfaces\FlyDirectionState.cs" />
