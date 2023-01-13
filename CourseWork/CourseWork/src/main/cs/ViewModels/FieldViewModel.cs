@@ -231,42 +231,21 @@ namespace CourseWork.src.main.cs.ViewModels
         {
             return (a.X - b.X) * (b.Y + a.Y) / 2.0+(c.X - a.X) * (c.Y + a.Y) / 2.0+ (b.X - c.X) * (b.Y + c.Y) / 2.0;
         }
-        public bool check(Enemy abstractPlain, AbstractPatron abstractPatron)
-        {
-            double cos = abstractPatron.Speed.X / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
-            double sin = abstractPatron.Speed.Y / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
 
-            Models.Vector v1, v2,v3,v4,v5,v6;
-            v1 = new Models.Vector();
-            v2 = new Models.Vector();
-            v3 = new Models.Vector();
-            v4 = new Models.Vector();
-            v5 = new Models.Vector();
-            v6 = new Models.Vector();
-            v1.X = abstractPatron.Coordinates.X + abstractPatron.Height* window.ActualHeight/24.0 / 2.0 * cos;
-            v1.Y = abstractPatron.Coordinates.Y + abstractPatron.Height * window.ActualHeight/24.0 / 2.0 * sin;
-            v2.X = abstractPatron.Coordinates.X - abstractPatron.Height * window.ActualHeight/24.0 / 2.0 * cos;
-            v2.Y = abstractPatron.Coordinates.Y - abstractPatron.Height * window.ActualHeight/24.0 / 2.0 * sin;
-            v3.X = abstractPlain.Coordinates.X * window.ActualWidth/24.0;
-            v3.Y = abstractPlain.Coordinates.Y * window.ActualHeight/24.0;
-            v4.X = (abstractPlain.Coordinates.X+abstractPlain.Width) * window.ActualWidth/24.0;
-            v4.Y = abstractPlain.Coordinates.Y * window.ActualHeight/24.0;
-            v5.X = (abstractPlain.Coordinates.X + abstractPlain.Width) * window.ActualWidth/24.0;
-            v5.Y = (abstractPlain.Coordinates.Y+abstractPlain.Height) * window.ActualHeight/24.0;
-            v6.X = abstractPlain.Coordinates.X * window.ActualWidth/24.0;
-            v6.Y = (abstractPlain.Coordinates.Y + abstractPlain.Height) * window.ActualHeight/24.0;
-            if ((Soriented(v1, v3, v4)) * (Soriented(v2, v3, v4))<=0 && (Soriented(v3, v1, v2)) * (Soriented(v4, v1, v2)) <= 0)
+        public bool intersect(Models.Vector v1, Models.Vector v2, Models.Vector v3, Models.Vector v4, Models.Vector v5, Models.Vector v6)
+        {
+            if ((Soriented(v1, v3, v4)) * (Soriented(v2, v3, v4)) <= 0 && (Soriented(v3, v1, v2)) * (Soriented(v4, v1, v2)) <= 0)
             {
                 return true;
             }
-            if ((Soriented(v1, v6, v5)) * (Soriented(v2, v6, v5)) <= 0 && (Soriented(v6, v1, v2)) * (Soriented(v5, v1, v2))<=0)
+            if ((Soriented(v1, v6, v5)) * (Soriented(v2, v6, v5)) <= 0 && (Soriented(v6, v1, v2)) * (Soriented(v5, v1, v2)) <= 0)
             {
-                
+
                 return true;
             }
             if ((Soriented(v1, v3, v6)) * (Soriented(v2, v3, v6)) <= 0 && (Soriented(v3, v1, v2)) * (Soriented(v6, v1, v2)) <= 0)
             {
-                
+
                 return true;
             }
             if ((Soriented(v1, v4, v5)) * (Soriented(v2, v4, v5)) <= 0 && (Soriented(v4, v1, v2)) * (Soriented(v5, v1, v2)) <= 0)
@@ -274,6 +253,40 @@ namespace CourseWork.src.main.cs.ViewModels
                 return true;
             }
             return false;
+        }
+        public bool check(Enemy abstractPlain, AbstractPatron abstractPatron)
+        {
+            double cos = abstractPatron.Speed.X / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
+            double sin = abstractPatron.Speed.Y / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
+
+            Models.Vector v1, v2, v3, v4, v5, v6;
+            v1 = new Models.Vector();
+            v2 = new Models.Vector();
+            v3 = new Models.Vector();
+            v4 = new Models.Vector();
+            v5 = new Models.Vector();
+            v6 = new Models.Vector();
+            v1.X = abstractPatron.Coordinates.X + abstractPatron.Height * window.ActualHeight / 24.0 / 2.0 * cos;
+            v1.Y = abstractPatron.Coordinates.Y + abstractPatron.Height * window.ActualHeight / 24.0 / 2.0 * sin;
+            v2.X = abstractPatron.Coordinates.X - abstractPatron.Height * window.ActualHeight / 24.0 / 2.0 * cos;
+            v2.Y = abstractPatron.Coordinates.Y - abstractPatron.Height * window.ActualHeight / 24.0 / 2.0 * sin;
+            v3.X = abstractPlain.Coordinates.X * window.ActualWidth / 24.0;
+            v3.Y = abstractPlain.Coordinates.Y * window.ActualHeight / 24.0;
+            v4.X = (abstractPlain.Coordinates.X + abstractPlain.Width) * window.ActualWidth / 24.0;
+            v4.Y = abstractPlain.Coordinates.Y * window.ActualHeight / 24.0;
+            v5.X = (abstractPlain.Coordinates.X + abstractPlain.Width) * window.ActualWidth / 24.0;
+            v5.Y = (abstractPlain.Coordinates.Y + abstractPlain.Height) * window.ActualHeight / 24.0;
+            v6.X = abstractPlain.Coordinates.X * window.ActualWidth / 24.0;
+            v6.Y = (abstractPlain.Coordinates.Y + abstractPlain.Height) * window.ActualHeight / 24.0;
+            Models.Vector vec = new Models.Vector(v2.X - v1.X, v2.Y - v1.Y);
+            Models.Vector perp = new Models.Vector(v2.Y - v1.Y, -v2.X + v1.X) * abstractPlain.Width * (1 / Math.Sqrt((v2.Y - v1.Y) * (v2.Y - v1.Y) + (v2.X - v1.X) * (v2.X - v1.X)));
+            v1 = v1 + perp;
+            v2 = v2 + perp;
+            bool f1 = intersect(v1, v2, v3, v4, v5, v6);
+            v1 = v1 + perp * (-1);
+            v2 = v2 + perp * (-1);
+            bool f2 = intersect(v1, v2, v3, v4, v5, v6);
+            return f1 || f2;
         }
 
         public Window Window { get => window; }

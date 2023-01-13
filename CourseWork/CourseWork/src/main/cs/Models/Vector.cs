@@ -18,5 +18,14 @@ namespace CourseWork.src.main.cs.Models
             X = x;
             Y = y;
         }
+
+        public static  Vector operator + (Vector a, Vector b)
+        {
+            return new Vector(a.X + b.X, a.Y + b.Y);
+        }
+        public static Vector operator * (Vector a, double k)
+        {
+            return new Vector(k*a.X, k*a.Y);
+        }
     }
 }
