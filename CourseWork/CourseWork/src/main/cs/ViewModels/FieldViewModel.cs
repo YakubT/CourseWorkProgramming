@@ -281,7 +281,7 @@ namespace CourseWork.src.main.cs.ViewModels
             Models.Vector vec = new Models.Vector(v2.X - v1.X, v2.Y - v1.Y);
             Models.Vector perp = new Models.Vector(v2.Y - v1.Y, -v2.X + v1.X) * abstractPatron.Width*0.5* (1.0 / Math.Sqrt((v2.Y - v1.Y) * (v2.Y - v1.Y) + (v2.X - v1.X) * (v2.X - v1.X))) * (window.ActualWidth / 24.0);
             Models.Vector v1copy, v2copy;
-            for (double i=-2.5;i<=2.5;i+=0.05)
+            for (double i=-1.5;i<=1.5;i+=0.05)
             {
                 v1copy = v1 + perp * i;
                 v2copy = v2 + perp * i;
