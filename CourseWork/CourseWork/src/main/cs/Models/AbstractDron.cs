@@ -39,7 +39,7 @@ namespace CourseWork.src.main.cs.Models
             timer.Interval = TimeSpan.FromMilliseconds(15);
             img.Visibility = Visibility.Visible;
             Image bah = new Image();
-            img.RenderTransformOrigin = new Point(0, 1);
+            img.RenderTransformOrigin = new Point(0, 0);
             viewModel.enemyList.Add(this);
             double k = 2.5;
             double mid = coordinates.Y - k; 

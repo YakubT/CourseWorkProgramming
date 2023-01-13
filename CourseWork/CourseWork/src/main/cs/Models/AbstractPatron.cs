@@ -90,9 +90,9 @@ namespace CourseWork.src.main.cs.Models
             coordinates = new Vector(link.Window.ActualWidth * (xGun-0.3) / 24.0 +(heightGun+weightGun) * link.Window.ActualHeight*Math.Sin(angle * Math.PI / 180) / 24.0, 
                 link.Window.ActualHeight *yGun/ 24.0+ heightGun* link.Window.ActualHeight * Math.Cos(angle * Math.PI / 180) / 24.0);
             img.Margin = new Thickness(coordinates.X, 0, 0, coordinates.Y);
-            img.RenderTransformOrigin = new Point(0.5, 0.5);
             img.Width = Width * link.Window.ActualWidth / 24;
             img.Height = Height * link.Window.ActualHeight / 24;
+            img.RenderTransformOrigin = new Point(0.5, 0.5);
             img.Visibility = Visibility.Hidden;
             link.patrons.Add(this);
             timer.Tick += (object sender, EventArgs e) => 
