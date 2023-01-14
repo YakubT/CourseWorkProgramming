@@ -1,4 +1,5 @@
 ﻿using CourseWork.src.main.cs.Models;
+using CourseWork.src.main.cs.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,8 +23,9 @@ namespace CourseWork.src.main.cs.Views
     {
         public MainWindow()
         {
+            
             InitializeComponent();
-
+            DataContext = new MainWindowViewModel();
         }
     }
 }

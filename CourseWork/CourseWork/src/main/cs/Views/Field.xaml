@@ -25,7 +25,7 @@
     </i:Interaction.Triggers>
     <Grid x:Name="grid">
         <Grid.Background>
-            <ImageBrush ImageSource="/CourseWork;component/src/main/resources/background.jpg"/>
+            <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/background.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition>
@@ -171,7 +171,7 @@
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="14" Grid.Row="17" Grid.RowSpan="6" Grid.ColumnSpan="2" Source="/CourseWork;component/src/main/resources/gun.png" Margin="0.4,17.4,34.2,0.8" Stretch="Fill" RenderTransformOrigin="0.535,0.832" HorizontalAlignment="Center">
+        <Image Grid.Column="14" Grid.Row="17" Grid.RowSpan="6" Grid.ColumnSpan="2" Source="/CourseWork;component/src/main/resources/img/gun.png" Margin="0.4,17.4,34.2,0.8" Stretch="Fill" RenderTransformOrigin="0.535,0.832" HorizontalAlignment="Center">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -184,7 +184,7 @@
 
         </Image>
 
-        <Image x:Name="car" Grid.Column="10" Grid.Row="20" Grid.ColumnSpan="6" Grid.RowSpan="4" Source="/CourseWork;component/src/main/resources/ppo_car.png" Stretch="Fill" Margin="0.4,0.2,33.2,0.2"/>
+        <Image x:Name="car" Grid.Column="10" Grid.Row="20" Grid.ColumnSpan="6" Grid.RowSpan="4" Source="/CourseWork;component/src/main/resources/img/ppo_car.png" Stretch="Fill" Margin="0.4,0.2,33.2,0.2"/>
 
     </Grid>
 </Window>

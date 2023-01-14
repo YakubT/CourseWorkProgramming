@@ -123,15 +123,15 @@ namespace CourseWork.src.main.cs.ViewModels
     }
     public class FieldViewModel : BaseViewModel
     {
-        public FlyWeightSprite[] flyWeightSprites = {new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket1.png", UriKind.Relative))),
-            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket2.png", UriKind.Relative))),
-            new  FlyWeightSprite (new BitmapImage(new Uri("/src/main/resources/rockets/ppo_rocket3.png", UriKind.Relative))),
-            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/mig_31.png", UriKind.Relative))),
-            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/mig_31_mirror.png", UriKind.Relative))),
-            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/plain2.png", UriKind.Relative))),
-            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/plains/plain2_mirror.png", UriKind.Relative))),
-            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/dron1.png", UriKind.Relative))),
-            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/dron1_2.png", UriKind.Relative))),
+        public FlyWeightSprite[] flyWeightSprites = {new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket1.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket2.png", UriKind.Relative))),
+            new  FlyWeightSprite (new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket3.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/plains/mig_31.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/plains/mig_31_mirror.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/plains/plain2.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/plains/plain2_mirror.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/dron1.png", UriKind.Relative))),
+            new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/dron1_2.png", UriKind.Relative))),
         };
         public List<Enemy> enemyList = new List<Enemy>();
 

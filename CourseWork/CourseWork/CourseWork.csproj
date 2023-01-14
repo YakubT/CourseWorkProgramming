@@ -124,6 +124,7 @@
     <Compile Include="src\main\cs\Models\Vector.cs" />
     <Compile Include="src\main\cs\ViewModels\FieldViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\BaseViewModel.cs" />
+    <Compile Include="src\main\cs\ViewModels\MainWindowViewModel.cs" />
     <Compile Include="src\main\cs\Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -162,6 +163,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="CourseWork_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -177,17 +179,17 @@
     <Folder Include="src\test\resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\ppo_car.png">
+    <Resource Include="src\main\resources\img\ppo_car.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\gun.png">
+    <Resource Include="src\main\resources\img\gun.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\background.jpg">
+    <Resource Include="src\main\resources\img\background.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -204,32 +206,34 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\rockets\ppo_rocket2.png">
+    <Resource Include="src\main\resources\img\rockets\ppo_rocket2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\rockets\ppo_rocket1.png" />
+    <Resource Include="src\main\resources\img\rockets\ppo_rocket1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\plains\mig_31.png" />
+    <Resource Include="src\main\resources\img\plains\mig_31.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\plains\mig_31_mirror.png" />
+    <Resource Include="src\main\resources\img\plains\mig_31_mirror.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="src\main\resources\black.png" />
-    <Resource Include="src\main\resources\rockets\ppo_rocket3.png" />
-    <Resource Include="src\main\resources\plains\plain2.png" />
-    <Resource Include="src\main\resources\plains\plain2_mirror.png" />
-    <Resource Include="src\main\resources\dron1.png" />
-    <Resource Include="src\main\resources\dron1_2.png" />
-    <Resource Include="src\main\cs\Views\camouflage19.jpg" />
+    <Resource Include="src\main\resources\img\black.png" />
+    <Resource Include="src\main\resources\img\rockets\ppo_rocket3.png" />
+    <Resource Include="src\main\resources\img\plains\plain2.png" />
+    <Resource Include="src\main\resources\img\plains\plain2_mirror.png" />
+    <Resource Include="src\main\resources\img\dron1.png" />
+    <Resource Include="src\main\resources\img\dron1_2.png" />
     <Content Include="src\main\resources\sounds\exploison.wav" />
-    <Resource Include="src\main\resources\fire.png">
+    <Resource Include="src\main\resources\img\fire.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="src\main\resources\sounds\boom.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

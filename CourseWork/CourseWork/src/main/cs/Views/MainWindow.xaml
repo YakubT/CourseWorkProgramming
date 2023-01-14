@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CourseWork.src.main.cs.Views"
+        xmlns:local="clr-namespace:CourseWork.src.main.cs.Views" xmlns:viewmodels="clr-namespace:CourseWork.src.main.cs.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowState="Maximized" WindowStyle="None" Background="#FF253A0D">
     <Grid>
@@ -82,10 +82,10 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition>
-                
+
             </ColumnDefinition>
             <ColumnDefinition>
-                
+
             </ColumnDefinition>
             <ColumnDefinition>
 
@@ -154,5 +154,10 @@
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <Button Grid.ColumnSpan="11" Content="" FontSize ="31" Grid.Column="7"  Grid.Row="5" Grid.RowSpan="6"/>
+        <Button Grid.ColumnSpan="11" Content="" FontSize ="31" Grid.Column="7"  Grid.Row="13" Grid.RowSpan="6"/>
+        <Label Content="Language:" Grid.RowSpan="3"  Grid.Row="1" FontSize ="22" Grid.Column="1" Grid.ColumnSpan="10" Foreground="#FFE8D7D7"/>
+        <Label Content="English" Grid.RowSpan="3"  Grid.Row="5" FontSize ="22" Grid.Column="2" Grid.ColumnSpan="10" Foreground="{Binding ColorOfEnLabel}"/>
+        <Label Content="Українська" Grid.RowSpan="3"  Grid.Row="3" FontSize ="22" Grid.Column="2" Grid.ColumnSpan="10" Foreground="{Binding ColorOfUkrLabel}"/>
     </Grid>
 </Window>
