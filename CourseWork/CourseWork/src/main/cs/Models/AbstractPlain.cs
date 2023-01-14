@@ -43,13 +43,16 @@ namespace CourseWork.src.main.cs.Models
             GC.WaitForPendingFinalizers();
             viewModel.enemyList.Remove(this);
         }
-        public override void ExecuteBodyMethod(Image img)
+        public override void ExecuteBodyMethod()
         {
             flyDirectionState[Convert.ToInt32(IsFromRight)].StartFlyPreprocessing(this);
+            Image img = new Image();
             img.Source = sprite;
             img.Width = Width * viewModel.Window.ActualWidth / 24;
             img.Height = Height * viewModel.Window.ActualHeight / 24;
+            img.Stretch = Stretch.Fill;
             Grid grid = (Grid)viewModel.Window.FindName("grid");
+            CanvasUtility.addToGrid(img, grid);
             healthBar = new HealthBar();
             healthBar.blackBar = new Image();
             healthBar.blackBar.Source = new BitmapImage(new Uri("\\src\\main\\resources\\black.png", UriKind.Relative));
@@ -58,7 +61,7 @@ namespace CourseWork.src.main.cs.Models
             CanvasUtility.addToGrid(healthBar.blackBar, grid);
             CanvasUtility.addToGrid(healthBar.indicator, grid);
             healthBar.blackBar.Width = healthBar.indicator.Width = img.Width / 2;
-            healthBar.blackBar.Height = healthBar.indicator.Height = 0.3 * viewModel.Window.ActualHeight / 24; ;
+            healthBar.blackBar.Height = healthBar.indicator.Height = 0.3 * viewModel.Window.ActualHeight / 24;
             img.HorizontalAlignment = HorizontalAlignment.Left;
             img.VerticalAlignment = VerticalAlignment.Bottom;
             DispatcherTimer timer = new DispatcherTimer();

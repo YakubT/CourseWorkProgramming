@@ -110,13 +110,13 @@ namespace CourseWork.src.main.cs.Models
 
         }
 
-        public abstract void ExecuteBodyMethod(Image img);
-        public void Fly(Image img)
+        public abstract void ExecuteBodyMethod();
+        public void Fly()
         {
             SetSpeed();
             SetDisplayProperty();
             coordinates.Y = heightOfFly;
-            ExecuteBodyMethod(img);
+            ExecuteBodyMethod();
             
         }
     }

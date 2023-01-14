@@ -24,8 +24,9 @@ namespace CourseWork.src.main.cs.Models
             GC.WaitForPendingFinalizers();
             viewModel.enemyList.Remove(this);
         }
-        public override void ExecuteBodyMethod(Image img)
+        public override void ExecuteBodyMethod()
         {
+            Image img = new Image();
             flyDirectionState[Convert.ToInt32(IsFromRight)].StartFlyPreprocessing(this);
             img.Source = sprite;
             img.Width = Width * viewModel.Window.ActualWidth / 24;
@@ -33,9 +34,11 @@ namespace CourseWork.src.main.cs.Models
             Grid grid = (Grid)viewModel.Window.FindName("grid");
             img.HorizontalAlignment = HorizontalAlignment.Left;
             img.VerticalAlignment = VerticalAlignment.Bottom;
+            img.Stretch = Stretch.Fill;
             DispatcherTimer timer = new DispatcherTimer();
             img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
             img.RenderTransformOrigin = new Point(0, 0);
+            CanvasUtility.addToGrid(img, grid);
             timer.Interval = TimeSpan.FromMilliseconds(15);
             img.Visibility = Visibility.Visible;
             Image bah = new Image();
