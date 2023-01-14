@@ -191,6 +191,7 @@ namespace CourseWork.src.main.cs.ViewModels
                      plain.heightOfFly = rnd.Next(18, 22)+ rnd.NextDouble();
                  }
                  plain.viewModel = this;
+                 plain.IsFromRight = Convert.ToBoolean(rnd.Next(2));
                  plain.Fly();
              };
             dispatcherTimer.Start();
@@ -220,15 +221,17 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public bool intersect(Models.Vector v1, Models.Vector v2, Models.Vector v3, Models.Vector v4, Models.Vector v5, Models.Vector v6)
         {
-            if ((Soriented(v1, v3, v4)) * (Soriented(v2, v3, v4)) <= 0 && (Soriented(v3, v1, v2)) * (Soriented(v4, v1, v2)) <= 0)
-            {
-                return true;
-            }
-            if ((Soriented(v1, v6, v5)) * (Soriented(v2, v6, v5)) <= 0 && (Soriented(v6, v1, v2)) * (Soriented(v5, v1, v2)) <= 0)
+            if ((Soriented(v1, v5, v6)) * (Soriented(v2, v5, v6)) <= 0 && (Soriented(v5, v1, v2)) * (Soriented(v6, v1, v2)) <= 0)
             {
 
                 return true;
             }
+
+            if ((Soriented(v1, v3, v4)) * (Soriented(v2, v3, v4)) <= 0 && (Soriented(v3, v1, v2)) * (Soriented(v4, v1, v2)) <= 0)
+            {
+                return true;
+            }
+           
             if ((Soriented(v1, v3, v5)) * (Soriented(v2, v3, v5)) <= 0 && (Soriented(v3, v1, v2)) * (Soriented(v5, v1, v2)) <= 0)
             {
 
@@ -267,16 +270,14 @@ namespace CourseWork.src.main.cs.ViewModels
             Models.Vector vec = new Models.Vector(v2.X - v1.X, v2.Y - v1.Y);
             Models.Vector perp = new Models.Vector(v2.Y - v1.Y, -v2.X + v1.X) * abstractPatron.Width*0.5* (1.0 / Math.Sqrt((v2.Y - v1.Y) * (v2.Y - v1.Y) + (v2.X - v1.X) * (v2.X - v1.X))) * (window.ActualWidth / 24.0);
             Models.Vector v1copy, v2copy;
-            v1copy = v1 + perp;
-            v2copy = v2 + perp;
-            if (intersect(v1copy, v2copy, v3, v4, v5, v6))
-                return true;
-
-            v1copy = v1 + perp*(-1);
-            v2copy = v2 + perp*(-1);
-            if (intersect(v1copy, v2copy, v3, v4, v5, v6))
-                return true;
-
+            
+            for (double i=-2;i<=1;i+=0.05)
+            {
+                v1copy = v1 + (perp * i);
+                v2copy = v2 + (perp * i);
+                if (intersect(v1copy, v2copy, v3, v4, v5, v6)) 
+                    return true;
+            }
             return false;
          
         }
