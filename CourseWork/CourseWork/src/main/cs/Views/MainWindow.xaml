@@ -157,7 +157,15 @@
         <Button Grid.ColumnSpan="11" Content="" FontSize ="31" Grid.Column="7"  Grid.Row="5" Grid.RowSpan="6"/>
         <Button Grid.ColumnSpan="11" Content="" FontSize ="31" Grid.Column="7"  Grid.Row="13" Grid.RowSpan="6"/>
         <Label Content="Language:" Grid.RowSpan="3"  Grid.Row="1" FontSize ="22" Grid.Column="1" Grid.ColumnSpan="10" Foreground="#FFE8D7D7"/>
-        <Label Content="English" Grid.RowSpan="3"  Grid.Row="5" FontSize ="22" Grid.Column="2" Grid.ColumnSpan="10" Foreground="{Binding ColorOfEnLabel}"/>
-        <Label Content="Українська" Grid.RowSpan="3"  Grid.Row="3" FontSize ="22" Grid.Column="2" Grid.ColumnSpan="10" Foreground="{Binding ColorOfUkrLabel}"/>
+        <Label Content="English" Grid.RowSpan="2"  Grid.Row="5" FontSize ="22" Grid.Column="2" Grid.ColumnSpan="5" Foreground="{Binding ColorOfEnLabel}">
+            <Label.InputBindings>
+                <MouseBinding Command="{Binding Label2Click}" MouseAction="LeftClick"/>
+            </Label.InputBindings>
+        </Label>
+        <Label Content="Українська" Grid.RowSpan="2"  Grid.Row="3" FontSize ="22" Grid.Column="2" Grid.ColumnSpan="5" Foreground="{Binding ColorOfUkrLabel}">
+            <Label.InputBindings>
+                <MouseBinding Command="{Binding Label1Click}" MouseAction="LeftClick"/>
+            </Label.InputBindings>
+        </Label>
     </Grid>
 </Window>
