@@ -88,7 +88,7 @@ namespace CourseWork.src.main.cs.Models
         protected void end(Image bah, Image img, Grid grid)
         {
             bah.Stretch = Stretch.Fill;
-            bah.Source = new BitmapImage(new Uri("\\src\\main\\resources\\fire.png", UriKind.Relative));
+            bah.Source = new BitmapImage(new Uri("\\src\\main\\resources\\img\\fire.png", UriKind.Relative));
             bah.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
             bah.Width = Width * viewModel.Window.ActualWidth / 24;
             bah.Height = 2 * Height * viewModel.Window.ActualHeight / 24;

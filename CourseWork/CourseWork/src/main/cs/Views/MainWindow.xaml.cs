@@ -25,7 +25,8 @@ namespace CourseWork.src.main.cs.Views
         {
             
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            DataContext = new MainWindowViewModel(this);
         }
+
     }
 }

@@ -32,3 +32,5 @@ C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgram
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\nunit.engine.core.dll
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\testcentric.engine.metadata.dll
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\CourseWork_Content.g.cs
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\src\main\cs\Views\Guide.g.cs
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\src\main\cs\Views\Guide.baml

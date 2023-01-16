@@ -154,9 +154,13 @@
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Grid.ColumnSpan="11" Content="" FontSize ="31" Grid.Column="7"  Grid.Row="5" Grid.RowSpan="6"/>
-        <Button Grid.ColumnSpan="11" Content="" FontSize ="31" Grid.Column="7"  Grid.Row="13" Grid.RowSpan="6"/>
-        <Label Content="Language:" Grid.RowSpan="3"  Grid.Row="1" FontSize ="22" Grid.Column="1" Grid.ColumnSpan="10" Foreground="#FFE8D7D7"/>
+        <Button Grid.ColumnSpan="11" Content="{Binding ButtonPlayText}" FontSize ="31" Grid.Column="7"  Grid.Row="5" Grid.RowSpan="6"/>
+        <Button Grid.ColumnSpan="11" Content="{Binding ButtonGuideText}" FontSize ="31" Grid.Column="7"  Grid.Row="13" Grid.RowSpan="6">
+            <Button.InputBindings>
+                <MouseBinding Command="{Binding GuideClick }" MouseAction="LeftClick"/>
+            </Button.InputBindings>
+        </Button>
+                <Label Content="Language:" Grid.RowSpan="3"  Grid.Row="1" FontSize ="22" Grid.Column="1" Grid.ColumnSpan="10" Foreground="#FFE8D7D7"/>
         <Label Content="English" Grid.RowSpan="2"  Grid.Row="5" FontSize ="22" Grid.Column="2" Grid.ColumnSpan="5" Foreground="{Binding ColorOfEnLabel}">
             <Label.InputBindings>
                 <MouseBinding Command="{Binding Label2Click}" MouseAction="LeftClick"/>

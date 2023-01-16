@@ -55,7 +55,7 @@ namespace CourseWork.src.main.cs.Models
             CanvasUtility.addToGrid(img, grid);
             healthBar = new HealthBar();
             healthBar.blackBar = new Image();
-            healthBar.blackBar.Source = new BitmapImage(new Uri("\\src\\main\\resources\\black.png", UriKind.Relative));
+            healthBar.blackBar.Source = new BitmapImage(new Uri("\\src\\main\\resources\\img\\black.png", UriKind.Relative));
             healthBar.blackBar.Stretch = Stretch.Fill;
             healthBar.indicator = new Rectangle();
             CanvasUtility.addToGrid(healthBar.blackBar, grid);
