@@ -51,7 +51,7 @@
         <Image Grid.RowSpan="2" Grid.Row="3" Source="picture_guide1-removebg-preview — копия.png" Grid.ColumnSpan="2" />
         <Image Grid.RowSpan="2" Grid.Row="3" Source="picture_guide1-removebg-preview.png" Grid.Column="3" />
         <Image Grid.RowSpan="4" Grid.Column="5" Grid.Row="3" Source="picture_guide1-removebg-preview — копия (2).png" Grid.ColumnSpan="2"/>
-        <Image Grid.Row="1" Grid.ColumnSpan="4" Source="keys-removebg-preview.png" Stretch="Fill"/>
+        <Image Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="2" Source="keys-removebg-preview.png" Stretch="Fill"/>
         <Image Grid.Column="6" Grid.Row="1" Source="mouse-removebg-preview-removebg-preview.png" Stretch="Fill"/>
     </Grid>
 </Window>
