@@ -54,7 +54,7 @@
         <Image Grid.RowSpan="3" Grid.Row="3" Source="picture_guide1-removebg-preview — копия (2).png" Grid.Column="6" Grid.ColumnSpan="2"/>
         <Image Grid.Row="1"  Grid.Column="4" Source="keys-removebg-preview.png" Stretch="Fill" Grid.ColumnSpan="2"/>
         <Image Grid.Column="7" Grid.Row="1" Source="mouse-removebg-preview-removebg-preview.png" Stretch="Fill"/>
-        <Button Grid.ColumnSpan="2" Content="{Binding BackButtonContent}" Grid.Row="1" Background="#FF203FC0"  Grid.Column="1" FontSize="15" Foreground="White">
+        <Button Grid.ColumnSpan="2" Content="{Binding BackButtonContent}" Grid.Row="1" Background="#FF203FC0"  Grid.Column="1" FontSize="30" Foreground="#FFCCFA01">
             <Button.InputBindings>
                 <MouseBinding Command="{Binding BackButtonClick}" MouseAction="LeftClick"/>
             </Button.InputBindings>
