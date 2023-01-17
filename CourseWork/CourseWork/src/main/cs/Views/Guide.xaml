@@ -18,9 +18,10 @@
             <RowDefinition Height="18*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="46*">
+            <ColumnDefinition Width="10*">
 
             </ColumnDefinition>
+            <ColumnDefinition Width="38*"/>
             <ColumnDefinition Width="114*"/>
             <ColumnDefinition Width="108*">
 
@@ -31,27 +32,35 @@
             </ColumnDefinition>
             <ColumnDefinition Width="118*"/>
             <ColumnDefinition Width="136*"/>
-            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="19*"/>
         </Grid.ColumnDefinitions>
-        <Image  Source="/CourseWork;component/src/main/resources/img/dron1.png" Grid.Row="2" Grid.ColumnSpan="2" Margin="46,0.2,0,0.4" >
+        <Image  Source="/CourseWork;component/src/main/resources/img/dron1.png" Grid.Row="2" Grid.Column="2" >
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/dron1.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image  Source="/CourseWork;component/src/main/resources/img/plains/mig_31.png" Grid.Column="3" Grid.Row="2" Margin="0,0.2,0.4,0.4">
+        <Image  Source="/CourseWork;component/src/main/resources/img/plains/mig_31.png" Grid.Column="4" Grid.Row="2">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/plains/mig_31.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image Source="/CourseWork;component/src/main/resources/img/plains/plain2.png" Grid.Column="5" Grid.Row="2" Grid.ColumnSpan="2">
+        <Image Source="/CourseWork;component/src/main/resources/img/plains/plain2.png" Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/plains/plain2.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image Grid.RowSpan="2" Grid.Row="3" Source="picture_guide1-removebg-preview — копия.png" Grid.ColumnSpan="2" />
-        <Image Grid.RowSpan="2" Grid.Row="3" Source="picture_guide1-removebg-preview.png" Grid.Column="3" />
-        <Image Grid.RowSpan="4" Grid.Column="5" Grid.Row="3" Source="picture_guide1-removebg-preview — копия (2).png" Grid.ColumnSpan="2"/>
-        <Image Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="2" Source="keys-removebg-preview.png" Stretch="Fill"/>
-        <Image Grid.Column="6" Grid.Row="1" Source="mouse-removebg-preview-removebg-preview.png" Stretch="Fill"/>
+        <Image Grid.RowSpan="3" Grid.Row="3" Source="picture_guide1-removebg-preview — копия.png" Grid.Column="2"/>
+        <Image Grid.RowSpan="3" Grid.Row="3" Source="picture_guide1-removebg-preview.png" Grid.Column="4"/>
+        <Image Grid.RowSpan="3" Grid.Row="3" Source="picture_guide1-removebg-preview — копия (2).png" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <Image Grid.Row="1"  Grid.Column="4" Source="keys-removebg-preview.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <Image Grid.Column="7" Grid.Row="1" Source="mouse-removebg-preview-removebg-preview.png" Stretch="Fill"/>
+        <Button Grid.ColumnSpan="2" Content="{Binding BackButtonContent}" Grid.Row="1" Background="#FF203FC0"  Grid.Column="1" FontSize="15" Foreground="White">
+            <Button.InputBindings>
+                <MouseBinding Command="{Binding BackButtonClick}" MouseAction="LeftClick"/>
+            </Button.InputBindings>
+        </Button>
     </Grid>
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding BackButtonClick}" Key="Esc"/>
+    </Window.InputBindings>
 </Window>

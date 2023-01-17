@@ -124,6 +124,7 @@
     <Compile Include="src\main\cs\Models\Vector.cs" />
     <Compile Include="src\main\cs\ViewModels\FieldViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\BaseViewModel.cs" />
+    <Compile Include="src\main\cs\ViewModels\GuideViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\MainWindowViewModel.cs" />
     <Compile Include="src\main\cs\Views\Guide.xaml.cs">
       <DependentUpon>Guide.xaml</DependentUpon>
