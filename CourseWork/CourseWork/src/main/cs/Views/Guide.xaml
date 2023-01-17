@@ -11,7 +11,8 @@
             <RowDefinition Height="30*">
 
             </RowDefinition>
-            <RowDefinition Height="79*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="31*"/>
             <RowDefinition Height="106*"/>
             <RowDefinition Height="134*"/>
             <RowDefinition Height="93*"/>
@@ -34,31 +35,31 @@
             <ColumnDefinition Width="136*"/>
             <ColumnDefinition Width="19*"/>
         </Grid.ColumnDefinitions>
-        <Image  Source="/CourseWork;component/src/main/resources/img/dron1.png" Grid.Row="2" Grid.Column="2" >
+        <Image  Source="/CourseWork;component/src/main/resources/img/dron1.png" Grid.Row="3" Grid.Column="2">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/dron1.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image  Source="/CourseWork;component/src/main/resources/img/plains/mig_31.png" Grid.Column="4" Grid.Row="2">
+        <Image  Source="/CourseWork;component/src/main/resources/img/plains/mig_31.png" Grid.Column="4" Grid.Row="3">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/plains/mig_31.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image Source="/CourseWork;component/src/main/resources/img/plains/plain2.png" Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2">
+        <Image Source="/CourseWork;component/src/main/resources/img/plains/plain2.png" Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="2">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/plains/plain2.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image Grid.RowSpan="3" Grid.Row="3" Source="/CourseWork;component/src/main/resources/img/picture_guide1-removebg-preview — копия.png" Grid.Column="2">
+        <Image Grid.RowSpan="3" Grid.Row="4" Source="/CourseWork;component/src/main/resources/img/picture_guide1-removebg-preview — копия.png" Grid.Column="2">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/picture_guide1-removebg-preview — копия.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image Grid.RowSpan="3" Grid.Row="3" Source="/CourseWork;component/src/main/resources/img/picture_guide1-removebg-preview.png" Grid.Column="4"/>
-        <Image Grid.RowSpan="3" Grid.Row="3" Source="/CourseWork;component/src/main/resources/img/picture_guide1-removebg-preview — копия (2).png" Grid.Column="6" Grid.ColumnSpan="2"/>
-        <Image Grid.Row="1"  Grid.Column="4" Source="/CourseWork;component/src/main/resources/img/keys-removebg-preview.png" Stretch="Fill" Grid.ColumnSpan="2"/>
-        <Image Grid.Column="7" Grid.Row="1" Source="/CourseWork;component/src/main/resources/img/mouse-removebg-preview-removebg-preview.png" Stretch="Fill"/>
-        <Button Grid.ColumnSpan="2" Content="{Binding BackButtonContent}" Grid.Row="1" Background="#FF203FC0"  Grid.Column="1" FontSize="30" Foreground="#FFCCFA01">
+        <Image Grid.RowSpan="3" Grid.Row="4" Source="/CourseWork;component/src/main/resources/img/picture_guide1-removebg-preview.png" Grid.Column="4"/>
+        <Image Grid.RowSpan="3" Grid.Row="4" Source="/CourseWork;component/src/main/resources/img/picture_guide1-removebg-preview — копия (2).png" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <Image  Grid.Column="4" Grid.Row="1" Source="/CourseWork;component/src/main/resources/img/keys-removebg-preview.png" Stretch="Fill" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Image Grid.Column="7" Grid.Row="1" Grid.RowSpan="2" Source="/CourseWork;component/src/main/resources/img/mouse-removebg-preview-removebg-preview.png" Stretch="Fill"/>
+        <Button  Content="{Binding BackButtonContent}" Background="#FF203FC0"  Grid.Column="2" Grid.Row="1" FontSize="30" Foreground="Yellow" FontWeight="Bold">
             <Button.InputBindings>
                 <MouseBinding Command="{Binding BackButtonClick}" MouseAction="LeftClick"/>
             </Button.InputBindings>
