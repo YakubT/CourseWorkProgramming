@@ -10,10 +10,11 @@ using System.Windows;
 using System.Windows.Input;
 using CourseWork.src.main.cs.utility;
 using CourseWork.src.main.cs.ViewModels.utils;
+using CourseWork.src.main.cs.ViewModels.utils.interfaces;
 
 namespace CourseWork.src.main.cs.ViewModels
 {
-    public class GuideViewModel : BaseViewModel
+    public class GuideViewModel : BaseViewModel, ICloseableWindow
     {
         private string backButtonContent;
 
@@ -40,30 +41,8 @@ namespace CourseWork.src.main.cs.ViewModels
             dictionary["UA"] = new UkrainianLanguageGuide();
             dictionary["EN"] = new EnglishLanguageGuide();
             dictionary[new PropertiesUtil(GlobalGonstants.file).getValue("language")].UpdateLanguage(this);
-            BackButtonClick = new BackButtonClick(this);
+            BackButtonClick = new BackButtonClickCommand(this);
         }
     }
 
-    public class BackButtonClick : ICommand
-    {
-        public event EventHandler CanExecuteChanged;
-
-        private GuideViewModel receiver;
-
-        public BackButtonClick(GuideViewModel receiver)
-        {
-            this.receiver = receiver;
-        }
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        public void Execute(object parameter)
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            receiver.Window.Close();
-        }
-    }
 }

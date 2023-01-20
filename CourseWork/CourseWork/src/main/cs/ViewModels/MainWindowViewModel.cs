@@ -7,10 +7,12 @@ using System.Windows.Input;
 using CourseWork.src.main.cs.utility;
 using System.Collections.Generic;
 using CourseWork.src.main.cs.ViewModels.intefaces;
+using CourseWork.src.main.cs.ViewModels.utils;
+using CourseWork.src.main.cs.ViewModels.utils.interfaces;
 
 namespace CourseWork.src.main.cs.ViewModels
 {
-    public class MainWindowViewModel : BaseViewModel
+    public class MainWindowViewModel : BaseViewModel, ICloseableWindow
     {
         private string colorOfUkrLabel;
 
@@ -22,11 +24,11 @@ namespace CourseWork.src.main.cs.ViewModels
 
         private Dictionary<string, IMainViewModelLanguageState> dictionary = new Dictionary<string, IMainViewModelLanguageState>();
 
-        public UkrainianLabelClick Label1Click { get; }
+        public UkrainianLabelClickCommand Label1Click { get; }
 
-        public EnglishLabelClick Label2Click { get; }
+        public EnglishLabelClickCommand Label2Click { get; }
 
-        public GuideClick GuideClick { get; }
+        public GuideClickCommand GuideClick { get; }
 
         public Window Window { get; }
 
@@ -76,9 +78,9 @@ namespace CourseWork.src.main.cs.ViewModels
             dictionary["UA"] = new MainUkrainianLanguageImplementor();
             dictionary["EN"] = new MainEnglishLanguageImplementor();
             UpdateLanguge();
-            Label1Click = new UkrainianLabelClick(this);
-            Label2Click = new EnglishLabelClick(this);
-            GuideClick = new GuideClick(this);
+            Label1Click = new UkrainianLabelClickCommand(this);
+            Label2Click = new EnglishLabelClickCommand(this);
+            GuideClick = new GuideClickCommand(this);
 
         }
 
@@ -98,77 +100,5 @@ namespace CourseWork.src.main.cs.ViewModels
         }
     }
 
-    public class EnglishLabelClick : ICommand
-    {
-        private MainWindowViewModel receiver;
-
-        public event EventHandler CanExecuteChanged;
-
-        public EnglishLabelClick(MainWindowViewModel receiver)
-        {
-            this.receiver = receiver;
-        }
-
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-     
-        public void Execute(object parameter)
-        {
-            PropertiesUtil properties = new PropertiesUtil(GlobalGonstants.file);
-            properties.setValue("language", "EN");
-            receiver.UpdateLanguge();
-        }
-    }
-
    
-    public class UkrainianLabelClick : ICommand
-    {
-        private MainWindowViewModel receiver;
-
-        public event EventHandler CanExecuteChanged;
-
-        public UkrainianLabelClick(MainWindowViewModel receiver)
-        {
-            this.receiver = receiver;
-        }
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-
-        public void Execute(object parameter)
-        {
-            PropertiesUtil properties = new PropertiesUtil(GlobalGonstants.file);
-            properties.setValue("language", "UA");
-            receiver.UpdateLanguge();
-        }
-    }
-
-    public class GuideClick : ICommand
-    {
-        private MainWindowViewModel receiver;
-
-        public event EventHandler CanExecuteChanged;
-
-        public GuideClick (MainWindowViewModel receiver)
-        {
-            this.receiver = receiver;
-        }
-
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        public void Execute(object parameter)
-        {
-            Guide guide = new Guide();
-            guide.Show();
-            receiver.Window.Close();
-        }
-    }
 }

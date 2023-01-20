@@ -151,6 +151,14 @@
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Content="Label" Grid.Column="9" Grid.ColumnSpan="6" Grid.RowSpan="6" Foreground="#FF003FF0" FontSize="72"/>
+        <Label Content="{Binding TitleTextW}" Grid.Column="9" Grid.ColumnSpan="6" Grid.RowSpan="6" Foreground="#FF003FF0" FontSize="72"/>
+        <Button Grid.ColumnSpan="6" Content="Button" Grid.Column="1" Grid.Row="9" Grid.RowSpan="8"/>
+        <Button Grid.ColumnSpan="6" Content="Button" Grid.Column="9" Grid.Row="9" Grid.RowSpan="8"/>
+        <Button Grid.ColumnSpan="6" Content="Button" Grid.Column="17" Grid.Row="9" Grid.RowSpan="8"/>
+        <Button  Content="{Binding BackButtonContent}" Background="#FF203FC0"  Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3" FontSize="30" Foreground="Yellow" >
+            <Button.InputBindings>
+                <MouseBinding Command="{Binding BackButtonClick}" MouseAction="LeftClick"/>
+            </Button.InputBindings>
+        </Button>
     </Grid>
 </Window>

@@ -10,5 +10,6 @@ namespace CourseWork.src.main.cs.ViewModels.intefaces
 {
     public interface IMainViewModelLanguageState:ILanguageImplementor<MainWindowViewModel>
     {
+
     }
 }

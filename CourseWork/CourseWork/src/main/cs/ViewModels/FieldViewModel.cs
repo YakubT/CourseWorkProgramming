@@ -1,5 +1,7 @@
 ﻿using CourseWork.src.main.cs.Models;
 using CourseWork.src.main.cs.Models.utility;
+using CourseWork.src.main.cs.ViewModels.utils;
+using CourseWork.src.main.cs.ViewModels.utils.interfaces;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -15,7 +17,7 @@ using System.Windows.Threading;
 namespace CourseWork.src.main.cs.ViewModels
 {
    
-    public class FieldViewModel : BaseViewModel
+    public class FieldViewModel : BaseViewModel, ICloseableWindow
     {
         public FlyWeightSprite[] flyWeightSprites = {new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket1.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket2.png", UriKind.Relative))),
@@ -34,9 +36,9 @@ namespace CourseWork.src.main.cs.ViewModels
         private Window window;
         public GunRotateCommand RotateGunCommand { get;}
 
-        public PatronStartFly PatronStartFly { get; }
+        public PatronStartFlyCommand PatronStartFly { get; }
 
-        public WheelScroll WheelScroll { get; }
+        public ChangeWeaponCommand WheelScroll { get; }
         
         private double angle;
 
@@ -63,8 +65,8 @@ namespace CourseWork.src.main.cs.ViewModels
         {
             this.window = window;
             RotateGunCommand = new GunRotateCommand(this);
-            PatronStartFly = new PatronStartFly(this);
-            WheelScroll = new WheelScroll(this);
+            PatronStartFly = new PatronStartFlyCommand(this);
+            WheelScroll = new ChangeWeaponCommand(this);
 
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
@@ -181,111 +183,4 @@ namespace CourseWork.src.main.cs.ViewModels
        
     }
 
-    public class GunRotateCommand : ICommand
-    {
-        private FieldViewModel receiver;
-
-        public event EventHandler CanExecuteChanged;
-
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        public GunRotateCommand(FieldViewModel receiver)
-        {
-            this.receiver = receiver;
-        }
-        public void Execute(object parameter)
-        {
-            double xGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunX"]);
-            double yGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunY"]);
-            double heightGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunHeight"]);
-            double tg = ((((MouseEventArgs)parameter).GetPosition(receiver.Window).Y -
-                receiver.Window.ActualHeight * (24 - yGun) / 24) /
-                (((MouseEventArgs)parameter).GetPosition(receiver.Window).X - receiver.Window.ActualWidth * xGun / 24.0));
-            double angle = 180 * Math.Atan(Math.Abs(tg)) / Math.PI;
-            if (tg > 0)
-            {
-                angle = -90 + angle;
-            }
-            else
-                angle = 90 - angle;
-            if (angle > -60 && angle < 50)
-                this.receiver.Angle = angle;
-
-        }
-    }
-
-    public class PatronStartFly : ICommand
-    {
-        private FieldViewModel receiver;
-
-        public event EventHandler CanExecuteChanged;
-
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        public PatronStartFly(FieldViewModel receiver)
-        {
-            this.receiver = receiver;
-        }
-        public void Execute(object parameter)
-        {
-            CreatorPatron[] creators = new CreatorPatron[3];
-            creators[0] = new CreatorPatron1();
-            creators[1] = new CreatorPatron2();
-            creators[2] = new CreatorPatron3();
-            AbstractPatron patron = creators[receiver.WheelType].Create();
-            Image img = new Image();
-            img.Stretch = System.Windows.Media.Stretch.Fill;
-            img.Visibility = Visibility.Visible;
-            Grid grid = (Grid)receiver.Window.FindName("grid");
-            FrameworkElement o = (FrameworkElement)img;
-            CanvasUtility.addToGrid(o, grid);
-            patron.StartFly(receiver.Angle, img, receiver);
-
-
-
-        }
-    }
-
-    public class WheelScroll : ICommand
-    {
-        private FieldViewModel receiver;
-
-        public event EventHandler CanExecuteChanged;
-
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        public WheelScroll(FieldViewModel receiver)
-        {
-            this.receiver = receiver;
-        }
-        public void Execute(object parameter)
-        {
-            try
-            {
-                if (((MouseWheelEventArgs)parameter).Delta > 0)
-                {
-                    receiver.WheelType = (receiver.WheelType + 3) % 3;
-                }
-                else
-                {
-                    receiver.WheelType = (receiver.WheelType - 1 + 3) % 3;
-                }
-            }
-            catch (InvalidCastException e)
-            {
-                receiver.WheelType = (receiver.WheelType + 1) % 3;
-            }
-
-
-        }
-    }
 }
