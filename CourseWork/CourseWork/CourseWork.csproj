@@ -115,6 +115,7 @@
     <Compile Include="src\main\cs\ViewModels\utils\LevelState2.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\LevelState1.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\ShuttdownCommand.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\StartTrainingCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\UkrainianLabelClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\BackButtonClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\ChooseLevelUkrainianLanguageImplementor.cs" />

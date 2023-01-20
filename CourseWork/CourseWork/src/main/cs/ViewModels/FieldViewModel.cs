@@ -68,6 +68,11 @@ namespace CourseWork.src.main.cs.ViewModels
             PatronStartFly = new PatronStartFlyCommand(this);
             WheelScroll = new ChangeWeaponCommand(this);
 
+        }
+        
+        public void StartTraining()
+        {
+
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
             CreatorEmeny[] creators = new CreatorEmeny[3];
@@ -75,41 +80,40 @@ namespace CourseWork.src.main.cs.ViewModels
             creators[1] = new CreatorPlain2();
             creators[2] = new CreatorDron();
             dispatcherTimer.Tick += (s, e) =>
-             {
-                 Random rnd = new Random();
-                 Enemy plain = creators[rnd.Next(3)].Create();
-                 if (plain is AbstractDron)
-                 {
-                     plain.heightOfFly = rnd.Next(15, 18)+rnd.NextDouble();
-                 }
-                 else
-                 {
-                     plain.heightOfFly = rnd.Next(18, 22)+ rnd.NextDouble();
-                 }
-                 plain.viewModel = this;
-                 plain.IsFromRight = Convert.ToBoolean(rnd.Next(2));
-                 plain.Fly();
-             };
+            {
+                Random rnd = new Random();
+                Enemy plain = creators[rnd.Next(3)].Create();
+                if (plain is AbstractDron)
+                {
+                    plain.heightOfFly = rnd.Next(15, 18) + rnd.NextDouble();
+                }
+                else
+                {
+                    plain.heightOfFly = rnd.Next(18, 22) + rnd.NextDouble();
+                }
+                plain.viewModel = this;
+                plain.IsFromRight = Convert.ToBoolean(rnd.Next(2));
+                plain.Fly();
+            };
             dispatcherTimer.Start();
             DispatcherTimer dispatcherTimer2 = new DispatcherTimer();
             dispatcherTimer2.Interval = TimeSpan.FromMilliseconds(1);
             dispatcherTimer2.Tick += (s, e) =>
-              {
-                  for (int i = 0; i<enemyList.Count;i++)
-                  {
-                      for (int j = 0; j < patrons.Count; j++)
-                      {
-                          if (check(enemyList[i],patrons[j]))
-                          {
-                              enemyList[i].health -= patrons[j].Demage;
-                              patrons[j].Abort(this);
-                          }
-                      }
-                  }
-              };
+            {
+                for (int i = 0; i < enemyList.Count; i++)
+                {
+                    for (int j = 0; j < patrons.Count; j++)
+                    {
+                        if (check(enemyList[i], patrons[j]))
+                        {
+                            enemyList[i].health -= patrons[j].Demage;
+                            patrons[j].Abort(this);
+                        }
+                    }
+                }
+            };
             dispatcherTimer2.Start();
         }
-        
         public double Soriented(Models.Vector a,Models.Vector b, Models.Vector c)
         {
             return (a.X - b.X) * (b.Y + a.Y) / 2.0+(c.X - a.X) * (c.Y + a.Y) / 2.0+ (b.X - c.X) * (b.Y + c.Y) / 2.0;

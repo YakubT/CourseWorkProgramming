@@ -116,8 +116,11 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public BackButtonClickCommand BackButtonClickCommand { get; }
 
+        public StartTrainingCommand StartTrainingCommand { get; }
+
         public ChooseLevelViewModel(Window window)
         {
+            StartTrainingCommand = new StartTrainingCommand(this);
             dictionary["EN"] = new ChooseLevelEnglishLanguageImplementor();
             dictionary["UA"] = new ChooseLevelUkrainianLanguageImplementor();
             levelStates[0] = new LevelState0();
