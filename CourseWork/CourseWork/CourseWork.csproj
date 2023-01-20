@@ -107,8 +107,14 @@
     <Compile Include="src\main\cs\Models\AbstractDron.cs" />
     <Compile Include="src\main\cs\Models\Dron1.cs" />
     <Compile Include="src\main\cs\Models\Enemy.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\UkrainianLanguageGuide.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\EnglishLanguageGuide.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILanguageImplementor.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\MainEnglishLanguageImplementor.cs" />
     <Compile Include="src\main\cs\Models\FlyWeightSprite.cs" />
     <Compile Include="src\main\cs\Models\HealthBar.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\interfaces\IGuideChangeLanguageState.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\interfaces\IMainViewModelLanguageState.cs" />
     <Compile Include="src\main\cs\Models\Patron3.cs" />
     <Compile Include="src\main\cs\Models\Plain2.cs" />
     <Compile Include="src\main\cs\Models\utility\CanvasUtility.cs" />
@@ -122,10 +128,17 @@
     <Compile Include="src\main\cs\Models\RightFlyDirectionState.cs" />
     <Compile Include="src\main\cs\Models\utility\PhysicalConstants.cs" />
     <Compile Include="src\main\cs\Models\Vector.cs" />
+    <Compile Include="src\main\cs\utility\GlobalGonstants.cs" />
+    <Compile Include="src\main\cs\utility\Properties.cs" />
+    <Compile Include="src\main\cs\ViewModels\ChooseLevelViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\FieldViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\BaseViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\GuideViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\MainUkrainianLanguageImplementor.cs" />
+    <Compile Include="src\main\cs\Views\ChooseLevel.xaml.cs">
+      <DependentUpon>ChooseLevel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="src\main\cs\Views\Guide.xaml.cs">
       <DependentUpon>Guide.xaml</DependentUpon>
     </Compile>
@@ -133,6 +146,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="src\test\cs\unit\PatronTest.cs" />
+    <Page Include="src\main\cs\Views\ChooseLevel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="src\main\cs\Views\Field.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -1,13 +1,12 @@
 ﻿using CourseWork.src.main.cs.Views;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using CourseWork.src.main.cs.utility;
+using System.Collections.Generic;
+using CourseWork.src.main.cs.ViewModels.intefaces;
 
 namespace CourseWork.src.main.cs.ViewModels
 {
@@ -20,6 +19,8 @@ namespace CourseWork.src.main.cs.ViewModels
         private string buttonPlayText;
 
         private string buttonGuideText;
+
+        private Dictionary<string, IMainViewModelLanguageState> dictionary = new Dictionary<string, IMainViewModelLanguageState>();
 
         public UkrainianLabelClick Label1Click { get; }
 
@@ -71,30 +72,29 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public MainWindowViewModel(Window window)
         {
-            this.Window = window; 
+            this.Window = window;
+            dictionary["UA"] = new MainUkrainianLanguageImplementor();
+            dictionary["EN"] = new MainEnglishLanguageImplementor();
             UpdateLanguge();
             Label1Click = new UkrainianLabelClick(this);
             Label2Click = new EnglishLabelClick(this);
             GuideClick = new GuideClick(this);
+
         }
 
         public void UpdateLanguge()
         {
-            string s = ConfigurationManager.AppSettings["language"];
-            if (s == "UA")
+            string s = "";
+            try
             {
-                ColorOfUkrLabel = ColorTranslator.ToHtml(Color.GreenYellow);
-                ColorOfEnLabel = ColorTranslator.ToHtml(Color.White);
-                ButtonGuideText = "Інструкція";
-                ButtonPlayText = "Грати";
+                s = new PropertiesUtil(GlobalGonstants.file).getValue("language");
             }
-            else
+            catch(Exception e)
             {
-                ColorOfEnLabel = ColorTranslator.ToHtml(Color.GreenYellow);
-                ColorOfUkrLabel = ColorTranslator.ToHtml(Color.White);
-                ButtonGuideText = "Guide";
-                ButtonPlayText = "Play";
+                s = "UA";
+                new PropertiesUtil(GlobalGonstants.file).setValue("language", s);
             }
+            dictionary[s].UpdateLanguage(this);
         }
     }
 
@@ -117,7 +117,8 @@ namespace CourseWork.src.main.cs.ViewModels
      
         public void Execute(object parameter)
         {
-            ConfigurationManager.AppSettings["language"] = "EN";
+            PropertiesUtil properties = new PropertiesUtil(GlobalGonstants.file);
+            properties.setValue("language", "EN");
             receiver.UpdateLanguge();
         }
     }
@@ -141,7 +142,8 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public void Execute(object parameter)
         {
-            ConfigurationManager.AppSettings["language"] = "UA";
+            PropertiesUtil properties = new PropertiesUtil(GlobalGonstants.file);
+            properties.setValue("language", "UA");
             receiver.UpdateLanguge();
         }
     }

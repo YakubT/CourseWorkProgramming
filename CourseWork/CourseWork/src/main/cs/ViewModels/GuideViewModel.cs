@@ -1,4 +1,5 @@
-﻿using CourseWork.src.main.cs.Views;
+﻿using CourseWork.src.main.cs.ViewModels.interfaces;
+using CourseWork.src.main.cs.Views;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -7,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using CourseWork.src.main.cs.utility;
+using CourseWork.src.main.cs.ViewModels.utils;
 
 namespace CourseWork.src.main.cs.ViewModels
 {
@@ -15,6 +18,8 @@ namespace CourseWork.src.main.cs.ViewModels
         private string backButtonContent;
 
         private Window window;
+
+        private Dictionary<string,IGuideChangeLanguageState> dictionary= new Dictionary<string,IGuideChangeLanguageState>(); 
 
         public Window Window { get=>window; }
 
@@ -32,7 +37,9 @@ namespace CourseWork.src.main.cs.ViewModels
         public GuideViewModel(Window window)
         {
             this.window = window;
-            BackButtonContent = ConfigurationManager.AppSettings["language"]=="UA"?"Назад":"Back";
+            dictionary["UA"] = new UkrainianLanguageGuide();
+            dictionary["EN"] = new EnglishLanguageGuide();
+            dictionary[new PropertiesUtil(GlobalGonstants.file).getValue("language")].UpdateLanguage(this);
             BackButtonClick = new BackButtonClick(this);
         }
     }
