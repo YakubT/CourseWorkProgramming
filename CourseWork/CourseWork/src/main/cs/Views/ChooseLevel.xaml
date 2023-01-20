@@ -151,14 +151,15 @@
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Content="{Binding TitleTextW}" Grid.Column="9" Grid.ColumnSpan="6" Grid.RowSpan="6" Foreground="#FF003FF0" FontSize="72"/>
-        <Button Grid.ColumnSpan="6" Content="Button" Grid.Column="1" Grid.Row="9" Grid.RowSpan="8"/>
-        <Button Grid.ColumnSpan="6" Content="Button" Grid.Column="9" Grid.Row="9" Grid.RowSpan="8"/>
-        <Button Grid.ColumnSpan="6" Content="Button" Grid.Column="17" Grid.Row="9" Grid.RowSpan="8"/>
+        <Label Content="{Binding TitleText}" Grid.Column="10" Grid.ColumnSpan="6" Grid.RowSpan="6" Foreground="#FF003FF0" FontSize="72"/>
+        <Button Grid.ColumnSpan="6" Content="1" Grid.Column="1" Grid.Row="15" Grid.RowSpan="8" Background="#FFC0F602" FontSize="40" Foreground="#FF0473EB"/>
+        <Button Grid.ColumnSpan="6" Content="2" Grid.Column="9" Grid.Row="15" Grid.RowSpan="8" Background="#FFC0F602" FontSize="40" Foreground="#FF0373EE"/>
+        <Button Grid.ColumnSpan="6" Content="3" Grid.Column="17" Grid.Row="15" Grid.RowSpan="8" Background="#FFC0F602" FontSize="40" Foreground="#FF007AFF"/>
         <Button  Content="{Binding BackButtonContent}" Background="#FF203FC0"  Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3" FontSize="30" Foreground="Yellow" >
             <Button.InputBindings>
                 <MouseBinding Command="{Binding BackButtonClickCommand}" MouseAction="LeftClick"/>
             </Button.InputBindings>
         </Button>
+        <Button Grid.ColumnSpan="6" Grid.Row="6"  Content="{Binding TrainingText}" Grid.Column="1" Grid.RowSpan="8" Background="#FFC0F602" FontSize="40" Foreground="#FF0473EB"/>
     </Grid>
 </Window>

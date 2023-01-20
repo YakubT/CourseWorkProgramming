@@ -109,6 +109,7 @@
     <Compile Include="src\main\cs\Models\Enemy.cs" />
     <Compile Include="src\main\cs\ViewModels\PlayClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\ShuttdownCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\UkrainianLabelClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\BackButtonClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\ChooseLevelUkrainianLanguageImplementor.cs" />
@@ -269,6 +270,7 @@
     <Resource Include="src\main\resources\img\keys-removebg-preview.png" />
     <Resource Include="src\main\resources\img\mouse-removebg-preview.png" />
     <Resource Include="src\main\resources\img\mouse-removebg-preview-removebg-preview.png" />
+    <Resource Include="src\main\cs\Views\krestik.png" />
     <Content Include="src\main\resources\sounds\exploison.wav" />
     <Resource Include="src\main\resources\img\fire.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

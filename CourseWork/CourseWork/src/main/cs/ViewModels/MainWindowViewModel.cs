@@ -34,6 +34,8 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public Window Window { get; }
 
+        public ShuttdownCommand ShutDown { get; }
+
         public string ColorOfUkrLabel
         {
             get => colorOfUkrLabel;
@@ -84,7 +86,7 @@ namespace CourseWork.src.main.cs.ViewModels
             Label2Click = new EnglishLabelClickCommand(this);
             GuideClickCommand = new GuideClickCommand(this);
             PlayClickCommand = new PlayClickCommand(this);
-
+            ShutDown = new ShuttdownCommand();
         }
 
         public void UpdateLanguge()

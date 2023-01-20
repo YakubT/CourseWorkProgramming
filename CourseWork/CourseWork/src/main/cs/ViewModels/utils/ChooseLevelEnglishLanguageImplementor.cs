@@ -13,6 +13,7 @@ namespace CourseWork.src.main.cs.ViewModels.utils
         {
             ViewModel.TitleText = "Levels";
             ViewModel.BackButtonContent = "Back";
+            ViewModel.TrainingText = "Training";
         }
     }
 }

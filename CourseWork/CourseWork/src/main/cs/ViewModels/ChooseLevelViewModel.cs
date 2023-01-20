@@ -17,6 +17,9 @@ namespace CourseWork.src.main.cs.ViewModels
         private string titleText;
 
         private string backButtonContent;
+
+        private string trainingText;
+
         public Window Window { get; }
 
         public string BackButtonContent
@@ -26,6 +29,16 @@ namespace CourseWork.src.main.cs.ViewModels
             {
                 backButtonContent = value;
                 OnPropertyChanged(nameof(BackButtonContent));
+            }
+        }
+
+        public string TrainingText
+        {
+            get => trainingText;
+            set
+            {
+                trainingText = value;
+                OnPropertyChanged(nameof(TrainingText));
             }
         }
 
@@ -45,10 +58,12 @@ namespace CourseWork.src.main.cs.ViewModels
         {
             dictionary["EN"] = new ChooseLevelEnglishLanguageImplementor();
             dictionary["UA"] = new ChooseLevelUkrainianLanguageImplementor();
-            string s = new PropertiesUtil(GlobalGonstants.file).getValue("language");
+            PropertiesUtil properties = new PropertiesUtil(GlobalGonstants.file);
+            string s = properties.getValue("language");
             dictionary[s].UpdateLanguage(this);
             BackButtonClickCommand = new BackButtonClickCommand(this);
             Window = window;
+
         }
     }
 }
