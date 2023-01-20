@@ -26,12 +26,15 @@ namespace CourseWork.src.main.cs.utility
             string s;
             while ((s = streamReader.ReadLine()) != null)
             {
-                string keytmp = s.Split('=')[0];
-                keytmp = keytmp.Substring(0, keytmp.Length - 1).Replace(" ", "");
-                if (keytmp.Equals(key))
+                if (s != "")
                 {
-                    streamReader.Close();
-                    return s.Split('=')[1].Substring(1).Replace(" ", "");
+                    string keytmp = s.Split('=')[0];
+                    keytmp = keytmp.Substring(0, keytmp.Length - 1).Replace(" ", "");
+                    if (keytmp.Equals(key))
+                    {
+                        streamReader.Close();
+                        return s.Split('=')[1].Substring(1).Replace(" ", "");
+                    }
                 }
             }
             streamReader.Close();
@@ -57,14 +60,14 @@ namespace CourseWork.src.main.cs.utility
                         }
                         else
                         {
-                            res += keytmp;
+                            res += s;
                         }
                         res += "\n";
                     }
                 }
                 streamReader.Close();
                 StreamWriter streamWriter = new StreamWriter(file);
-                streamWriter.WriteLine(res);
+                streamWriter.WriteLine(res+key+" = "+value+"\n");
                 streamWriter.Close();
             }
             else

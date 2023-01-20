@@ -108,7 +108,12 @@
     <Compile Include="src\main\cs\Models\Dron1.cs" />
     <Compile Include="src\main\cs\Models\Enemy.cs" />
     <Compile Include="src\main\cs\ViewModels\PlayClickCommand.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILevelState.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\LevelState0.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\LevelState3.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\LevelState2.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\LevelState1.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\ShuttdownCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\UkrainianLabelClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\BackButtonClickCommand.cs" />
