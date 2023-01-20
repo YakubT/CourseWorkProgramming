@@ -107,6 +107,7 @@
     <Compile Include="src\main\cs\Models\AbstractDron.cs" />
     <Compile Include="src\main\cs\Models\Dron1.cs" />
     <Compile Include="src\main\cs\Models\Enemy.cs" />
+    <Compile Include="src\main\cs\ViewModels\PlayClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\UkrainianLabelClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\BackButtonClickCommand.cs" />

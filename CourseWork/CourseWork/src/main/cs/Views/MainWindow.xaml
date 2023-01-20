@@ -154,10 +154,14 @@
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Grid.ColumnSpan="11" Content="{Binding ButtonPlayText}" FontSize ="31" Grid.Column="7"  Grid.Row="5" Grid.RowSpan="6"/>
+        <Button Grid.ColumnSpan="11" Content="{Binding ButtonPlayText}" FontSize ="31" Grid.Column="7"  Grid.Row="5" Grid.RowSpan="6">
+            <Button.InputBindings>
+                <MouseBinding Command="{Binding PlayClickCommand}" MouseAction="LeftClick"/>
+            </Button.InputBindings>
+        </Button>
         <Button Grid.ColumnSpan="11" Content="{Binding ButtonGuideText}" FontSize ="31" Grid.Column="7"  Grid.Row="13" Grid.RowSpan="6">
             <Button.InputBindings>
-                <MouseBinding Command="{Binding GuideClick }" MouseAction="LeftClick"/>
+                <MouseBinding Command="{Binding GuideClickCommand}" MouseAction="LeftClick"/>
             </Button.InputBindings>
         </Button>
                 <Label Content="Language:" Grid.RowSpan="3"  Grid.Row="1" FontSize ="22" Grid.Column="1" Grid.ColumnSpan="10" Foreground="#FFE8D7D7"/>

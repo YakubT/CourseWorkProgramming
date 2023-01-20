@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseWork.src.main.cs.Views"
         mc:Ignorable="d"
-        Title="ChooseLevel" Height="450" Width="800" Background="#FF253A0D" WindowStyle="None">
+        Title="ChooseLevel" Height="450" Width="800" Background="#FF253A0D" WindowStyle="None" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition>
@@ -157,7 +157,7 @@
         <Button Grid.ColumnSpan="6" Content="Button" Grid.Column="17" Grid.Row="9" Grid.RowSpan="8"/>
         <Button  Content="{Binding BackButtonContent}" Background="#FF203FC0"  Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3" FontSize="30" Foreground="Yellow" >
             <Button.InputBindings>
-                <MouseBinding Command="{Binding BackButtonClick}" MouseAction="LeftClick"/>
+                <MouseBinding Command="{Binding BackButtonClickCommand}" MouseAction="LeftClick"/>
             </Button.InputBindings>
         </Button>
     </Grid>

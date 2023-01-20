@@ -28,7 +28,9 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public EnglishLabelClickCommand Label2Click { get; }
 
-        public GuideClickCommand GuideClick { get; }
+        public GuideClickCommand GuideClickCommand { get; }
+
+        public PlayClickCommand PlayClickCommand { get; }
 
         public Window Window { get; }
 
@@ -80,7 +82,8 @@ namespace CourseWork.src.main.cs.ViewModels
             UpdateLanguge();
             Label1Click = new UkrainianLabelClickCommand(this);
             Label2Click = new EnglishLabelClickCommand(this);
-            GuideClick = new GuideClickCommand(this);
+            GuideClickCommand = new GuideClickCommand(this);
+            PlayClickCommand = new PlayClickCommand(this);
 
         }
 
