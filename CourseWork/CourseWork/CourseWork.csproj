@@ -279,6 +279,13 @@
     <Resource Include="src\main\resources\img\krestik.png" />
     <Resource Include="src\main\resources\img\galochka-removebg-preview.png" />
     <Resource Include="src\main\resources\img\rauta_news_2022-02-28-1.jpg" />
+    <Resource Include="src\main\resources\img\vidsik.png" />
+    <Resource Include="src\main\resources\img\vidsik1.png" />
+    <Resource Include="src\main\resources\img\vidsik2.png" />
+    <Resource Include="src\main\cs\Views\vidsik1.png" />
+    <Resource Include="src\main\resources\img\vidsik3.png" />
+    <Resource Include="src\main\resources\img\frame.png" />
+    <Resource Include="src\main\cs\Views\frame.png" />
     <Content Include="src\main\resources\sounds\exploison.wav" />
     <Resource Include="src\main\resources\img\fire.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

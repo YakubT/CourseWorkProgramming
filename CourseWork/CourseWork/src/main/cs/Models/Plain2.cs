@@ -15,7 +15,7 @@ namespace CourseWork.src.main.cs.Models
         public Plain2(FieldViewModel viewModel) : base(viewModel) {  }
         protected override void SetDisplayProperty()
         {
-            width = 3.3;
+            width = 3.5;
             height = 1.4;
             maxHealth = health = 3;
             sprite1 = viewModel.flyWeightSprites[5].GetBitmap;
