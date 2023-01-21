@@ -48,6 +48,7 @@ namespace CourseWork.src.main.cs.utility
                 StreamReader streamReader = new StreamReader(file);
                 string s;
                 string res = "";
+                bool f = false;
                 while ((s = streamReader.ReadLine()) != null)
                 {
                     if (s != "")
@@ -57,6 +58,7 @@ namespace CourseWork.src.main.cs.utility
                         if (keytmp.Equals(key))
                         {
                             res += key + " = " + value;
+                            f = true;
                         }
                         else
                         {
@@ -67,7 +69,14 @@ namespace CourseWork.src.main.cs.utility
                 }
                 streamReader.Close();
                 StreamWriter streamWriter = new StreamWriter(file);
-                streamWriter.WriteLine(res+key+" = "+value+"\n");
+                if (!f)
+                {
+                    streamWriter.WriteLine(res + key + " = " + value + "\n");
+                }
+                else
+                {
+                    streamWriter.WriteLine(res);
+                }
                 streamWriter.Close();
             }
             else

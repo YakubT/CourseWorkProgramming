@@ -276,9 +276,9 @@
     <Resource Include="src\main\resources\img\keys-removebg-preview.png" />
     <Resource Include="src\main\resources\img\mouse-removebg-preview.png" />
     <Resource Include="src\main\resources\img\mouse-removebg-preview-removebg-preview.png" />
-    <Resource Include="src\main\cs\Views\krestik.png" />
-    <Resource Include="src\main\cs\Views\galochka-removebg-preview.png" />
-    <Resource Include="src\main\cs\Views\rauta_news_2022-02-28-1.jpg" />
+    <Resource Include="src\main\resources\img\krestik.png" />
+    <Resource Include="src\main\resources\img\galochka-removebg-preview.png" />
+    <Resource Include="src\main\resources\img\rauta_news_2022-02-28-1.jpg" />
     <Content Include="src\main\resources\sounds\exploison.wav" />
     <Resource Include="src\main\resources\img\fire.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
