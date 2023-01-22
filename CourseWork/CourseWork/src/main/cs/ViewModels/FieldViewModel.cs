@@ -45,9 +45,11 @@ namespace CourseWork.src.main.cs.ViewModels
 
         private uint wheelType;
 
-        private int fontsize;
+        private double fontsize;
 
         private int posOfFrame;
+
+        private string labelContent;
 
         public double Angle
         {
@@ -69,7 +71,7 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
-        public int FontSize
+        public double FontSize
         {
             get => fontsize;
             set
@@ -89,6 +91,16 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
+        public string LabelContent
+        {
+            get => labelContent;
+            set
+            {
+                labelContent = value;
+                OnPropertyChanged(nameof(LabelContent));
+            }
+        }
+
         DispatcherTimer dispatcherTimer;
         public FieldViewModel(Window window)
         {
@@ -96,13 +108,14 @@ namespace CourseWork.src.main.cs.ViewModels
             RotateGunCommand = new GunRotateCommand(this);
             PatronStartFly = new PatronStartFlyCommand(this);
             WheelScroll = new ChangeWeaponCommand(this);
-            FontSize = (int) (window.ActualHeight / GlobalConstants.rowCount);
             WheelType = 0;
         }
         
         public void StartTraining()
         {
-
+            FontSize = 0.5 * (window.ActualHeight / GlobalConstants.rowCount);
+            const double time = GameStateSingleton.reloadTime;
+            LabelContent = new PropertiesUtil(GlobalConstants.file).getValue("language").Equals("UA") ? "Інтервал між пострілами - " +time.ToString() + " с." : "The interval between shots is " + time.ToString()+ " s.";
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
             CreatorEmeny[] creators = new CreatorEmeny[3];

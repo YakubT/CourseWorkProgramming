@@ -198,5 +198,6 @@
         <Label Content=" 7" Grid.Column="21" Grid.Row="23" FontSize="{Binding FontSize}"/>
         <Label Content=" 6" Grid.Column="22" Grid.Row="23" FontSize="{Binding FontSize}"/>
         <Rectangle Grid.Column="{Binding PosOfFrame}" Grid.Row="20" Grid.RowSpan="2" Stroke="#FFEB0505" StrokeThickness="3"/>
+        <Label Content="{Binding LabelContent}" Grid.Column="19" Grid.Row="19" Grid.ColumnSpan="5" FontSize="{Binding FontSize}" FontWeight="Bold" Background="#FF08F61C" Foreground="#FFFA0404"/>
     </Grid>
 </Window>

@@ -18,7 +18,7 @@ namespace CourseWork.src.main.cs.Models
         private bool isReloaded =true;
         public bool IsReloaded { get=>isReloaded; }
 
-        private const double reloadTime = 0.7; //in seconds
+        public const double reloadTime = 0.7; //in seconds
 
         public void Reload()
         {

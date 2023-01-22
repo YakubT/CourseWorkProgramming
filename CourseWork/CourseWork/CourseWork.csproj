@@ -112,7 +112,7 @@
     <Compile Include="src\main\cs\Models\ProxyPatron1.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron2.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron3.cs" />
-    <Compile Include="src\main\cs\ViewModels\PlayClickCommand.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\PlayClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILevelState.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\LevelState0.cs" />
@@ -152,7 +152,7 @@
     <Compile Include="src\main\cs\Models\utility\PhysicalConstants.cs" />
     <Compile Include="src\main\cs\Models\Vector.cs" />
     <Compile Include="src\main\cs\utility\GlobalConstants.cs" />
-    <Compile Include="src\main\cs\utility\Properties.cs" />
+    <Compile Include="src\main\cs\utility\PropertiesUtil.cs" />
     <Compile Include="src\main\cs\ViewModels\ChooseLevelViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\FieldViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\BaseViewModel.cs" />
