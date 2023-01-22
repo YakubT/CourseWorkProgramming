@@ -16,9 +16,6 @@
         <i:EventTrigger EventName="MouseLeftButtonDown">
             <i:InvokeCommandAction Command="{Binding PatronStartFly}"/>
         </i:EventTrigger>
-        <i:EventTrigger EventName="MouseWheel">
-            <i:InvokeCommandAction Command="{Binding WheelScroll}" PassEventArgsToCommand="True"/>
-        </i:EventTrigger>
         <i:EventTrigger EventName="MouseRightButtonDown">
             <i:InvokeCommandAction Command="{Binding WheelScroll}" PassEventArgsToCommand="True"/>
         </i:EventTrigger>
@@ -200,5 +197,6 @@
         <Label Content=" 20" Grid.Column="20" Grid.Row="23" FontSize="{Binding FontSize}"/>
         <Label Content=" 7" Grid.Column="21" Grid.Row="23" FontSize="{Binding FontSize}"/>
         <Label Content=" 6" Grid.Column="22" Grid.Row="23" FontSize="{Binding FontSize}"/>
+        <Rectangle Grid.Column="{Binding PosOfFrame}" Grid.Row="20" Grid.RowSpan="2" Stroke="#FFEB0505" StrokeThickness="3"/>
     </Grid>
 </Window>

@@ -16,7 +16,7 @@ namespace CourseWork.src.main.cs.Models
 {
     public abstract class Enemy
     {
-        public double heightOfFly;
+       
 
         protected FlyDirectionState[] flyDirectionState;
 
@@ -47,6 +47,8 @@ namespace CourseWork.src.main.cs.Models
         public double Width { get => width; }
 
         public bool IsFromRight { get; set; }
+
+        public double HeightOfFly { get; set; }
 
         public Vector Coordinates { get => coordinates; }
 
@@ -115,7 +117,7 @@ namespace CourseWork.src.main.cs.Models
         {
             SetSpeed();
             SetDisplayProperty();
-            coordinates.Y = heightOfFly;
+            coordinates.Y = HeightOfFly;
             ExecuteBodyMethod();
             
         }

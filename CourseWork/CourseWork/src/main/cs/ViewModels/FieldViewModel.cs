@@ -43,9 +43,11 @@ namespace CourseWork.src.main.cs.ViewModels
         
         private double angle;
 
-        private uint wheelType = 0;
+        private uint wheelType;
 
         private int fontsize;
+
+        private int posOfFrame;
 
         public double Angle
         {
@@ -60,7 +62,11 @@ namespace CourseWork.src.main.cs.ViewModels
         public uint WheelType
         {
             get => wheelType;
-            set => wheelType = value;
+            set
+            {
+                wheelType = value;
+                PosOfFrame = 20 + (int)wheelType;
+            }
         }
 
         public int FontSize
@@ -73,6 +79,16 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
+        public int PosOfFrame
+        {
+            get => posOfFrame;
+            set
+            {
+                posOfFrame = value;
+                OnPropertyChanged(nameof(posOfFrame));
+            }
+        }
+
         DispatcherTimer dispatcherTimer;
         public FieldViewModel(Window window)
         {
@@ -81,6 +97,7 @@ namespace CourseWork.src.main.cs.ViewModels
             PatronStartFly = new PatronStartFlyCommand(this);
             WheelScroll = new ChangeWeaponCommand(this);
             FontSize = (int) (window.ActualHeight / GlobalConstants.rowCount);
+            WheelType = 0;
         }
         
         public void StartTraining()
@@ -98,11 +115,11 @@ namespace CourseWork.src.main.cs.ViewModels
                 Enemy plain = creators[rnd.Next(3)].Create();
                 if (plain is AbstractDron)
                 {
-                    plain.heightOfFly = rnd.Next(15, 18) + rnd.NextDouble();
+                    plain.HeightOfFly = rnd.Next(15, 18) + rnd.NextDouble();
                 }
                 else
                 {
-                    plain.heightOfFly = rnd.Next(18, 22) + rnd.NextDouble();
+                    plain.HeightOfFly = rnd.Next(18, 22) + rnd.NextDouble();
                 }
                 plain.viewModel = this;
                 plain.IsFromRight = Convert.ToBoolean(rnd.Next(2));
