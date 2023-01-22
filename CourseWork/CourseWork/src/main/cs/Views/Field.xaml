@@ -194,11 +194,11 @@
         <Image  Grid.Column="20" Grid.Row="23" Source="frame.png" Stretch="Fill"/>
         <Image  Grid.Column="21" Grid.Row="23" Source="frame.png" Stretch="Fill"/>
         <Image  Grid.Column="22" Grid.Row="23" Source="frame.png" Stretch="Fill"/>
-        <Label Content=" 10" Grid.Column="20" Grid.Row="22" FontSize="16"/>
-        <Label Content=" 5" Grid.Column="21" Grid.Row="22" FontSize="16"/>
-        <Label Content=" 2" Grid.Column="22" Grid.Row="22" FontSize="16"/>
-        <Label Content=" 20" Grid.Column="20" Grid.Row="23" FontSize="16"/>
-        <Label Content=" 7" Grid.Column="21" Grid.Row="23" FontSize="16"/>
-        <Label Content=" 6" Grid.Column="22" Grid.Row="23" FontSize="16"/>
+        <Label Content=" 10" Grid.Column="20" Grid.Row="22" FontSize="{Binding FontSize}"/>
+        <Label Content=" 5" Grid.Column="21" Grid.Row="22" FontSize="{Binding FontSize}"/>
+        <Label Content=" 2" Grid.Column="22" Grid.Row="22" FontSize="{Binding FontSize}"/>
+        <Label Content=" 20" Grid.Column="20" Grid.Row="23" FontSize="{Binding FontSize}"/>
+        <Label Content=" 7" Grid.Column="21" Grid.Row="23" FontSize="{Binding FontSize}"/>
+        <Label Content=" 6" Grid.Column="22" Grid.Row="23" FontSize="{Binding FontSize}"/>
     </Grid>
 </Window>

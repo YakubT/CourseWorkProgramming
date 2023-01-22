@@ -27,7 +27,7 @@ namespace CourseWork.src.main.cs.ViewModels.utils
 
         public void Execute(object parameter)
         {
-            PropertiesUtil properties = new PropertiesUtil(GlobalGonstants.file);
+            PropertiesUtil properties = new PropertiesUtil(GlobalConstants.file);
             properties.setValue("language", "EN");
             receiver.UpdateLanguge();
         }

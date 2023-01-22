@@ -40,7 +40,7 @@ namespace CourseWork.src.main.cs.ViewModels
             this.window = window;
             dictionary["UA"] = new UkrainianLanguageGuide();
             dictionary["EN"] = new EnglishLanguageGuide();
-            dictionary[new PropertiesUtil(GlobalGonstants.file).getValue("language")].UpdateLanguage(this);
+            dictionary[new PropertiesUtil(GlobalConstants.file).getValue("language")].UpdateLanguage(this);
             BackButtonClick = new BackButtonClickCommand(this);
         }
     }

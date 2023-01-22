@@ -127,7 +127,7 @@ namespace CourseWork.src.main.cs.ViewModels
             levelStates[1] = new LevelState1();
             levelStates[2] = new LevelState2();
             levelStates[3] = new LevelState3();
-            PropertiesUtil properties = new PropertiesUtil(GlobalGonstants.file);
+            PropertiesUtil properties = new PropertiesUtil(GlobalConstants.file);
             string s = properties.getValue("language");
             dictionary[s].UpdateLanguage(this);
             BackButtonClickCommand = new BackButtonClickCommand(this);

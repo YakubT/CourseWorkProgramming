@@ -1,4 +1,5 @@
 ﻿using CourseWork.src.main.cs.Models.utility;
+using CourseWork.src.main.cs.utility;
 using CourseWork.src.main.cs.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -48,8 +49,8 @@ namespace CourseWork.src.main.cs.Models
             flyDirectionState[Convert.ToInt32(IsFromRight)].StartFlyPreprocessing(this);
             Image img = new Image();
             img.Source = sprite;
-            img.Width = Width * viewModel.Window.ActualWidth / 24;
-            img.Height = Height * viewModel.Window.ActualHeight / 24;
+            img.Width = Width * viewModel.Window.ActualWidth / GlobalConstants.columnCount;
+            img.Height = Height * viewModel.Window.ActualHeight / GlobalConstants.rowCount;
             img.Stretch = Stretch.Fill;
             Grid grid = (Grid)viewModel.Window.FindName("grid");
             CanvasUtility.addToGrid(img, grid);
@@ -61,13 +62,13 @@ namespace CourseWork.src.main.cs.Models
             CanvasUtility.addToGrid(healthBar.blackBar, grid);
             CanvasUtility.addToGrid(healthBar.indicator, grid);
             healthBar.blackBar.Width = healthBar.indicator.Width = img.Width / 2;
-            healthBar.blackBar.Height = healthBar.indicator.Height = 0.3 * viewModel.Window.ActualHeight / 24;
+            healthBar.blackBar.Height = healthBar.indicator.Height = 0.3 * viewModel.Window.ActualHeight / GlobalConstants.rowCount;
             img.HorizontalAlignment = HorizontalAlignment.Left;
             img.VerticalAlignment = VerticalAlignment.Bottom;
             DispatcherTimer timer = new DispatcherTimer();
             healthBar.indicator.Fill = new SolidColorBrush(Colors.Green);
-            img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
-            healthBar.indicator.Margin = healthBar.blackBar.Margin = new Thickness((coordinates.X + width / 4) * viewModel.Window.ActualWidth / 24.0, 0, 0, (coordinates.Y + 0.8) * viewModel.Window.ActualHeight / 24.0);
+            img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / GlobalConstants.columnCount, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / GlobalConstants.rowCount);
+            healthBar.indicator.Margin = healthBar.blackBar.Margin = new Thickness((coordinates.X + width / 4) * viewModel.Window.ActualWidth / GlobalConstants.columnCount, 0, 0, (coordinates.Y + 0.8) * viewModel.Window.ActualHeight / GlobalConstants.rowCount);
             img.RenderTransformOrigin = new Point(0, 0);
             timer.Interval = TimeSpan.FromMilliseconds(15);
             img.Visibility = Visibility.Visible;
@@ -77,8 +78,8 @@ namespace CourseWork.src.main.cs.Models
             timer.Tick += async (sender, e) =>
             {
                 coordinates.X += speed * timer.Interval.TotalSeconds;
-                img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
-                healthBar.indicator.Margin = healthBar.blackBar.Margin = new Thickness((coordinates.X + width / 4) * viewModel.Window.ActualWidth / 24.0, 0, 0, (coordinates.Y + 0.8) * viewModel.Window.ActualHeight / 24.0);
+                img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / GlobalConstants.columnCount, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / GlobalConstants.rowCount);
+                healthBar.indicator.Margin = healthBar.blackBar.Margin = new Thickness((coordinates.X + width / 4) * viewModel.Window.ActualWidth / GlobalConstants.columnCount, 0, 0, (coordinates.Y + 0.8) * viewModel.Window.ActualHeight / GlobalConstants.rowCount);
                 healthBar.indicator.Width = Math.Max(health / maxHealth * healthBar.blackBar.Width, 0);
 
                 if (health <= 0)

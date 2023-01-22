@@ -94,12 +94,12 @@ namespace CourseWork.src.main.cs.ViewModels
             string s = "";
             try
             {
-                s = new PropertiesUtil(GlobalGonstants.file).getValue("language");
+                s = new PropertiesUtil(GlobalConstants.file).getValue("language");
             }
             catch(Exception e)
             {
                 s = "UA";
-                new PropertiesUtil(GlobalGonstants.file).setValue("language", s);
+                new PropertiesUtil(GlobalConstants.file).setValue("language", s);
             }
             dictionary[s].UpdateLanguage(this);
         }

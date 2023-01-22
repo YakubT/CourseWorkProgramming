@@ -1,5 +1,6 @@
 ﻿using CourseWork.src.main.cs.Models;
 using CourseWork.src.main.cs.Models.utility;
+using CourseWork.src.main.cs.utility;
 using CourseWork.src.main.cs.ViewModels.utils;
 using CourseWork.src.main.cs.ViewModels.utils.interfaces;
 using System;
@@ -18,7 +19,7 @@ namespace CourseWork.src.main.cs.ViewModels
 {
    
     public class FieldViewModel : BaseViewModel, ICloseableWindow
-    {
+    { 
         public FlyWeightSprite[] flyWeightSprites = {new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket1.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket2.png", UriKind.Relative))),
             new  FlyWeightSprite (new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket3.png", UriKind.Relative))),
@@ -42,7 +43,9 @@ namespace CourseWork.src.main.cs.ViewModels
         
         private double angle;
 
-        private uint wheelType = 0; 
+        private uint wheelType = 0;
+
+        private int fontsize;
 
         public double Angle
         {
@@ -60,6 +63,16 @@ namespace CourseWork.src.main.cs.ViewModels
             set => wheelType = value;
         }
 
+        public int FontSize
+        {
+            get => fontsize;
+            set
+            {
+                fontsize = value;
+                OnPropertyChanged(nameof(FontSize));
+            }
+        }
+
         DispatcherTimer dispatcherTimer;
         public FieldViewModel(Window window)
         {
@@ -67,7 +80,7 @@ namespace CourseWork.src.main.cs.ViewModels
             RotateGunCommand = new GunRotateCommand(this);
             PatronStartFly = new PatronStartFlyCommand(this);
             WheelScroll = new ChangeWeaponCommand(this);
-
+            FontSize = (int) (window.ActualHeight / GlobalConstants.rowCount);
         }
         
         public void StartTraining()
@@ -155,18 +168,18 @@ namespace CourseWork.src.main.cs.ViewModels
             v4 = new Models.Vector();
             v5 = new Models.Vector();
             v6 = new Models.Vector();
-            v1.X = abstractPatron.Coordinates.X + abstractPatron.Height * window.ActualHeight / 24.0 / 2.0 * cos;
-            v1.Y = abstractPatron.Coordinates.Y + abstractPatron.Height * window.ActualHeight / 24.0 / 2.0 * sin;
-            v2.X = abstractPatron.Coordinates.X - abstractPatron.Height * window.ActualHeight / 24.0 / 2.0 * cos;
-            v2.Y = abstractPatron.Coordinates.Y - abstractPatron.Height * window.ActualHeight / 24.0 / 2.0 * sin;
-            v3.X = abstractPlain.Coordinates.X * window.ActualWidth / 24.0;
-            v3.Y = abstractPlain.Coordinates.Y * window.ActualHeight / 24.0;
-            v4.X = (abstractPlain.Coordinates.X + abstractPlain.Width) * window.ActualWidth / 24.0;
-            v4.Y = abstractPlain.Coordinates.Y * window.ActualHeight / 24.0;
-            v5.X = (abstractPlain.Coordinates.X) * window.ActualWidth / 24.0;
-            v5.Y = (abstractPlain.Coordinates.Y - abstractPlain.Height) * window.ActualHeight / 24.0;
-            v6.X = (abstractPlain.Coordinates.X+abstractPlain.Width) * window.ActualWidth / 24.0;
-            v6.Y = (abstractPlain.Coordinates.Y - abstractPlain.Height) * window.ActualHeight / 24.0;
+            v1.X = abstractPatron.Coordinates.X + abstractPatron.Height * window.ActualHeight / GlobalConstants.rowCount / 2.0 * cos;
+            v1.Y = abstractPatron.Coordinates.Y + abstractPatron.Height * window.ActualHeight / GlobalConstants.rowCount / 2.0 * sin;
+            v2.X = abstractPatron.Coordinates.X - abstractPatron.Height * window.ActualHeight / GlobalConstants.rowCount / 2.0 * cos;
+            v2.Y = abstractPatron.Coordinates.Y - abstractPatron.Height * window.ActualHeight / GlobalConstants.rowCount / 2.0 * sin;
+            v3.X = abstractPlain.Coordinates.X * window.ActualWidth / GlobalConstants.rowCount;
+            v3.Y = abstractPlain.Coordinates.Y * window.ActualHeight / GlobalConstants.rowCount;
+            v4.X = (abstractPlain.Coordinates.X + abstractPlain.Width) * window.ActualWidth / GlobalConstants.columnCount;
+            v4.Y = abstractPlain.Coordinates.Y * window.ActualHeight / GlobalConstants.rowCount;
+            v5.X = (abstractPlain.Coordinates.X) * window.ActualWidth / GlobalConstants.columnCount;
+            v5.Y = (abstractPlain.Coordinates.Y - abstractPlain.Height) * window.ActualHeight / GlobalConstants.rowCount;
+            v6.X = (abstractPlain.Coordinates.X+abstractPlain.Width) * window.ActualWidth / GlobalConstants.columnCount;
+            v6.Y = (abstractPlain.Coordinates.Y - abstractPlain.Height) * window.ActualHeight / GlobalConstants.rowCount;
             Models.Vector vec = new Models.Vector(v2.X - v1.X, v2.Y - v1.Y);
             Models.Vector perp = new Models.Vector(v2.Y - v1.Y, -v2.X + v1.X) * abstractPatron.Width*0.5* (1.0 / Math.Sqrt((v2.Y - v1.Y) * (v2.Y - v1.Y) + (v2.X - v1.X) * (v2.X - v1.X))) * (window.ActualWidth / 24.0);
             Models.Vector v1copy, v2copy;

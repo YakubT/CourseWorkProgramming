@@ -146,7 +146,7 @@
     <Compile Include="src\main\cs\Models\RightFlyDirectionState.cs" />
     <Compile Include="src\main\cs\Models\utility\PhysicalConstants.cs" />
     <Compile Include="src\main\cs\Models\Vector.cs" />
-    <Compile Include="src\main\cs\utility\GlobalGonstants.cs" />
+    <Compile Include="src\main\cs\utility\GlobalConstants.cs" />
     <Compile Include="src\main\cs\utility\Properties.cs" />
     <Compile Include="src\main\cs\ViewModels\ChooseLevelViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\FieldViewModel.cs" />
@@ -282,7 +282,6 @@
     <Resource Include="src\main\resources\img\vidsik.png" />
     <Resource Include="src\main\resources\img\vidsik1.png" />
     <Resource Include="src\main\resources\img\vidsik2.png" />
-    <Resource Include="src\main\cs\Views\vidsik1.png" />
     <Resource Include="src\main\resources\img\vidsik3.png" />
     <Resource Include="src\main\resources\img\frame.png" />
     <Resource Include="src\main\cs\Views\frame.png" />
