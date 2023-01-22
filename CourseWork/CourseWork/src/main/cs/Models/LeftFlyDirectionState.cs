@@ -10,7 +10,7 @@ namespace CourseWork.src.main.cs.Models
 {
     public class LeftFlyDirectionState : FlyDirectionState
     {
-        public void StartFlyPreprocessing(Enemy plain)
+        public void StartFlyPreprocessing(AbstractEnemy plain)
         {
             plain.PlainPutLeft();
             plain.sprite = plain.sprite1;

@@ -8,6 +8,6 @@ namespace CourseWork.src.main.cs.Models
 {
     public abstract class CreatorEmeny
     {
-        public abstract Enemy Create();
+        public abstract AbstractEnemy Create();
     }
 }

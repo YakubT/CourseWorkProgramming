@@ -8,7 +8,7 @@ namespace CourseWork.src.main.cs.Models
 {
     public class CreatorDron : CreatorEmeny
     {
-        public override Enemy Create()
+        public override AbstractEnemy Create()
         {
             return new Dron1();
         }

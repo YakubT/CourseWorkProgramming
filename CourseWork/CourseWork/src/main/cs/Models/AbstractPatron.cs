@@ -1,4 +1,5 @@
-﻿using CourseWork.src.main.cs.Models.utility;
+﻿using CourseWork.src.main.cs.Models.interfaces;
+using CourseWork.src.main.cs.Models.utility;
 using CourseWork.src.main.cs.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ using System.Windows.Threading;
 
 namespace CourseWork.src.main.cs.Models
 {
-    public abstract class AbstractPatron
+    public abstract class AbstractPatron:IPatron
     {
         protected FieldViewModel fieldViewModel;
 

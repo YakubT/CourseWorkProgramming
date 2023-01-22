@@ -9,6 +9,6 @@ namespace CourseWork.src.main.cs.Models
 {
     public interface FlyDirectionState
     {
-        void StartFlyPreprocessing(Enemy plain);
+        void StartFlyPreprocessing(AbstractEnemy plain);
     }
 }

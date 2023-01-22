@@ -97,16 +97,21 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="src\main\cs\Models\CreatorDron.cs" />
-    <Compile Include="src\main\cs\Models\CreatorPatron.cs" />
-    <Compile Include="src\main\cs\Models\CreatorPatron1.cs" />
-    <Compile Include="src\main\cs\Models\CreatorPatron3.cs" />
-    <Compile Include="src\main\cs\Models\CreatorPatron2.cs" />
+    <Compile Include="src\main\cs\Models\CreatorProxyPatron.cs" />
+    <Compile Include="src\main\cs\Models\CreatorProxyPatron1.cs" />
+    <Compile Include="src\main\cs\Models\CreatorProxyPatron3.cs" />
+    <Compile Include="src\main\cs\Models\CreatorProxyPatron2.cs" />
     <Compile Include="src\main\cs\Models\CreatorEnemy.cs" />
     <Compile Include="src\main\cs\Models\CreatorPlain2.cs" />
     <Compile Include="src\main\cs\Models\CreatorPlain1.cs" />
     <Compile Include="src\main\cs\Models\AbstractDron.cs" />
     <Compile Include="src\main\cs\Models\Dron1.cs" />
-    <Compile Include="src\main\cs\Models\Enemy.cs" />
+    <Compile Include="src\main\cs\Models\AbstractEnemy.cs" />
+    <Compile Include="src\main\cs\Models\GameStateSingleton.cs" />
+    <Compile Include="src\main\cs\Models\interfaces\IPatron.cs" />
+    <Compile Include="src\main\cs\Models\ProxyPatron1.cs" />
+    <Compile Include="src\main\cs\Models\ProxyPatron2.cs" />
+    <Compile Include="src\main\cs\Models\ProxyPatron3.cs" />
     <Compile Include="src\main\cs\ViewModels\PlayClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILevelState.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />

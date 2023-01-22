@@ -30,7 +30,7 @@ namespace CourseWork.src.main.cs.ViewModels
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/dron1.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/dron1_2.png", UriKind.Relative))),
         };
-        public List<Enemy> enemyList = new List<Enemy>();
+        public List<AbstractEnemy> enemyList = new List<AbstractEnemy>();
 
         public List<AbstractPatron> patrons = new List<AbstractPatron>();
 
@@ -109,10 +109,14 @@ namespace CourseWork.src.main.cs.ViewModels
             creators[0] = new CreatorPlain1();
             creators[1] = new CreatorPlain2();
             creators[2] = new CreatorDron();
+            GameStateSingleton gameStateSingleton = GameStateSingleton.GetInstance();
+            gameStateSingleton.cntRockets[0] = int.MaxValue;
+            gameStateSingleton.cntRockets[1] = int.MaxValue;
+            gameStateSingleton.cntRockets[2] = int.MaxValue;
             dispatcherTimer.Tick += (s, e) =>
             {
                 Random rnd = new Random();
-                Enemy plain = creators[rnd.Next(3)].Create();
+                AbstractEnemy plain = creators[rnd.Next(3)].Create();
                 if (plain is AbstractDron)
                 {
                     plain.HeightOfFly = rnd.Next(15, 18) + rnd.NextDouble();
@@ -173,7 +177,7 @@ namespace CourseWork.src.main.cs.ViewModels
             }
             return false;
         }
-        public bool check(Enemy abstractPlain, AbstractPatron abstractPatron)
+        public bool check(AbstractEnemy abstractPlain, AbstractPatron abstractPatron)
         {
             double cos = abstractPatron.Speed.X / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);
             double sin = abstractPatron.Speed.Y / Math.Sqrt(abstractPatron.Speed.X * abstractPatron.Speed.X + abstractPatron.Speed.Y * abstractPatron.Speed.Y);

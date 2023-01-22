@@ -10,7 +10,7 @@ namespace CourseWork.src.main.cs.Models
 {
     public class RightFlyDirectionState : FlyDirectionState
     {
-        public void StartFlyPreprocessing(Enemy plain)
+        public void StartFlyPreprocessing(AbstractEnemy plain)
         {
             plain.AntiSpeed();
             plain.PlainPutRight();

@@ -1,4 +1,5 @@
 ﻿using CourseWork.src.main.cs.Models;
+using CourseWork.src.main.cs.Models.interfaces;
 using CourseWork.src.main.cs.Models.utility;
 using System;
 using System.Collections.Generic;
@@ -28,11 +29,11 @@ namespace CourseWork.src.main.cs.ViewModels.utils
         }
         public void Execute(object parameter)
         {
-            CreatorPatron[] creators = new CreatorPatron[3];
-            creators[0] = new CreatorPatron1();
-            creators[1] = new CreatorPatron2();
-            creators[2] = new CreatorPatron3();
-            AbstractPatron patron = creators[receiver.WheelType].Create();
+            CreatorProxyPatron[] creators = new CreatorProxyPatron[3];
+            creators[0] = new CreatorProxyPatron1();
+            creators[1] = new CreatorProxyPatron2();
+            creators[2] = new CreatorProxyPatron3();
+            IPatron patron = creators[receiver.WheelType].Create();
             Image img = new Image();
             img.Stretch = System.Windows.Media.Stretch.Fill;
             img.Visibility = Visibility.Visible;
@@ -40,6 +41,7 @@ namespace CourseWork.src.main.cs.ViewModels.utils
             FrameworkElement o = (FrameworkElement)img;
             CanvasUtility.addToGrid(o, grid);
             patron.StartFly(receiver.Angle, img, receiver);
+            GameStateSingleton.GetInstance().Reload();
         }
     }
 }

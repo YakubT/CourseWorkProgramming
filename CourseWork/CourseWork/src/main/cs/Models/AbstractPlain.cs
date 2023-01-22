@@ -17,7 +17,7 @@ using System.Windows.Threading;
 
 namespace CourseWork.src.main.cs.Models
 {
-    public abstract class AbstractPlain:Enemy
+    public abstract class AbstractPlain:AbstractEnemy
     {
         
 

@@ -13,7 +13,7 @@ using System.Windows.Threading;
 
 namespace CourseWork.src.main.cs.Models
 {
-    public abstract class AbstractDron : Enemy
+    public abstract class AbstractDron : AbstractEnemy
     {
         protected override void finish(Grid grid, Image img)
         {

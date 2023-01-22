@@ -8,7 +8,7 @@ namespace CourseWork.src.main.cs.Models
 {
     public class CreatorPlain1:CreatorEmeny
     {
-        public override Enemy Create()
+        public override AbstractEnemy Create()
         {
             return new Plain1();
         }
