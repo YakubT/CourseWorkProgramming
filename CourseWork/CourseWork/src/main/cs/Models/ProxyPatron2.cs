@@ -18,7 +18,7 @@ namespace CourseWork.src.main.cs.Models
             {
                 patron2 = new Patron2();
             }
-            if (GameStateSingleton.GetInstance().cntRockets[0] > 0 && GameStateSingleton.GetInstance().IsReloaded)
+            if (GameStateSingleton.GetInstance().cntRockets[1] > 0 && GameStateSingleton.GetInstance().IsReloaded)
             {
                 patron2.StartFly(angle, img, link);
             }

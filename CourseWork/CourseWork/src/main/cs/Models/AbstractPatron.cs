@@ -81,9 +81,13 @@ namespace CourseWork.src.main.cs.Models
         {
             timer.Start();
         }
+
+        public abstract void reduceRocket(FieldViewModel link);
+            
         public void StartFly(double angle, Image img, FieldViewModel link)
         {
-            
+            reduceRocket(link);
+
             fieldViewModel = link;
             SoundPlayer soundPlayer = new SoundPlayer();
             soundPlayer.Stream = Properties.Resources.boom1;

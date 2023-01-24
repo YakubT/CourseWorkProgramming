@@ -79,6 +79,18 @@ namespace CourseWork.src.main.cs.ViewModels
 
         private string patronInfoVisibility;
 
+        private string rocket1Cnt;
+
+        private string rocket1MaxCnt;
+
+        private string rocket2Cnt;
+
+        private string rocket2MaxCnt;
+
+        private string rocket3Cnt;
+
+        private string rocket3MaxCnt;
+
         public double Angle
         {
             get => angle;
@@ -177,6 +189,68 @@ namespace CourseWork.src.main.cs.ViewModels
                 OnPropertyChanged(GoToWindowsBtnContent);
             }
         }
+
+        public string Rocket1Cnt
+        {
+            get => rocket1Cnt;
+            set
+            {
+                rocket1Cnt = value;
+                OnPropertyChanged(nameof(Rocket1Cnt));
+            }
+        }
+
+        public string Rocket2Cnt
+        {
+            get => rocket2Cnt;
+            set
+            {
+                rocket2Cnt = value;
+                OnPropertyChanged(nameof(Rocket2Cnt));
+            }
+        }
+
+        public string Rocket3Cnt
+        {
+            get => rocket3Cnt;
+            set
+            {
+                rocket3Cnt = value;
+                OnPropertyChanged(nameof(Rocket3Cnt));
+            }
+        }
+
+
+        public string Rocket1MaxCnt
+        {
+            get => rocket1MaxCnt;
+            set
+            {
+                rocket1MaxCnt = value;
+                OnPropertyChanged(nameof(Rocket1MaxCnt));
+            }
+        }
+
+        public string Rocket2MaxCnt
+        {
+            get => rocket2MaxCnt;
+            set
+            {
+                rocket2MaxCnt = value;
+                OnPropertyChanged(nameof(Rocket2MaxCnt));
+            }
+        }
+
+        public string Rocket3MaxCnt
+        {
+            get => rocket3MaxCnt;
+            set
+            {
+                rocket3MaxCnt = value;
+                OnPropertyChanged(nameof(Rocket3MaxCnt));
+            }
+        }
+
         public void UpdateLanguge()
         {
             string s = "";
@@ -260,6 +334,19 @@ namespace CourseWork.src.main.cs.ViewModels
             };
             dispatcherTimer2.Start();
         }
+
+        public void StartLevel1()
+        {
+            FontSize = 0.5 * (window.ActualHeight / GlobalConstants.rowCount);
+            GameStateSingleton gameStateSingleton = GameStateSingleton.GetInstance();
+            gameStateSingleton.cntMaxRockets[0] = gameStateSingleton.cntRockets[0] = 10;
+            gameStateSingleton.cntMaxRockets[1] = gameStateSingleton.cntRockets[1] = 6;
+            gameStateSingleton.cntMaxRockets[2] = gameStateSingleton.cntRockets[2] = 2;
+            Rocket1MaxCnt = Rocket1Cnt = " "+gameStateSingleton.cntRockets[0].ToString();
+            Rocket2MaxCnt = Rocket2Cnt = " "+gameStateSingleton.cntRockets[1].ToString();
+            Rocket3MaxCnt = Rocket3Cnt = " "+gameStateSingleton.cntRockets[2].ToString();
+        }
+            
         public double Soriented(Models.Vector a,Models.Vector b, Models.Vector c)
         {
             return (a.X - b.X) * (b.Y + a.Y) / 2.0+(c.X - a.X) * (c.Y + a.Y) / 2.0+ (b.X - c.X) * (b.Y + c.Y) / 2.0;

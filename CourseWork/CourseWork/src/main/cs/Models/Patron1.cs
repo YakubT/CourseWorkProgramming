@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseWork.src.main.cs.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,12 @@ namespace CourseWork.src.main.cs.Models
         {
             p = 40;
             SetSpeedUsingAngleAndModule(p, angle);
+        }
+
+        public override void reduceRocket(FieldViewModel link)
+        {
+            GameStateSingleton.GetInstance().cntRockets[0]--;
+            link.Rocket1Cnt =" "+GameStateSingleton.GetInstance().cntRockets[0].ToString();
         }
     }
 }

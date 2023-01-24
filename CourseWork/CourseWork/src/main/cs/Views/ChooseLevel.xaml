@@ -153,7 +153,9 @@
         </Grid.ColumnDefinitions>
         <Label Content="{Binding TitleText}" Grid.Column="10" Grid.ColumnSpan="6" Grid.Row="1"   Grid.RowSpan="6" Foreground="#FF003FF0" FontSize="72"/>
         <Button Grid.ColumnSpan="5" Content="1" Grid.Column="1" Grid.Row="15" Grid.RowSpan="6" Background="#FFC0F602" FontSize="40" Foreground="#FF0473EB">
-           
+            <Button.InputBindings>
+                <MouseBinding Command="{Binding Level1Click}" MouseAction="LeftClick"/>
+            </Button.InputBindings>
         </Button>
         <Button Grid.ColumnSpan="5" Content="2" Grid.Column="9" Grid.Row="15" Grid.RowSpan="6" Background="#FFC0F602" FontSize="40" Foreground="#FF0373EE" IsEnabled="{Binding IsEnabledLevel2}"/>
         <Button Grid.ColumnSpan="5" Content="3" Grid.Column="17" Grid.Row="15" Grid.RowSpan="6" Background="#FFC0F602" FontSize="40" Foreground="#FF007AFF" IsEnabled="{Binding IsEnabledLevel3}"/>

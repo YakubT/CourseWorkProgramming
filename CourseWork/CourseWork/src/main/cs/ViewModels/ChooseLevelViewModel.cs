@@ -118,9 +118,12 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public StartTrainingCommand StartTrainingCommand { get; }
 
+        public Level1Click Level1Click { get; }
+
         public ChooseLevelViewModel(Window window)
         {
             StartTrainingCommand = new StartTrainingCommand(this);
+            Level1Click = new Level1Click(this);
             dictionary["EN"] = new ChooseLevelEnglishLanguageImplementor();
             dictionary["UA"] = new ChooseLevelUkrainianLanguageImplementor();
             levelStates[0] = new LevelState0();
@@ -140,7 +143,7 @@ namespace CourseWork.src.main.cs.ViewModels
             }
             int levelPassed = int.Parse(levelHighest);
             levelStates[levelPassed].setStateOfButtons(this);
-
+          
         }
     }
 }

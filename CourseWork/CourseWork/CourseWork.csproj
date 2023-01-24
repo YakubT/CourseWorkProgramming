@@ -111,6 +111,7 @@
     <Compile Include="src\main\cs\ViewModels\utils\EnLanguageField.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILanguageField.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\Level1Click.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\PauseCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\PlayClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILevelState.cs" />
