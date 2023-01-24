@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="CourseWork.exe.manifest" size="5872">
+    <dependentAssembly dependencyType="install" codebase="CourseWork.exe.manifest" size="5188">
       <assemblyIdentity name="CourseWork.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Qam9Kula8U2qvJGBNWX0UiqNzjkReMl+zzhAodc4tG0=</dsig:DigestValue>
+        <dsig:DigestValue>k78MLAP3aWcd37QTc98+zd30kEBAmwLpqq6QZztsbIg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

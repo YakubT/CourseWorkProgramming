@@ -64,6 +64,7 @@
                 <MouseBinding Command="{Binding BackButtonClick}" MouseAction="LeftClick"/>
             </Button.InputBindings>
         </Button>
+        <Image  Grid.Row = "1" Grid.Column="6" Stretch="Fill" Source="/CourseWork;component/src/main/resources/img/Esc.png"/>
     </Grid>
     <Window.InputBindings>
         <KeyBinding Command="{Binding BackButtonClick}" Key="Esc"/>

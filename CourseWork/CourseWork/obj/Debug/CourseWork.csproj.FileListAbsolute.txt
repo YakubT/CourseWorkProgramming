@@ -23,8 +23,6 @@ C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgram
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\CourseWork.application
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\CourseWork.exe.manifest
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\CourseWork.application
-C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\nunit.framework.dll
-C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\nunit.framework.xml
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\NUnit3.TestAdapter.dll
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\NUnit3.TestAdapter.pdb
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\bin\Debug\nunit.engine.dll
