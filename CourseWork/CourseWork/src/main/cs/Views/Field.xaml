@@ -16,6 +16,9 @@
         <i:EventTrigger EventName="MouseLeftButtonDown">
             <i:InvokeCommandAction Command="{Binding PatronStartFly}"/>
         </i:EventTrigger>
+        <i:EventTrigger EventName="KeyDown">
+            <i:InvokeCommandAction Command="{Binding WheelScroll}" PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
         <i:EventTrigger EventName="MouseRightButtonDown">
             <i:InvokeCommandAction Command="{Binding WheelScroll}" PassEventArgsToCommand="True"/>
         </i:EventTrigger>
