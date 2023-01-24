@@ -77,6 +77,8 @@ namespace CourseWork.src.main.cs.ViewModels
 
         private string goToWindowsBtnContent;
 
+        private string patronInfoVisibility;
+
         public double Angle
         {
             get => angle;
@@ -107,6 +109,15 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
+        public string PatronInfoVisibility
+        {
+            get => patronInfoVisibility;
+            set
+            {
+                patronInfoVisibility = value;
+                OnPropertyChanged(nameof(PatronInfoVisibility));
+            }
+        }
         public int PosOfFrame
         {
             get => posOfFrame;
@@ -196,10 +207,12 @@ namespace CourseWork.src.main.cs.ViewModels
             bridge["UA"] = new UkrLanguageField();
             GameStateSingleton.GetInstance().Ispause = false;
             UpdateLanguge();
+            PatronInfoVisibility = "Visible";
         }
         
         public void StartTraining()
         {
+            PatronInfoVisibility = "Hidden";
             FontSize = 0.5 * (window.ActualHeight / GlobalConstants.rowCount);
             const double time = GameStateSingleton.reloadTime;
             LabelContent = new PropertiesUtil(GlobalConstants.file).getValue("language").Equals("UA") ? "Інтервал між пострілами - " +time.ToString() + " с." : "The interval between shots is " + time.ToString()+ " s.";

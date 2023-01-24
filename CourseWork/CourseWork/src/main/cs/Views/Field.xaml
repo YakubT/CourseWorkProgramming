@@ -189,18 +189,18 @@
         <Image  Grid.Column="20"  Grid.Row="20" Grid.RowSpan="2" Source="/CourseWork;component/src/main/resources/img/vidsik1.png" Stretch="Fill"/>
         <Image  Grid.Column="21"  Grid.Row="20" Grid.RowSpan="2" Source="/CourseWork;component/src/main/resources/img/vidsik2.png" Stretch="Fill"/>
         <Image  Grid.Column="22"  Grid.Row="20" Grid.RowSpan="2" Source="/CourseWork;component/src/main/resources/img/vidsik3.png" Stretch="Fill"/>
-        <Image  Grid.Column="20" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill"/>
-        <Image  Grid.Column="21" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill"/>
-        <Image  Grid.Column="22" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill"/>
-        <Image  Grid.Column="20" Grid.Row="23" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill"/>
-        <Image  Grid.Column="21" Grid.Row="23" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill"/>
-        <Image  Grid.Column="22" Grid.Row="23" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill"/>
-        <Label Content=" 10" Grid.Column="20" Grid.Row="22" FontSize="{Binding FontSize}"/>
-        <Label Content=" 5" Grid.Column="21" Grid.Row="22" FontSize="{Binding FontSize}"/>
-        <Label Content=" 2" Grid.Column="22" Grid.Row="22" FontSize="{Binding FontSize}"/>
-        <Label Content=" 20" Grid.Column="20" Grid.Row="23" FontSize="{Binding FontSize}"/>
-        <Label Content=" 7" Grid.Column="21" Grid.Row="23" FontSize="{Binding FontSize}"/>
-        <Label Content=" 6" Grid.Column="22" Grid.Row="23" FontSize="{Binding FontSize}"/>
+        <Image  Grid.Column="20" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="21" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="22" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="20" Grid.Row="23" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="21" Grid.Row="23" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="22" Grid.Row="23" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content=" 10" Grid.Column="20" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content=" 5" Grid.Column="21" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content=" 2" Grid.Column="22" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content=" 20" Grid.Column="20" Grid.Row="23" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content=" 7" Grid.Column="21" Grid.Row="23" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content=" 6" Grid.Column="22" Grid.Row="23" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
         <Rectangle Grid.Column="{Binding PosOfFrame}" Grid.Row="20" Grid.RowSpan="2" Stroke="#FFEB0505" StrokeThickness="3"/>
         <Label Content="{Binding LabelContent}" Grid.Column="19" Grid.Row="19" Grid.ColumnSpan="5" FontSize="{Binding FontSize}" FontWeight="Bold" Background="#FF08F61C" Foreground="#FFFA0404"/>
         <Rectangle Grid.ColumnSpan="11" Grid.Column="7" Fill="#FF0202F1"  Grid.Row="5" Grid.RowSpan="13" Visibility="{Binding PauseMenuVisibility}"/>
