@@ -289,6 +289,9 @@
     <Resource Include="src\main\resources\img\vidsik3.png" />
     <Resource Include="src\main\resources\img\frame.png" />
     <Resource Include="src\main\resources\img\Esc.png" />
+    <Resource Include="src\main\resources\img\dron_frame.png" />
+    <Resource Include="src\main\resources\img\plan1_frame.png" />
+    <Resource Include="src\main\resources\img\plain3_frame.png" />
     <Content Include="src\main\resources\sounds\exploison.wav" />
     <Resource Include="src\main\resources\img\fire.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

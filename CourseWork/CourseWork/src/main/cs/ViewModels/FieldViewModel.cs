@@ -388,17 +388,19 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public void StartEnemy (AbstractEnemy plain, int time)
         {
-            if (!GameStateSingleton.GetInstance().Ispause)
-            {
-                DispatcherTimer dispatcherTimer3 = new DispatcherTimer();
+            
+            DispatcherTimer dispatcherTimer3 = new DispatcherTimer();
                 dispatcherTimer3.Interval = TimeSpan.FromSeconds(time);
                 dispatcherTimer3.Tick += (s, e) =>
                 {
-                    plain.Fly();
-                    dispatcherTimer3.Stop();
+                    if (!GameStateSingleton.GetInstance().Ispause) {
+                        plain.Fly();
+                        dispatcherTimer3.Stop();
+                    }
+                       
                 };
+
                 dispatcherTimer3.Start();
-            }
         }
 
         public void Refresh()
