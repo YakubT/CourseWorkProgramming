@@ -251,6 +251,72 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
+        private string plain1MaxCnt;
+        public string Plain1MaxCnt
+        {
+            get => plain1MaxCnt;
+            set
+            {
+                plain1MaxCnt = value;
+                OnPropertyChanged(nameof(Plain1MaxCnt));
+            }
+        }
+
+        private string plain2MaxCnt;
+        public string Plain2MaxCnt
+        {
+            get => plain2MaxCnt;
+            set
+            {
+                plain2MaxCnt = value;
+                OnPropertyChanged(nameof(Plain2MaxCnt));
+            }
+        }
+
+        private string plain3MaxCnt;
+        public string Plain3MaxCnt
+        {
+            get => plain3MaxCnt;
+            set
+            {
+                plain3MaxCnt = value;
+                OnPropertyChanged(nameof(Plain3MaxCnt));
+            }
+        }
+
+        private string plain1Cnt;
+        public string Plain1Cnt
+        {
+            get => plain1Cnt;
+            set
+            {
+                plain1Cnt = value;
+                OnPropertyChanged(nameof(Plain1Cnt));
+            }
+        }
+
+        private string plain2Cnt;
+        public string Plain2Cnt
+        {
+            get => plain2Cnt;
+            set
+            {
+                plain2Cnt = value;
+                OnPropertyChanged(nameof(Plain2Cnt));
+            }
+        }
+
+        private string plain3Cnt;
+        public string Plain3Cnt
+        {
+            get => plain3Cnt;
+            set
+            {
+                plain3Cnt = value;
+                OnPropertyChanged(nameof(Plain3Cnt));
+            }
+        }
+
         public void UpdateLanguge()
         {
             string s = "";
@@ -316,6 +382,27 @@ namespace CourseWork.src.main.cs.ViewModels
                 plain.Fly();
             };
             dispatcherTimer.Start();
+
+            Refresh();
+        }
+
+        public void StartEnemy (AbstractEnemy plain, int time)
+        {
+            if (!GameStateSingleton.GetInstance().Ispause)
+            {
+                DispatcherTimer dispatcherTimer3 = new DispatcherTimer();
+                dispatcherTimer3.Interval = TimeSpan.FromSeconds(time);
+                dispatcherTimer3.Tick += (s, e) =>
+                {
+                    plain.Fly();
+                    dispatcherTimer3.Stop();
+                };
+                dispatcherTimer3.Start();
+            }
+        }
+
+        public void Refresh()
+        {
             DispatcherTimer dispatcherTimer2 = new DispatcherTimer();
             dispatcherTimer2.Interval = TimeSpan.FromMilliseconds(1);
             dispatcherTimer2.Tick += (s, e) =>
@@ -334,7 +421,6 @@ namespace CourseWork.src.main.cs.ViewModels
             };
             dispatcherTimer2.Start();
         }
-
         public void StartLevel1()
         {
             FontSize = 0.5 * (window.ActualHeight / GlobalConstants.rowCount);
@@ -345,8 +431,53 @@ namespace CourseWork.src.main.cs.ViewModels
             Rocket1MaxCnt = Rocket1Cnt = " "+gameStateSingleton.cntRockets[0].ToString();
             Rocket2MaxCnt = Rocket2Cnt = " "+gameStateSingleton.cntRockets[1].ToString();
             Rocket3MaxCnt = Rocket3Cnt = " "+gameStateSingleton.cntRockets[2].ToString();
+            gameStateSingleton.cntMaxPlains[1] = gameStateSingleton.cntPlains[1] = 8;
+            Plain2Cnt = Plain2MaxCnt = " " + gameStateSingleton.cntMaxPlains[1].ToString();
+            Refresh();
+            Plain1 plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 18;
+            plain1.IsFromRight=false;
+            StartEnemy(plain1,3);
+            plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 19;
+            plain1.IsFromRight = false;
+            StartEnemy(plain1,7);
+            plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 18;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1,14);
+            plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 21;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 17);
+            plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 22;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 20);
+            plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 20;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 24);
+
+            plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 21;
+            plain1.IsFromRight = false;
+            StartEnemy(plain1, 27);
+
+            plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 22;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 31);
         }
-            
+        
         public double Soriented(Models.Vector a,Models.Vector b, Models.Vector c)
         {
             return (a.X - b.X) * (b.Y + a.Y) / 2.0+(c.X - a.X) * (c.Y + a.Y) / 2.0+ (b.X - c.X) * (b.Y + c.Y) / 2.0;

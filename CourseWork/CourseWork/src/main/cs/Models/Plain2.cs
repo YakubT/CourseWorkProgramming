@@ -26,5 +26,10 @@ namespace CourseWork.src.main.cs.Models
         {
             speed = 8.5;
         }
+        protected override void reduceEnemy()
+        {
+            GameStateSingleton.GetInstance().cntPlains[2]--;
+            viewModel.Plain3Cnt = " " + GameStateSingleton.GetInstance().cntPlains[2].ToString();
+        }
     }
 }

@@ -15,6 +15,11 @@ namespace CourseWork.src.main.cs.Models
 
         public int[] cntRockets = new int[3];
 
+        public int[] cntMaxPlains = new int[3];
+
+        public int[] cntPlains = new int[3];
+
+
         private bool isReloaded =true;
         public bool IsReloaded { get=>isReloaded; }
 

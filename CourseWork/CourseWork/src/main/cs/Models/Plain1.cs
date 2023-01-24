@@ -12,6 +12,13 @@ namespace CourseWork.src.main.cs.Models
     {
         public Plain1():base() {}
         public Plain1(FieldViewModel viewModel) : base(viewModel) { }
+
+        protected override void reduceEnemy()
+        {
+            GameStateSingleton.GetInstance().cntPlains[1]--;
+            viewModel.Plain2Cnt = " "+GameStateSingleton.GetInstance().cntPlains[1].ToString();
+        }
+
         protected override void SetDisplayProperty()
         {
             width = 3;

@@ -98,8 +98,10 @@ namespace CourseWork.src.main.cs.Models
              timer.Start();
         }
 
+        protected abstract void reduceEnemy();
         protected void end(Image bah, Image img, Grid grid)
         {
+            
             bah.Stretch = Stretch.Fill;
             bah.Source = new BitmapImage(new Uri("\\src\\main\\resources\\img\\fire.png", UriKind.Relative));
             bah.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
@@ -120,7 +122,7 @@ namespace CourseWork.src.main.cs.Models
             };
 
             timer2.Start();
-
+            reduceEnemy();
         }
 
         public abstract void ExecuteBodyMethod();
