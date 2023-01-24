@@ -35,7 +35,6 @@ namespace CourseWork.src.main.cs.Models
             img.HorizontalAlignment = HorizontalAlignment.Left;
             img.VerticalAlignment = VerticalAlignment.Bottom;
             img.Stretch = Stretch.Fill;
-            DispatcherTimer timer = new DispatcherTimer();
             img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / 24.0, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / 24.0);
             img.RenderTransformOrigin = new Point(0, 0);
             CanvasUtility.addToGrid(img, grid);

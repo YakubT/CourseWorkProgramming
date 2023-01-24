@@ -21,6 +21,8 @@ namespace CourseWork.src.main.cs.Models
     {
         protected FieldViewModel fieldViewModel;
 
+        private DispatcherTimer timer = new DispatcherTimer();
+
         protected double demage;
 
         protected double p;
@@ -54,8 +56,7 @@ namespace CourseWork.src.main.cs.Models
         protected abstract void SetStartSpeed(double angle);
 
         protected abstract void SetDisplayProperites();
-
-        DispatcherTimer timer;
+        
 
         Image img2;
         public void Abort(FieldViewModel link)
@@ -70,8 +71,14 @@ namespace CourseWork.src.main.cs.Models
             link.patrons.Remove(this);
             timer.Stop();
         }
+
+        public void Pause(FieldViewModel fieldViewModel)
+        {
+            timer.Stop();
+        }
         public void StartFly(double angle, Image img, FieldViewModel link)
         {
+            
             fieldViewModel = link;
             SoundPlayer soundPlayer = new SoundPlayer();
             soundPlayer.Stream = Properties.Resources.boom1;
@@ -80,7 +87,6 @@ namespace CourseWork.src.main.cs.Models
             SetDisplayProperites();
             img2 = img;
             img.Source = this.img;
-             timer = new DispatcherTimer();
             speed.X *= (link.Window.ActualWidth / 24.0);
             speed.Y *= (link.Window.ActualWidth / 24.0);
             timer.Interval = TimeSpan.FromMilliseconds(20);
@@ -96,6 +102,7 @@ namespace CourseWork.src.main.cs.Models
             img.RenderTransformOrigin = new Point(0.5, 0.5);
             img.Visibility = Visibility.Hidden;
             link.patrons.Add(this);
+            link.PauseEvent += Pause;
             timer.Tick += (object sender, EventArgs e) => 
             {
                 speed.Y -= PhysicalConstants.g*(link.Window.ActualWidth / 24.0) * timer.Interval.Milliseconds/1000.0; 

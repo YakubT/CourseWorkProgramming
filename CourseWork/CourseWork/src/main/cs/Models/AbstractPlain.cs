@@ -65,7 +65,6 @@ namespace CourseWork.src.main.cs.Models
             healthBar.blackBar.Height = healthBar.indicator.Height = 0.3 * viewModel.Window.ActualHeight / GlobalConstants.rowCount;
             img.HorizontalAlignment = HorizontalAlignment.Left;
             img.VerticalAlignment = VerticalAlignment.Bottom;
-            DispatcherTimer timer = new DispatcherTimer();
             healthBar.indicator.Fill = new SolidColorBrush(Colors.Green);
             img.Margin = new Thickness(coordinates.X * viewModel.Window.ActualWidth / GlobalConstants.columnCount, 0, 0, coordinates.Y * viewModel.Window.ActualHeight / GlobalConstants.rowCount);
             healthBar.indicator.Margin = healthBar.blackBar.Margin = new Thickness((coordinates.X + width / 4) * viewModel.Window.ActualWidth / GlobalConstants.columnCount, 0, 0, (coordinates.Y + 0.8) * viewModel.Window.ActualHeight / GlobalConstants.rowCount);

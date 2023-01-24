@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseWork.src.main.cs.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,8 @@ namespace CourseWork.src.main.cs.ViewModels.utils
         }
         public void Execute(object parameter)
         {
+            if (GameStateSingleton.GetInstance().Ispause)
+                return;
             try
             {
                 Dictionary<Key, int> dictionary = new Dictionary<Key, int>();

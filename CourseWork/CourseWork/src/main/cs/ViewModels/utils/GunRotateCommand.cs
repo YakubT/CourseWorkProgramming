@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseWork.src.main.cs.Models;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -25,6 +26,9 @@ namespace CourseWork.src.main.cs.ViewModels.utils
         }
         public void Execute(object parameter)
         {
+            if (GameStateSingleton.GetInstance().Ispause)
+                return;
+
             double xGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunX"]);
             double yGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunY"]);
             double heightGun = Convert.ToDouble(ConfigurationManager.AppSettings["GunHeight"]);

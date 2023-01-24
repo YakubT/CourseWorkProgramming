@@ -19,7 +19,15 @@ namespace CourseWork.src.main.cs.ViewModels
 {
    
     public class FieldViewModel : BaseViewModel, ICloseableWindow
-    { 
+    {
+        private DispatcherTimer dispatcherTimer = new DispatcherTimer();
+
+        public delegate void PauseEventHandler (FieldViewModel field);
+
+        public event PauseEventHandler PauseEvent;
+
+        public event PauseEventHandler ResumeEvent;
+
         public FlyWeightSprite[] flyWeightSprites = {new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket1.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket2.png", UriKind.Relative))),
             new  FlyWeightSprite (new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket3.png", UriKind.Relative))),
@@ -40,6 +48,9 @@ namespace CourseWork.src.main.cs.ViewModels
         public PatronStartFlyCommand PatronStartFly { get; }
 
         public ChangeWeaponCommand WheelScroll { get; }
+
+        public PauseCommand PauseCommand { get; }
+
         
         private double angle;
 
@@ -101,13 +112,13 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
-        DispatcherTimer dispatcherTimer;
         public FieldViewModel(Window window)
         {
             this.window = window;
             RotateGunCommand = new GunRotateCommand(this);
             PatronStartFly = new PatronStartFlyCommand(this);
             WheelScroll = new ChangeWeaponCommand(this);
+            PauseCommand = new PauseCommand(this);
             WheelType = 0;
         }
         
@@ -116,7 +127,6 @@ namespace CourseWork.src.main.cs.ViewModels
             FontSize = 0.5 * (window.ActualHeight / GlobalConstants.rowCount);
             const double time = GameStateSingleton.reloadTime;
             LabelContent = new PropertiesUtil(GlobalConstants.file).getValue("language").Equals("UA") ? "Інтервал між пострілами - " +time.ToString() + " с." : "The interval between shots is " + time.ToString()+ " s.";
-            dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
             CreatorEmeny[] creators = new CreatorEmeny[3];
             creators[0] = new CreatorPlain1();
@@ -231,6 +241,27 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public Window Window { get => window; }
 
+        public void Pause()
+        {
+            if (PauseEvent != null)
+            {
+                PauseEvent.Invoke(this);
+            }
+            GameStateSingleton gameStateSingleton = GameStateSingleton.GetInstance();
+            gameStateSingleton.Ispause = true;
+            dispatcherTimer.Stop();
+        }
+
+        public void Resume()
+        {
+            if (ResumeEvent!=null)
+            {
+                ResumeEvent.Invoke(this);
+            }
+            GameStateSingleton gameStateSingleton = GameStateSingleton.GetInstance();
+            gameStateSingleton.Ispause = false;
+            dispatcherTimer.Start();
+        }
        
     }
 

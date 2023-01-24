@@ -18,6 +18,7 @@
         </i:EventTrigger>
         <i:EventTrigger EventName="KeyDown">
             <i:InvokeCommandAction Command="{Binding WheelScroll}" PassEventArgsToCommand="True"/>
+            <i:InvokeCommandAction Command="{Binding PauseCommand}" PassEventArgsToCommand="True"/>
         </i:EventTrigger>
         <i:EventTrigger EventName="MouseRightButtonDown">
             <i:InvokeCommandAction Command="{Binding WheelScroll}" PassEventArgsToCommand="True"/>

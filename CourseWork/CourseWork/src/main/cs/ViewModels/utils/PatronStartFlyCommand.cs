@@ -29,6 +29,8 @@ namespace CourseWork.src.main.cs.ViewModels.utils
         }
         public void Execute(object parameter)
         {
+            if (GameStateSingleton.GetInstance().Ispause)
+                return;
             CreatorProxyPatron[] creators = new CreatorProxyPatron[3];
             creators[0] = new CreatorProxyPatron1();
             creators[1] = new CreatorProxyPatron2();

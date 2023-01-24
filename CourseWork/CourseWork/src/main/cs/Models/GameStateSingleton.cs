@@ -20,6 +20,8 @@ namespace CourseWork.src.main.cs.Models
 
         public const double reloadTime = 0.7; //in seconds
 
+        public bool Ispause =false;
+
         public void Reload()
         {
             isReloaded = false;

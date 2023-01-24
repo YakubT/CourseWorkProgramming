@@ -16,7 +16,7 @@ namespace CourseWork.src.main.cs.Models
 {
     public abstract class AbstractEnemy
     {
-       
+        protected DispatcherTimer timer = new DispatcherTimer();
 
         protected FlyDirectionState[] flyDirectionState;
 
@@ -87,6 +87,11 @@ namespace CourseWork.src.main.cs.Models
 
         protected abstract void finish(Grid grid, Image img);
 
+        private void Pause(FieldViewModel fieldViewModel)
+        {
+            timer.Stop();
+        }
+
         protected void end(Image bah, Image img, Grid grid)
         {
             bah.Stretch = Stretch.Fill;
@@ -118,6 +123,7 @@ namespace CourseWork.src.main.cs.Models
             SetSpeed();
             SetDisplayProperty();
             coordinates.Y = HeightOfFly;
+            viewModel.PauseEvent += Pause;
             ExecuteBodyMethod();
             
         }
