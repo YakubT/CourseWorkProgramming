@@ -18,7 +18,7 @@ using System.Windows.Threading;
 namespace CourseWork.src.main.cs.ViewModels
 {
    
-    public class FieldViewModel : BaseViewModel, ICloseableWindow
+    public class FieldViewModel : BaseViewModel,ICloseableWindow
     {
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
@@ -27,6 +27,8 @@ namespace CourseWork.src.main.cs.ViewModels
         public event PauseEventHandler PauseEvent;
 
         public event PauseEventHandler ResumeEvent;
+
+        private Dictionary <string,ILanguageField> bridge = new Dictionary<string, ILanguageField>();
 
         public FlyWeightSprite[] flyWeightSprites = {new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket1.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket2.png", UriKind.Relative))),
@@ -51,7 +53,12 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public PauseCommand PauseCommand { get; }
 
-        
+        public ResumeCommand ResumeCommand { get; }
+
+        public ShuttdownCommand ShuttdownCommand { get; }
+
+        public BackButtonClickCommand BackButtonClickCommand { get; }
+
         private double angle;
 
         private uint wheelType;
@@ -61,6 +68,14 @@ namespace CourseWork.src.main.cs.ViewModels
         private int posOfFrame;
 
         private string labelContent;
+
+        private string pauseMenuVisibility;
+
+        private string goToMenuBtnContent;
+
+        private string goToGameBtnContent;
+
+        private string goToWindowsBtnContent;
 
         public double Angle
         {
@@ -112,6 +127,59 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
+        public string PauseMenuVisibility
+        {
+            get => pauseMenuVisibility;
+            set
+            {
+                pauseMenuVisibility = value;
+                OnPropertyChanged(nameof(pauseMenuVisibility));
+            }
+        }
+
+        public string GoToMenuBtnContent
+        {
+            get =>  goToMenuBtnContent;
+            set
+            {
+                goToMenuBtnContent = value;
+                OnPropertyChanged(GoToMenuBtnContent);
+            }
+        }
+
+        public string GoToGameBtnContent
+        {
+            get => goToGameBtnContent;
+            set
+            {
+                goToGameBtnContent = value;
+                OnPropertyChanged(GoToGameBtnContent);
+            }
+        }
+
+        public string GoToWindowsBtnContent
+        {
+            get => goToWindowsBtnContent;
+            set
+            {
+                goToWindowsBtnContent = value;
+                OnPropertyChanged(GoToWindowsBtnContent);
+            }
+        }
+        public void UpdateLanguge()
+        {
+            string s = "";
+            try
+            {
+                s = new PropertiesUtil(GlobalConstants.file).getValue("language");
+            }
+            catch (Exception e)
+            {
+                s = "UA";
+                new PropertiesUtil(GlobalConstants.file).setValue("language", s);
+            }
+            bridge[s].UpdateLanguage(this);
+        }
         public FieldViewModel(Window window)
         {
             this.window = window;
@@ -119,7 +187,15 @@ namespace CourseWork.src.main.cs.ViewModels
             PatronStartFly = new PatronStartFlyCommand(this);
             WheelScroll = new ChangeWeaponCommand(this);
             PauseCommand = new PauseCommand(this);
+            ResumeCommand = new ResumeCommand(this);
+            ShuttdownCommand = new ShuttdownCommand();
+            BackButtonClickCommand = new BackButtonClickCommand(this);
             WheelType = 0;
+            PauseMenuVisibility = "Hidden";
+            bridge["EN"] = new EnLanguageField();
+            bridge["UA"] = new UkrLanguageField();
+            GameStateSingleton.GetInstance().Ispause = false;
+            UpdateLanguge();
         }
         
         public void StartTraining()

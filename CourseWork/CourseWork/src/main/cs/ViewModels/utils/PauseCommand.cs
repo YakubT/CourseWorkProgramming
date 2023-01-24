@@ -30,6 +30,7 @@ namespace CourseWork.src.main.cs.ViewModels.utils
             if (((KeyEventArgs)parameter).Key.Equals(Key.Escape))
             {
                 receiver.Pause();
+                receiver.PauseMenuVisibility = "Visible";
             }
            
         }

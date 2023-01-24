@@ -92,6 +92,12 @@ namespace CourseWork.src.main.cs.Models
             timer.Stop();
         }
 
+        private void Resume(FieldViewModel fieldViewModel)
+        {
+            if (viewModel.enemyList.Contains(this))
+             timer.Start();
+        }
+
         protected void end(Image bah, Image img, Grid grid)
         {
             bah.Stretch = Stretch.Fill;
@@ -124,6 +130,7 @@ namespace CourseWork.src.main.cs.Models
             SetDisplayProperty();
             coordinates.Y = HeightOfFly;
             viewModel.PauseEvent += Pause;
+            viewModel.ResumeEvent += Resume;
             ExecuteBodyMethod();
             
         }

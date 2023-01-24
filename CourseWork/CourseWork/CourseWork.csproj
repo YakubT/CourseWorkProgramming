@@ -112,10 +112,12 @@
     <Compile Include="src\main\cs\Models\ProxyPatron1.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron2.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron3.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\EnLanguageField.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILanguageField.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\PauseCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\PlayClickCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILevelState.cs" />
-    <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\LevelState0.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\LevelState3.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\LevelState2.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="src\main\cs\ViewModels\MainWindowViewModel.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\MainUkrainianLanguageImplementor.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\ChangeWeaponCommand.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\UkrLanguageField.cs" />
     <Compile Include="src\main\cs\Views\ChooseLevel.xaml.cs">
       <DependentUpon>ChooseLevel.xaml</DependentUpon>
     </Compile>

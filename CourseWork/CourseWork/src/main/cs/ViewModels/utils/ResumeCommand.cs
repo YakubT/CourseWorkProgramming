@@ -25,7 +25,9 @@ namespace CourseWork.src.main.cs.ViewModels.utils
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+            receiver.Resume();
+            receiver.PauseMenuVisibility = "Hidden";
+
         }
     }
 }

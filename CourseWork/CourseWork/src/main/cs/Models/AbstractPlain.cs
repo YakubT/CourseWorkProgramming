@@ -74,6 +74,7 @@ namespace CourseWork.src.main.cs.Models
             Image bah = new Image();
             img.RenderTransformOrigin = new Point(0, 0);
             viewModel.enemyList.Add(this);
+            bool f = true;
             timer.Tick += async (sender, e) =>
             {
                 coordinates.X += speed * timer.Interval.TotalSeconds;

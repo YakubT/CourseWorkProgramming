@@ -76,6 +76,11 @@ namespace CourseWork.src.main.cs.Models
         {
             timer.Stop();
         }
+
+        public void Resume (FieldViewModel fieldViewModel)
+        {
+            timer.Start();
+        }
         public void StartFly(double angle, Image img, FieldViewModel link)
         {
             
@@ -103,6 +108,7 @@ namespace CourseWork.src.main.cs.Models
             img.Visibility = Visibility.Hidden;
             link.patrons.Add(this);
             link.PauseEvent += Pause;
+            link.ResumeEvent += Resume;
             timer.Tick += (object sender, EventArgs e) => 
             {
                 speed.Y -= PhysicalConstants.g*(link.Window.ActualWidth / 24.0) * timer.Interval.Milliseconds/1000.0; 
