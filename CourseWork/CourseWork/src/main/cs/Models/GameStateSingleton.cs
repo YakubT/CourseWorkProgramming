@@ -17,7 +17,7 @@ namespace CourseWork.src.main.cs.Models
 
         public int[] cntMaxPlains = new int[3];
 
-        public int[] cntPlains = new int[3];
+        public int[] cntKilledPlains = new int[3];
 
         private bool isReloaded =true;
 

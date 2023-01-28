@@ -28,8 +28,8 @@ namespace CourseWork.src.main.cs.Models
         }
         protected override void reduceEnemy()
         {
-            GameStateSingleton.GetInstance().cntPlains[2]--;
-            viewModel.Plain3Cnt = " " + GameStateSingleton.GetInstance().cntPlains[2].ToString();
+            GameStateSingleton.GetInstance().cntKilledPlains[2]++;
+            viewModel.Plain3Cnt = " " + GameStateSingleton.GetInstance().cntKilledPlains[2].ToString();
         }
     }
 }

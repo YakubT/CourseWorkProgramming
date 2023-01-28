@@ -15,7 +15,7 @@ namespace CourseWork.src.main.cs.ViewModels.utils
         {
             const double time = GameStateSingleton.reloadTime;
             ViewModel.LabelContent = "Інтервал між пострілами - " + time.ToString() + "с.";
-            ViewModel.GoToGameBtnContent = "Назад до гри";
+            ViewModel.GoToGameBtnContent = "Продовжити гру";
             ViewModel.GoToMenuBtnContent = "Вийти в меню";
             ViewModel.GoToWindowsBtnContent = "Вийти з гри";
             ViewModel.RestartText = "Перезапустити";

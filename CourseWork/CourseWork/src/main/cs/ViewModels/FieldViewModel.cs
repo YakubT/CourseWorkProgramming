@@ -450,8 +450,10 @@ namespace CourseWork.src.main.cs.ViewModels
             Rocket1MaxCnt = Rocket1Cnt = " "+gameStateSingleton.cntRockets[0].ToString();
             Rocket2MaxCnt = Rocket2Cnt = " "+gameStateSingleton.cntRockets[1].ToString();
             Rocket3MaxCnt = Rocket3Cnt = " "+gameStateSingleton.cntRockets[2].ToString();
-            gameStateSingleton.cntMaxPlains[1] = gameStateSingleton.cntPlains[1] = 8;
-            Plain2Cnt = Plain2MaxCnt = " " + gameStateSingleton.cntMaxPlains[1].ToString();
+            gameStateSingleton.cntMaxPlains[1] = 8;
+            gameStateSingleton.cntKilledPlains[1] = 0;
+            Plain2MaxCnt = " " + gameStateSingleton.cntMaxPlains[1].ToString();
+            Plain1Cnt = Plain3Cnt =  Plain2Cnt = Plain1MaxCnt = Plain3MaxCnt =  " 0";
             Refresh();
             Plain1 plain1 = new Plain1();
             plain1.viewModel = this;

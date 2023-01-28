@@ -15,8 +15,8 @@ namespace CourseWork.src.main.cs.Models
 
         protected override void reduceEnemy()
         {
-            GameStateSingleton.GetInstance().cntPlains[1]--;
-            viewModel.Plain2Cnt = " "+GameStateSingleton.GetInstance().cntPlains[1].ToString();
+            GameStateSingleton.GetInstance().cntKilledPlains[1]++;
+            viewModel.Plain2Cnt = " "+GameStateSingleton.GetInstance().cntKilledPlains[1].ToString();
         }
 
         protected override void SetDisplayProperty()
