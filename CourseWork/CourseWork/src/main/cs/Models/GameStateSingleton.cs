@@ -19,13 +19,15 @@ namespace CourseWork.src.main.cs.Models
 
         public int[] cntPlains = new int[3];
 
-
         private bool isReloaded =true;
+
         public bool IsReloaded { get=>isReloaded; }
 
         public const double reloadTime = 0.7; //in seconds
 
-        public bool Ispause =false;
+        public bool Ispause = false;
+
+        public int levelLoaded;
 
         public void Reload()
         {

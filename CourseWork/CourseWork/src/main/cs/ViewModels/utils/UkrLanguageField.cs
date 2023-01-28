@@ -18,6 +18,7 @@ namespace CourseWork.src.main.cs.ViewModels.utils
             ViewModel.GoToGameBtnContent = "Назад до гри";
             ViewModel.GoToMenuBtnContent = "Вийти в меню";
             ViewModel.GoToWindowsBtnContent = "Вийти з гри";
+            ViewModel.RestartText = "Перезапустити";
         }
     }
 }

@@ -59,6 +59,8 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public BackButtonClickCommand BackButtonClickCommand { get; }
 
+        public RestartCommand RestartCommand { get; }
+
         private double angle;
 
         private uint wheelType;
@@ -317,6 +319,18 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
+        private string restartText;
+
+        public string RestartText
+        {
+            get => restartText;
+            set
+            {
+                restartText = value;
+                OnPropertyChanged(nameof(RestartText));
+            }
+        }
+
         public void UpdateLanguge()
         {
             string s = "";
@@ -348,6 +362,7 @@ namespace CourseWork.src.main.cs.ViewModels
             GameStateSingleton.GetInstance().Ispause = false;
             UpdateLanguge();
             PatronInfoVisibility = "Visible";
+            RestartCommand = new RestartCommand(this);
         }
         
         public void StartTraining()
@@ -362,6 +377,7 @@ namespace CourseWork.src.main.cs.ViewModels
             creators[1] = new CreatorPlain2();
             creators[2] = new CreatorDron();
             GameStateSingleton gameStateSingleton = GameStateSingleton.GetInstance();
+            gameStateSingleton.levelLoaded = 0;
             gameStateSingleton.cntRockets[0] = int.MaxValue;
             gameStateSingleton.cntRockets[1] = int.MaxValue;
             gameStateSingleton.cntRockets[2] = int.MaxValue;
@@ -425,6 +441,7 @@ namespace CourseWork.src.main.cs.ViewModels
         }
         public void StartLevel1()
         {
+            GameStateSingleton.GetInstance().levelLoaded = 1;
             FontSize = 0.5 * (window.ActualHeight / GlobalConstants.rowCount);
             GameStateSingleton gameStateSingleton = GameStateSingleton.GetInstance();
             gameStateSingleton.cntMaxRockets[0] = gameStateSingleton.cntRockets[0] = 10;

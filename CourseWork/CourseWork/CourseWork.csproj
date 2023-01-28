@@ -108,6 +108,7 @@
     <Compile Include="src\main\cs\Models\ProxyPatron1.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron2.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron3.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\AbsrtactRestartState.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\EnLanguageField.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILanguageField.cs" />
@@ -119,6 +120,9 @@
     <Compile Include="src\main\cs\ViewModels\utils\LevelState3.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\LevelState2.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\LevelState1.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\RestartCommand.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\RestartState0.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\RestartState1.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\ResumeCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\ShuttdownCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\StartTrainingCommand.cs" />
