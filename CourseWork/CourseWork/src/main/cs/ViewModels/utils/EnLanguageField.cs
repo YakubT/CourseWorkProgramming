@@ -13,7 +13,7 @@ namespace CourseWork.src.main.cs.ViewModels.utils
         public void UpdateLanguage(FieldViewModel ViewModel)
         {
             const double time = GameStateSingleton.reloadTime;
-            ViewModel.LabelContent = "The interval between shots is " + time.ToString() + " s.";
+            ViewModel.LabelContent = "The interval between shots is " + time.ToString() + "s.";
             ViewModel.GoToGameBtnContent = "Resume";
             ViewModel.GoToMenuBtnContent = "Go to menu";
             ViewModel.GoToWindowsBtnContent = "Close game";
