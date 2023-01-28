@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
+using System.Windows.Threading;
 
 namespace CourseWork.src.main.cs.Models
 {
@@ -32,7 +33,7 @@ namespace CourseWork.src.main.cs.Models
         public override void reduceRocket(FieldViewModel link)
         {
             GameStateSingleton.GetInstance().cntRockets[0]--;
-            link.Rocket1Cnt =" "+GameStateSingleton.GetInstance().cntRockets[0].ToString();
+            link.Rocket1Cnt = " " + GameStateSingleton.GetInstance().cntRockets[0].ToString();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace CourseWork.src.main.cs.Models
 {
@@ -21,6 +22,21 @@ namespace CourseWork.src.main.cs.Models
             if (GameStateSingleton.GetInstance().cntRockets[2] > 0 && GameStateSingleton.GetInstance().IsReloaded)
             {
                 patron3.StartFly(angle, img, link);
+            }
+            else
+            {
+                if (GameStateSingleton.GetInstance().cntRockets[2] == 0)
+                {
+                    DispatcherTimer timer = new DispatcherTimer();
+                    timer.Interval = TimeSpan.FromSeconds(1);
+                    link.AlertVisibility = "Visible";
+                    timer.Tick += (o, s) =>
+                    {
+                        link.AlertVisibility = "Hidden";
+                        timer.Stop();
+                    };
+                    timer.Start();
+                }
             }
         }
     }

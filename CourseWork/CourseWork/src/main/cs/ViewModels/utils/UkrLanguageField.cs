@@ -19,6 +19,10 @@ namespace CourseWork.src.main.cs.ViewModels.utils
             ViewModel.GoToMenuBtnContent = "Вийти в меню";
             ViewModel.GoToWindowsBtnContent = "Вийти з гри";
             ViewModel.RestartText = "Перезапустити";
+            ViewModel.EndContent = "Відбій повітряної тривоги!";
+            ViewModel.StartContent = "Увага повітряна тривога!";
+            ViewModel.GameOverContent = "Ви програли! Всі цілі НЕзнищено!";
+            ViewModel.AlertContent = "Змініть тип снарядів.";
         }
     }
 }

@@ -3,10 +3,12 @@ using CourseWork.src.main.cs.Models.utility;
 using CourseWork.src.main.cs.utility;
 using CourseWork.src.main.cs.ViewModels.utils;
 using CourseWork.src.main.cs.ViewModels.utils.interfaces;
+using CourseWork.src.main.cs.Views;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -92,6 +94,10 @@ namespace CourseWork.src.main.cs.ViewModels
         private string rocket3Cnt;
 
         private string rocket3MaxCnt;
+
+        private string endContent;
+
+        private double endFontSize;
 
         public double Angle
         {
@@ -331,6 +337,109 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
+        public double EndFontSize
+        {
+            get => endFontSize;
+            set
+            {
+                endFontSize = value;
+                OnPropertyChanged(nameof(EndFontSize));
+            }
+        }
+
+        public string EndContent
+        {
+            get => endContent;
+            set
+            {
+                endContent = value;
+                OnPropertyChanged(nameof(EndContent));
+            }
+        }
+
+        private string endVisibility;
+        public string EndVisibility
+        {
+            get => endVisibility;
+            set
+            {
+                endVisibility = value;
+                OnPropertyChanged(nameof(EndVisibility));
+            }
+        }
+
+        private string startVisibility;
+
+        public string StartVisibility
+        {
+            get => startVisibility;
+            set
+            {
+                startVisibility = value;
+                OnPropertyChanged(nameof(StartVisibility));
+            }
+        }
+
+        public string startContent;
+
+        public string StartContent
+        {
+            get => startContent;
+            set
+            {
+                startContent= value;
+                OnPropertyChanged(nameof(StartContent));
+            }
+        }
+
+        public string gameOverContent;
+
+        public string GameOverContent
+        {
+            get => gameOverContent;
+            set
+            {
+                gameOverContent = value;
+                OnPropertyChanged(nameof(GameOverContent));
+            }
+        }
+
+        public string gameOverVisibility;
+
+        public string GameOverVisibility
+        {
+            get => gameOverVisibility;
+            set
+            {
+                gameOverVisibility = value;
+                OnPropertyChanged(nameof(GameOverVisibility));
+            }
+        }
+
+        private string alertContent;
+
+        public string AlertContent
+        {
+            get => alertContent;
+            set
+            {
+                alertContent = value;
+                OnPropertyChanged(nameof(AlertContent));
+            }
+        }
+
+        private string alertVisibility;
+
+        public string AlertVisibility
+        {
+            get => alertVisibility;
+            set
+            {
+                alertVisibility = value;
+                OnPropertyChanged(nameof(AlertVisibility));
+            }
+        }
+
         public void UpdateLanguge()
         {
             string s = "";
@@ -357,12 +466,16 @@ namespace CourseWork.src.main.cs.ViewModels
             BackButtonClickCommand = new BackButtonClickCommand(this);
             WheelType = 0;
             PauseMenuVisibility = "Hidden";
+            EndVisibility = "Hidden";
             bridge["EN"] = new EnLanguageField();
             bridge["UA"] = new UkrLanguageField();
             GameStateSingleton.GetInstance().Ispause = false;
             UpdateLanguge();
+            GameOverVisibility = "Hidden";
             PatronInfoVisibility = "Visible";
             RestartCommand = new RestartCommand(this);
+            EndFontSize = 2 * Window.Height / 24;
+            AlertVisibility = "Hidden";
         }
         
         public void StartTraining()
@@ -439,6 +552,69 @@ namespace CourseWork.src.main.cs.ViewModels
             };
             dispatcherTimer2.Start();
         }
+        public void Start()
+        {
+            SoundPlayer soundPlayer = new SoundPlayer();
+            soundPlayer.Stream = Properties.Resources.alarm;
+            soundPlayer.Play();
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(7);
+            timer.Tick += (o, s) =>
+           {
+              
+               StartVisibility = "Hidden";
+               timer.Stop();
+           };
+            timer.Start();
+
+        }
+        public void GiveGameResult(int time, int level)
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            DispatcherTimer timer2 = new DispatcherTimer();
+            timer2.Interval = TimeSpan.FromSeconds(3);
+            timer2.Tick += (s, a) =>
+            {
+                ChooseLevel chooseLevel = new ChooseLevel();
+                chooseLevel.Show();
+                this.Window.Close();
+                timer2.Stop();
+            };
+            timer.Interval = TimeSpan.FromSeconds(time);
+            timer.Tick +=(s,a)=> {
+               
+                GameStateSingleton gameState = GameStateSingleton.GetInstance();
+                bool f = true;
+                const int cnt_Types_of_plains = 3;
+                for (int i = 0; i < cnt_Types_of_plains && f; i++)
+                {
+                    if (gameState.cntKilledPlains[i] != gameState.cntMaxPlains[i])
+                    {
+                        f = false;
+                    }
+                }
+
+                if (f == true)
+                {
+                    EndVisibility = "Visible";
+                    PropertiesUtil propertiesUtil = new PropertiesUtil(GlobalConstants.file);
+                    int old_level = int.Parse(propertiesUtil.getValue("level"));
+                    if (old_level < level)
+                    {
+                        propertiesUtil.setValue("level", level.ToString());
+                    }
+                    timer2.Start();
+                    
+                }
+                else
+                {
+                    GameOverVisibility = "Visible";
+                }
+                timer.Stop();
+            };
+            timer.Start();
+          
+        }
         public void StartLevel1()
         {
             GameStateSingleton.GetInstance().levelLoaded = 1;
@@ -455,48 +631,50 @@ namespace CourseWork.src.main.cs.ViewModels
             Plain2MaxCnt = " " + gameStateSingleton.cntMaxPlains[1].ToString();
             Plain1Cnt = Plain3Cnt =  Plain2Cnt = Plain1MaxCnt = Plain3MaxCnt =  " 0";
             Refresh();
+            Start();
             Plain1 plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 18;
             plain1.IsFromRight=false;
-            StartEnemy(plain1,3);
+            StartEnemy(plain1,11);
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 19;
             plain1.IsFromRight = false;
-            StartEnemy(plain1,7);
+            StartEnemy(plain1,15);
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 18;
             plain1.IsFromRight = true;
-            StartEnemy(plain1,14);
+            StartEnemy(plain1,22);
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 21;
             plain1.IsFromRight = true;
-            StartEnemy(plain1, 17);
+            StartEnemy(plain1, 25);
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 22;
             plain1.IsFromRight = true;
-            StartEnemy(plain1, 20);
+            StartEnemy(plain1, 28);
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 20;
             plain1.IsFromRight = true;
-            StartEnemy(plain1, 24);
+            StartEnemy(plain1, 32);
 
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 21;
             plain1.IsFromRight = false;
-            StartEnemy(plain1, 27);
+            StartEnemy(plain1, 35);
 
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 22;
             plain1.IsFromRight = true;
-            StartEnemy(plain1, 31);
+            StartEnemy(plain1, 39);
+            GiveGameResult(48,1);
         }
         
         public double Soriented(Models.Vector a,Models.Vector b, Models.Vector c)

@@ -18,6 +18,10 @@ namespace CourseWork.src.main.cs.ViewModels.utils
             ViewModel.GoToMenuBtnContent = "Go to menu";
             ViewModel.GoToWindowsBtnContent = "Close game";
             ViewModel.RestartText = "Restart";
+            ViewModel.EndContent = "Repulse of the air alarm!";
+            ViewModel.StartContent = "Attention air alarm!";
+            ViewModel.GameOverContent = "You lose! All targets are not neutralized!";
+            ViewModel.AlertContent = "Change the type of projectiles.";
         }
     }
 }

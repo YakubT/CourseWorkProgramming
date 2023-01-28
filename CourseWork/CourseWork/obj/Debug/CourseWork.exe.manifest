@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CourseWork.exe" size="28198840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CourseWork.exe" size="28204472">
       <assemblyIdentity name="CourseWork" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>URhw5Aa8B+6c5yNlXbZMXdTZPwRZ3D3ADPRZVLL64gk=</dsig:DigestValue>
+        <dsig:DigestValue>X3qlWlYk/ddOR2U3LNb+nQgawQTtFPmZsy7hYgRQh6M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,6 +72,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>1IGW4t1X2xbhS2AkOEXxQyix351NySTMZ7qnpLpguw8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="src\main\resources\sounds\alarm.wav" size="1286262">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Fa2lMyyDsXqDldL2/GBoPur9NA7o5o9yAPLbLVQRdUw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="src\main\resources\sounds\boom.wav" size="327784">

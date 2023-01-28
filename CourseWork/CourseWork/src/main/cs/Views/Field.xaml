@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CourseWork" xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:CourseWork" xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:viewmodels="clr-namespace:CourseWork.src.main.cs.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:FieldViewModel}"
         mc:Ignorable="d"
         Title="ППО симулятор" Height="450" Width="800" WindowStartupLocation="CenterOwner" MinWidth="800" MinHeight="450" WindowStyle="None" WindowState="Maximized">
     <Window.Background>
@@ -184,7 +184,9 @@
             </Image.RenderTransform>
 
         </Image>
-
+        
+        <Label Grid.Row="6" Grid.RowSpan="3" Grid.ColumnSpan="19" Content="{Binding AlertContent}" Grid.Column="10"  FontSize="{Binding EndFontSize}" Visibility="{Binding AlertVisibility}" Foreground="#FF022977" FontWeight="Bold"/>
+        
         <Image x:Name="car" Grid.Column="10" Grid.Row="20" Grid.ColumnSpan="6" Grid.RowSpan="4" Source="/CourseWork;component/src/main/resources/img/ppo_car.png" Stretch="Fill" Margin="0.4,0.2,33.2,0.2"/>
         <Image  Grid.Column="20"  Grid.Row="19" Grid.RowSpan="2" Source="/CourseWork;component/src/main/resources/img/vidsik1.png" Stretch="Fill"/>
         <Image  Grid.Column="21"  Grid.Row="19" Grid.RowSpan="2" Source="/CourseWork;component/src/main/resources/img/vidsik2.png" Stretch="Fill"/>
@@ -195,12 +197,12 @@
         <Image  Grid.Column="20" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
         <Image  Grid.Column="21" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
         <Image  Grid.Column="22" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Label Content="{Binding Rocket1Cnt}" Grid.Column="20" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
-        <Label Content="{Binding Rocket2Cnt}" Grid.Column="21" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
-        <Label Content="{Binding Rocket3Cnt}" Grid.Column="22" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
-        <Label Content="{Binding Rocket1MaxCnt}" Grid.Column="20" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
-        <Label Content="{Binding Rocket2MaxCnt}" Grid.Column="21" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
-        <Label Content="{Binding Rocket3MaxCnt}" Grid.Column="22" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content="{Binding Rocket1Cnt}" Grid.Column="20" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}" Foreground="#FFE70000" FontWeight="Bold"/>
+        <Label Content="{Binding Rocket2Cnt}" Grid.Column="21" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}" Foreground="#FFE70000" FontWeight="Bold"/>
+        <Label Content="{Binding Rocket3Cnt}" Grid.Column="22" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}" Foreground="#FFE70000" FontWeight="Bold"/>
+        <Label Content="{Binding Rocket1MaxCnt}" Grid.Column="20" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content="{Binding Rocket2MaxCnt}" Grid.Column="21" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content="{Binding Rocket3MaxCnt}" Grid.Column="22" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
         <Rectangle Grid.Column="{Binding PosOfFrame}" Grid.Row="19" Grid.RowSpan="2" Stroke="#FFEB0505" StrokeThickness="3"/>
         <Label Content="{Binding LabelContent}" Grid.Column="19" Grid.Row="18" Grid.ColumnSpan="5" FontSize="{Binding FontSize}" FontWeight="Bold" Background="#FF08F61C" Foreground="#FFFA0404"/>
         <Rectangle Grid.ColumnSpan="9" Grid.Column="8" Fill="#FF0202F1"  Grid.Row="5" Grid.RowSpan="13" Visibility="{Binding PauseMenuVisibility}"/>
@@ -233,14 +235,17 @@
         <Image  Grid.Column="1"  Grid.Row="20" Grid.RowSpan="1" Source="/CourseWork;component/src/main/resources/img/dron_frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
         <Image  Grid.Column="2"  Grid.Row="20" Grid.RowSpan="1" Source="/CourseWork;component/src/main/resources/img/plan1_frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
         <Image  Grid.Column="3"  Grid.Row="20" Grid.RowSpan="1" Source="/CourseWork;component/src/main/resources/img/plain3_frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="0"  Grid.Row="22" Grid.RowSpan="1" Source="/CourseWork;component/src/main/resources/img/skull.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="0"  Grid.Row="22" Grid.RowSpan="1" Source="/CourseWork;component/src/main/resources/img/skull.png" Visibility="{Binding PatronInfoVisibility}"/>
 
         <Label Content="{Binding Plain1MaxCnt}" Grid.Column="1" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
         <Label Content="{Binding Plain2MaxCnt}" Grid.Column="2" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
         <Label Content="{Binding Plain3MaxCnt}" Grid.Column="3" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
 
-        <Label Content="{Binding Plain1Cnt}" Grid.Column="1" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
-        <Label Content="{Binding Plain2Cnt}" Grid.Column="2" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
-        <Label Content="{Binding Plain3Cnt}" Grid.Column="3" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
+        <Label Content="{Binding Plain1Cnt}" Grid.Column="1" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}" Foreground="#FFE70000" FontWeight="Bold"/>
+        <Label Content="{Binding Plain2Cnt}" Grid.Column="2" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}" Foreground="#FFE70000" FontWeight="Bold"/>
+        <Label Content="{Binding Plain3Cnt}" Grid.Column="3" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}" Foreground="#FFE70000" FontWeight="Bold"/>
+        <Label Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="17" Content="{Binding EndContent}" Grid.Column="9"  FontSize="{Binding EndFontSize}" Visibility="{Binding EndVisibility}" Foreground="#FF136203" FontWeight="Bold"/>
+        <Label Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="17" Content="{Binding StartContent}" Grid.Column="9"  FontSize="{Binding EndFontSize}" Visibility="{Binding StartVisibility}" Foreground="#FFEE0404" FontWeight="Bold"/>
+        <Label Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="17" Content="{Binding GameOverContent}" Grid.Column="8"  FontSize="{Binding EndFontSize}" Visibility="{Binding GameOverVisibility}" Foreground="#FFEE0404" FontWeight="Bold"/>
     </Grid>
 </Window>
