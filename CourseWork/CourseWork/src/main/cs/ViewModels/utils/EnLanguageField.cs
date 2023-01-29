@@ -20,8 +20,9 @@ namespace CourseWork.src.main.cs.ViewModels.utils
             ViewModel.RestartText = "Restart";
             ViewModel.EndContent = "Repulse of the air alarm!";
             ViewModel.StartContent = "Attention air alarm!";
-            ViewModel.GameOverContent = "You lose! All targets are not neutralized!";
+            ViewModel.GameOverContent = "All targets are not neutralized! Try again, press ESC.";
             ViewModel.AlertContent = "Change the type of projectiles.";
+            ViewModel.MessageContent = "Pay attention to the number of planes and the number of shells!";
         }
     }
 }

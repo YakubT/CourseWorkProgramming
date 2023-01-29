@@ -440,6 +440,30 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
+        private string messageVisibility;
+
+        public string MessageVisibility
+        {
+            get => messageVisibility;
+            set
+            {
+                messageVisibility = value;
+                OnPropertyChanged(nameof(MessageVisibility));
+            }
+        }
+
+        public string messageContent;
+
+        public string MessageContent
+        {
+            get => messageContent;
+            set
+            {
+                messageContent = value;
+                OnPropertyChanged(nameof(MessageContent));
+            }
+        }
+
         public void UpdateLanguge()
         {
             string s = "";
@@ -476,6 +500,8 @@ namespace CourseWork.src.main.cs.ViewModels
             RestartCommand = new RestartCommand(this);
             EndFontSize = 2 * Window.Height / 24;
             AlertVisibility = "Hidden";
+            MessageVisibility = "Hidden";
+
         }
         
         public void StartTraining()
@@ -554,11 +580,8 @@ namespace CourseWork.src.main.cs.ViewModels
         }
         public void Start()
         {
-            SoundPlayer soundPlayer = new SoundPlayer();
-            soundPlayer.Stream = Properties.Resources.alarm;
-            soundPlayer.Play();
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(7);
+            timer.Interval = TimeSpan.FromSeconds(8);
             timer.Tick += (o, s) =>
            {
               
@@ -567,6 +590,27 @@ namespace CourseWork.src.main.cs.ViewModels
            };
             timer.Start();
 
+        }
+
+        public void SendMessage()
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            DispatcherTimer timer2 = new DispatcherTimer();
+            timer2.Interval = TimeSpan.FromSeconds(1);
+            timer2.Tick += (o, s) =>
+              {
+                  MessageVisibility = "Visible";
+                  timer2.Stop();
+              };
+            timer2.Start();
+            timer.Interval = TimeSpan.FromSeconds(7);
+            timer.Tick += (o, s) =>
+            {
+
+                MessageVisibility = "Hidden";
+                timer.Stop();
+            };
+            timer.Start();
         }
         public void GiveGameResult(int time, int level)
         {
@@ -632,6 +676,7 @@ namespace CourseWork.src.main.cs.ViewModels
             Plain1Cnt = Plain3Cnt =  Plain2Cnt = Plain1MaxCnt = Plain3MaxCnt =  " 0";
             Refresh();
             Start();
+            SendMessage();
             Plain1 plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 18;

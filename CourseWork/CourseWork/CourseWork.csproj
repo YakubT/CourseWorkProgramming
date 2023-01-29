@@ -297,7 +297,6 @@
     <Resource Include="src\main\resources\img\plan1_frame.png" />
     <Resource Include="src\main\resources\img\plain3_frame.png" />
     <Resource Include="src\main\resources\img\skull.png" />
-    <Content Include="src\main\resources\sounds\alarm.wav" />
     <Content Include="src\main\resources\sounds\exploison.wav" />
     <Resource Include="src\main\resources\img\fire.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
