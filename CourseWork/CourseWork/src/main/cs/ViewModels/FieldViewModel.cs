@@ -452,7 +452,7 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
-        public string messageContent;
+        private string messageContent;
 
         public string MessageContent
         {
@@ -461,6 +461,17 @@ namespace CourseWork.src.main.cs.ViewModels
             {
                 messageContent = value;
                 OnPropertyChanged(nameof(MessageContent));
+            }
+        }
+
+        private string endContent0;
+        public string EndContent0
+        {
+            get => endContent0;
+            set
+            {
+                endContent0 = value;
+                OnPropertyChanged(nameof(EndContent0));
             }
         }
 

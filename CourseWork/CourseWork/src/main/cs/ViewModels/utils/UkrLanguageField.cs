@@ -21,9 +21,10 @@ namespace CourseWork.src.main.cs.ViewModels.utils
             ViewModel.RestartText = "Перезапустити";
             ViewModel.EndContent = "Відбій повітряної тривоги!";
             ViewModel.StartContent = "Увага повітряна тривога!";
-            ViewModel.GameOverContent = "Всі цілі НЕзнищено! Спробуйте ще раз, натисніть ESC.";
+            ViewModel.GameOverContent = "Ви не знищили всі цілі!\nСпробуйте ще раз, натисніть ESC.";
             ViewModel.AlertContent = "Змініть тип снарядів.";
-            ViewModel.MessageContent = "Зверніть увагу на кількість літаків та кількість снарядів!";
+            ViewModel.MessageContent = "Зверніть увагу на кількість цілей та снарядів!";
+            ViewModel.EndContent0 = "Всі цілі знищено!";
         }
     }
 }

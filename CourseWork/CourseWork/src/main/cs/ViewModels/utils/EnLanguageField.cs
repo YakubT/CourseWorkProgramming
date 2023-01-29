@@ -22,7 +22,8 @@ namespace CourseWork.src.main.cs.ViewModels.utils
             ViewModel.StartContent = "Attention air alarm!";
             ViewModel.GameOverContent = "All targets are not neutralized! Try again, press ESC.";
             ViewModel.AlertContent = "Change the type of projectiles.";
-            ViewModel.MessageContent = "Pay attention to the number of planes and the number of shells!";
+            ViewModel.MessageContent = "Pay attention to the number of aims and shells!";
+            ViewModel.EndContent0 = "All targets destroyed!";
         }
     }
 }
