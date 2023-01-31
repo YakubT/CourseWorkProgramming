@@ -628,7 +628,7 @@ namespace CourseWork.src.main.cs.ViewModels
         {
             DispatcherTimer timer = new DispatcherTimer();
             DispatcherTimer timer2 = new DispatcherTimer();
-            timer2.Interval = TimeSpan.FromSeconds(3);
+            timer2.Interval = TimeSpan.FromSeconds(6);
             timer2.Tick += (s, a) =>
             {
                 ChooseLevel chooseLevel = new ChooseLevel();
@@ -735,7 +735,7 @@ namespace CourseWork.src.main.cs.ViewModels
             plain1.HeightOfFly = 22;
             plain1.IsFromRight = true;
             StartEnemy(plain1, 39);
-            GiveGameResult(48,1);
+            GiveGameResult(45,1);
         }
         
         public double Soriented(Models.Vector a,Models.Vector b, Models.Vector c)
