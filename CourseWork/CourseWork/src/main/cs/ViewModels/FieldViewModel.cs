@@ -518,6 +518,7 @@ namespace CourseWork.src.main.cs.ViewModels
         public void StartTraining()
         {
             PatronInfoVisibility = "Hidden";
+            StartVisibility = "Hidden";
             FontSize = 0.5 * (window.ActualHeight / GlobalConstants.rowCount);
             const double time = GameStateSingleton.reloadTime;
             LabelContent = new PropertiesUtil(GlobalConstants.file).getValue("language").Equals("UA") ? "Інтервал між пострілами - " +time.ToString() + " с." : "The interval between shots is " + time.ToString()+ " s.";
@@ -683,6 +684,10 @@ namespace CourseWork.src.main.cs.ViewModels
             Rocket3MaxCnt = Rocket3Cnt = " "+gameStateSingleton.cntRockets[2].ToString();
             gameStateSingleton.cntMaxPlains[1] = 8;
             gameStateSingleton.cntKilledPlains[1] = 0;
+            gameStateSingleton.cntKilledPlains[0] = 0;
+            gameStateSingleton.cntKilledPlains[2] = 0;
+            gameStateSingleton.cntMaxPlains[0] = 0;
+            gameStateSingleton.cntMaxPlains[2] = 0;
             Plain2MaxCnt = " " + gameStateSingleton.cntMaxPlains[1].ToString();
             Plain1Cnt = Plain3Cnt =  Plain2Cnt = Plain1MaxCnt = Plain3MaxCnt =  " 0";
             Refresh();
