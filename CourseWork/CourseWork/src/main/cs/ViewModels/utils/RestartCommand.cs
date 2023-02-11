@@ -20,9 +20,10 @@ namespace CourseWork.src.main.cs.ViewModels.utils
         public RestartCommand(FieldViewModel receiver)
         {
             this.receiver = receiver;
-            restartState = new AbsrtactRestartState[2];
+            restartState = new AbsrtactRestartState[3];
             restartState[0] = new RestartState0();
             restartState[1] = new RestartState1();
+            restartState[2] = new RestartState2();
         }
 
         public bool CanExecute(object parameter)
