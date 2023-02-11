@@ -122,11 +122,14 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public Level2Click Level2Click { get; }
 
+        public Level3Click Level3Click { get; }
+
         public ChooseLevelViewModel(Window window)
         {
             StartTrainingCommand = new StartTrainingCommand(this);
             Level1Click = new Level1Click(this);
             Level2Click = new Level2Click(this);
+            Level3Click = new Level3Click(this);
             dictionary["EN"] = new ChooseLevelEnglishLanguageImplementor();
             dictionary["UA"] = new ChooseLevelUkrainianLanguageImplementor();
             levelStates[0] = new LevelState0();

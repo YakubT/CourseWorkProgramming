@@ -162,7 +162,12 @@
                 <MouseBinding Command="{Binding Level2Click}" MouseAction="LeftClick"/>
             </Button.InputBindings>
         </Button>
-        <Button Grid.ColumnSpan="5" Content="3" Grid.Column="17" Grid.Row="15" Grid.RowSpan="6" Background="#FFC0F602" FontSize="40" Foreground="#FF007AFF" IsEnabled="{Binding IsEnabledLevel3}"/>
+        <Button Grid.ColumnSpan="5" Content="3" Grid.Column="17" Grid.Row="15" Grid.RowSpan="6" Background="#FFC0F602" FontSize="40" Foreground="#FF007AFF" IsEnabled="{Binding IsEnabledLevel3}">
+            <Button.InputBindings>
+                <MouseBinding Command="{Binding Level3Click}" MouseAction="LeftClick"/>
+            </Button.InputBindings>
+        </Button>
+        
         <Button  Content="{Binding BackButtonContent}" Background="#FF203FC0"  Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3" FontSize="30" Foreground="Yellow" >
             <Button.InputBindings>
                 <MouseBinding Command="{Binding BackButtonClickCommand}" MouseAction="LeftClick"/>

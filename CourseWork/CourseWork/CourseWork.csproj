@@ -108,11 +108,13 @@
     <Compile Include="src\main\cs\Models\ProxyPatron1.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron2.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron3.cs" />
+    <Compile Include="src\main\cs\ViewModels\RestartState3.cs" />
     <Compile Include="src\main\cs\ViewModels\RestartState2.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\AbsrtactRestartState.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\EnLanguageField.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILanguageField.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\Level3Click.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\Level2Click .cs" />
     <Compile Include="src\main\cs\ViewModels\utils\Level1Click.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\PauseCommand.cs" />

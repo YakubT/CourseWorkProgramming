@@ -846,6 +846,105 @@ namespace CourseWork.src.main.cs.ViewModels
 
             GiveGameResult(78, 2);
         }
+
+        public void StartLevel3()
+        {
+            GameStateSingleton.GetInstance().levelLoaded = 3;
+            FontSize = 0.5 * (window.ActualHeight / GlobalConstants.rowCount);
+            GameStateSingleton gameStateSingleton = GameStateSingleton.GetInstance();
+            gameStateSingleton.cntMaxRockets[0] = gameStateSingleton.cntRockets[0] = 7;
+            gameStateSingleton.cntMaxRockets[1] = gameStateSingleton.cntRockets[1] = 3;
+            gameStateSingleton.cntMaxRockets[2] = gameStateSingleton.cntRockets[2] = 4;
+            Rocket1MaxCnt = Rocket1Cnt = " " + gameStateSingleton.cntRockets[0].ToString();
+            Rocket2MaxCnt = Rocket2Cnt = " " + gameStateSingleton.cntRockets[1].ToString();
+            Rocket3MaxCnt = Rocket3Cnt = " " + gameStateSingleton.cntRockets[2].ToString();
+            gameStateSingleton.cntMaxPlains[1] = 3;
+            gameStateSingleton.cntMaxPlains[0] = 5;
+            gameStateSingleton.cntMaxPlains[2] = 4;
+            gameStateSingleton.cntKilledPlains[1] = 0;
+            gameStateSingleton.cntKilledPlains[0] = 0;
+            gameStateSingleton.cntKilledPlains[2] = 0;
+            Plain2MaxCnt = " " + gameStateSingleton.cntMaxPlains[1].ToString();
+            Plain1MaxCnt = " " + gameStateSingleton.cntMaxPlains[0].ToString();
+            Plain3MaxCnt = " " + gameStateSingleton.cntMaxPlains[2].ToString();
+            Plain1Cnt = Plain3Cnt = Plain2Cnt = " 0";
+            Refresh();
+            Start();
+            SendMessage();
+            AbstractEnemy plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 18;
+            plain1.IsFromRight = false;
+            StartEnemy(plain1, 11);
+            plain1 = new Plain2();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 18;
+            plain1.IsFromRight = false;
+            StartEnemy(plain1, 16);
+
+            plain1 = new Plain2();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 18;
+            plain1.IsFromRight = false;
+            StartEnemy(plain1, 25);
+
+            plain1 = new Dron1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 21;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 35);
+
+            plain1 = new Dron1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 19;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 39);
+
+            plain1 = new Plain2();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 18;
+            plain1.IsFromRight = false;
+            StartEnemy(plain1, 45);
+
+            plain1 = new Plain2();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 18;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 57);
+
+            plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 18;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 65);
+
+            plain1 = new Plain1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 18;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 70);
+
+            plain1 = new Dron1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 21;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 75);
+
+            plain1 = new Dron1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 21;
+            plain1.IsFromRight = true;
+            StartEnemy(plain1, 80);
+
+            plain1 = new Dron1();
+            plain1.viewModel = this;
+            plain1.HeightOfFly = 19;
+            plain1.IsFromRight = false;
+            StartEnemy(plain1, 85);
+
+            GiveGameResult(90, 3);
+        } 
+
         public double Soriented(Models.Vector a,Models.Vector b, Models.Vector c)
         {
             return (a.X - b.X) * (b.Y + a.Y) / 2.0+(c.X - a.X) * (c.Y + a.Y) / 2.0+ (b.X - c.X) * (b.Y + c.Y) / 2.0;
