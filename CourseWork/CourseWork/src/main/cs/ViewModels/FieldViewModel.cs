@@ -844,7 +844,7 @@ namespace CourseWork.src.main.cs.ViewModels
             plain1.IsFromRight = true;
             StartEnemy(plain1, 74);
 
-            GiveGameResult(78, 2);
+            GiveGameResult(82, 2);
         }
 
         public void StartLevel3()
@@ -942,7 +942,7 @@ namespace CourseWork.src.main.cs.ViewModels
             plain1.IsFromRight = false;
             StartEnemy(plain1, 85);
 
-            GiveGameResult(90, 3);
+            GiveGameResult(92, 3);
         } 
 
         public double Soriented(Models.Vector a,Models.Vector b, Models.Vector c)
