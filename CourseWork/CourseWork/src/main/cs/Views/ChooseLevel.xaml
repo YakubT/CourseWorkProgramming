@@ -178,19 +178,19 @@
                 <MouseBinding Command="{Binding StartTrainingCommand}" MouseAction="LeftClick"/>
             </Button.InputBindings>
         </Button>
-        <Image Grid.ColumnSpan="1" Grid.Column="5"  Grid.Row="15" Grid.RowSpan="1"  Source="/CourseWork;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg" Stretch="Fill" Visibility="{Binding Level1PassedVisibility}">
+        <Image Grid.ColumnSpan="1" Grid.Column="5"  Grid.Row="15" Grid.RowSpan="1"  Source="/Glory to Ukraine;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg" Stretch="Fill" Visibility="{Binding Level1PassedVisibility}">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg"/>
+                <ImageBrush ImageSource="/Glory to Ukraine;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg"/>
             </Image.OpacityMask>
         </Image>
-        <Image Grid.ColumnSpan="1" Grid.Column="13"  Grid.Row="15" Grid.RowSpan="1"  Source="/CourseWork;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg" Visibility="{Binding Level2PassedVisibility}" Stretch="Fill">
+        <Image Grid.ColumnSpan="1" Grid.Column="13"  Grid.Row="15" Grid.RowSpan="1"  Source="/Glory to Ukraine;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg" Visibility="{Binding Level2PassedVisibility}" Stretch="Fill">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg"/>
+                <ImageBrush ImageSource="/Glory to Ukraine;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg"/>
             </Image.OpacityMask>
         </Image>
-        <Image Grid.ColumnSpan="1" Grid.Column="21"  Grid.Row="15" Grid.RowSpan="1"  Source="/CourseWork;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg" Visibility="{Binding Level3PassedVisibility}" Stretch="Fill">
+        <Image Grid.ColumnSpan="1" Grid.Column="21"  Grid.Row="15" Grid.RowSpan="1"  Source="/Glory to Ukraine;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg" Visibility="{Binding Level3PassedVisibility}" Stretch="Fill">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg"/>
+                <ImageBrush ImageSource="/Glory to Ukraine;component/src/main/resources/img/rauta_news_2022-02-28-1.jpg"/>
             </Image.OpacityMask>
         </Image>
     </Grid>

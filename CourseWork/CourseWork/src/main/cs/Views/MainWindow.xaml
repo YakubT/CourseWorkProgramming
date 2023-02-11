@@ -175,9 +175,9 @@
                 <MouseBinding Command="{Binding Label1Click}" MouseAction="LeftClick"/>
             </Label.InputBindings>
         </Label>
-        <Image  Grid.Column="21"  Grid.RowSpan="2" Grid.Row="1" Grid.ColumnSpan="2" Source="/CourseWork;component/src/main/resources/img/krestik.png">
+        <Image  Grid.Column="21"  Grid.RowSpan="2" Grid.Row="1" Grid.ColumnSpan="2" Source="/Glory to Ukraine;component/src/main/resources/img/krestik.png">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/krestik.png"/>
+                <ImageBrush ImageSource="/Glory to Ukraine;component/src/main/resources/img/krestik.png"/>
             </Image.OpacityMask>
             <Image.InputBindings>
                 <MouseBinding Command="{Binding ShutDown}" MouseAction="LeftClick"></MouseBinding>

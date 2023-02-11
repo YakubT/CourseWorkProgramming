@@ -26,7 +26,7 @@
     </i:Interaction.Triggers>
     <Grid x:Name="grid">
         <Grid.Background>
-            <ImageBrush ImageSource="/CourseWork;component/src/main/resources/img/background.jpg"/>
+            <ImageBrush ImageSource="/Glory to Ukraine;component/src/main/resources/img/background.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition>
@@ -172,7 +172,7 @@
 
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Image Grid.Column="14" Grid.Row="17" Grid.RowSpan="6" Grid.ColumnSpan="2" Source="/CourseWork;component/src/main/resources/img/gun.png" Margin="0.4,17.4,34.2,0.8" Stretch="Fill" RenderTransformOrigin="0.535,0.832" HorizontalAlignment="Center">
+        <Image Grid.Column="14" Grid.Row="17" Grid.RowSpan="6" Grid.ColumnSpan="2" Source="/Glory to Ukraine;component/src/main/resources/img/gun.png" Margin="0.4,17.4,34.2,0.8" Stretch="Fill" RenderTransformOrigin="0.535,0.832" HorizontalAlignment="Center">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -190,18 +190,18 @@
 
         <Label Grid.Row="6" Grid.RowSpan="3" Grid.ColumnSpan="19" Content="{Binding AlertContent}" Grid.Column="10"  FontSize="{Binding EndFontSize}" Visibility="{Binding AlertVisibility}" Foreground="#FF022977" FontWeight="Bold"/>
         <Label Grid.Row="8" Grid.RowSpan="3" Grid.ColumnSpan="19" Content="{Binding MessageContent}" Grid.Column="6"  FontSize="{Binding EndFontSize}" Visibility="{Binding MessageVisibility}" Foreground="#FF03421C" FontWeight="Bold"/>
-        
-        
-        <Image x:Name="car" Grid.Column="10" Grid.Row="20" Grid.ColumnSpan="6" Grid.RowSpan="4" Source="/CourseWork;component/src/main/resources/img/ppo_car.png" Stretch="Fill" Margin="0.4,0.2,33.2,0.2"/>
-        <Image  Grid.Column="20"  Grid.Row="19" Grid.RowSpan="2" Source="/CourseWork;component/src/main/resources/img/vidsik1.png" Stretch="Fill"/>
-        <Image  Grid.Column="21"  Grid.Row="19" Grid.RowSpan="2" Source="/CourseWork;component/src/main/resources/img/vidsik2.png" Stretch="Fill"/>
-        <Image  Grid.Column="22"  Grid.Row="19" Grid.RowSpan="2" Source="/CourseWork;component/src/main/resources/img/vidsik3.png" Stretch="Fill"/>
-        <Image  Grid.Column="20" Grid.Row="21" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="21" Grid.Row="21" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="22" Grid.Row="21" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="20" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="21" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="22" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+
+
+        <Image x:Name="car" Grid.Column="10" Grid.Row="20" Grid.ColumnSpan="6" Grid.RowSpan="4" Source="/Glory to Ukraine;component/src/main/resources/img/ppo_car.png" Stretch="Fill" Margin="0.4,0.2,33.2,0.2"/>
+        <Image  Grid.Column="20"  Grid.Row="19" Grid.RowSpan="2" Source="/Glory to Ukraine;component/src/main/resources/img/vidsik1.png" Stretch="Fill"/>
+        <Image  Grid.Column="21"  Grid.Row="19" Grid.RowSpan="2" Source="/Glory to Ukraine;component/src/main/resources/img/vidsik2.png" Stretch="Fill"/>
+        <Image  Grid.Column="22"  Grid.Row="19" Grid.RowSpan="2" Source="/Glory to Ukraine;component/src/main/resources/img/vidsik3.png" Stretch="Fill"/>
+        <Image  Grid.Column="20" Grid.Row="21" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="21" Grid.Row="21" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="22" Grid.Row="21" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="20" Grid.Row="22" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="21" Grid.Row="22" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="22" Grid.Row="22" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
         <Label Content="{Binding Rocket1Cnt}" Grid.Column="20" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}" Foreground="#FFE70000" FontWeight="Bold"/>
         <Label Content="{Binding Rocket2Cnt}" Grid.Column="21" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}" Foreground="#FFE70000" FontWeight="Bold"/>
         <Label Content="{Binding Rocket3Cnt}" Grid.Column="22" Grid.Row="22" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}" Foreground="#FFE70000" FontWeight="Bold"/>
@@ -231,16 +231,16 @@
                 <MouseBinding MouseAction="LeftClick" Command="{Binding ShuttdownCommand}"/>
             </Button.InputBindings>
         </Button>
-        <Image  Grid.Column="3" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="2" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="1" Grid.Row="22" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="3" Grid.Row="21" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="2" Grid.Row="21" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="1" Grid.Row="21" Source="/CourseWork;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="1"  Grid.Row="20" Grid.RowSpan="1" Source="/CourseWork;component/src/main/resources/img/dron_frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="2"  Grid.Row="20" Grid.RowSpan="1" Source="/CourseWork;component/src/main/resources/img/plan1_frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="3"  Grid.Row="20" Grid.RowSpan="1" Source="/CourseWork;component/src/main/resources/img/plain3_frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
-        <Image  Grid.Column="0"  Grid.Row="22" Grid.RowSpan="1" Source="/CourseWork;component/src/main/resources/img/skull.png" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="3" Grid.Row="22" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="2" Grid.Row="22" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="1" Grid.Row="22" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="3" Grid.Row="21" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="2" Grid.Row="21" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="1" Grid.Row="21" Source="/Glory to Ukraine;component/src/main/resources/img/frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="1"  Grid.Row="20" Grid.RowSpan="1" Source="/Glory to Ukraine;component/src/main/resources/img/dron_frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="2"  Grid.Row="20" Grid.RowSpan="1" Source="/Glory to Ukraine;component/src/main/resources/img/plan1_frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="3"  Grid.Row="20" Grid.RowSpan="1" Source="/Glory to Ukraine;component/src/main/resources/img/plain3_frame.png" Stretch="Fill" Visibility="{Binding PatronInfoVisibility}"/>
+        <Image  Grid.Column="0"  Grid.Row="22" Grid.RowSpan="1" Source="/Glory to Ukraine;component/src/main/resources/img/skull.png" Visibility="{Binding PatronInfoVisibility}"/>
 
         <Label Content="{Binding Plain1MaxCnt}" Grid.Column="1" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
         <Label Content="{Binding Plain2MaxCnt}" Grid.Column="2" Grid.Row="21" FontSize="{Binding FontSize}" Visibility="{Binding PatronInfoVisibility}"/>
