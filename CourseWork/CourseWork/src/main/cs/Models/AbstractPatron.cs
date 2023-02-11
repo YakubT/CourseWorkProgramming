@@ -86,8 +86,8 @@ namespace CourseWork.src.main.cs.Models
             
         public void StartFly(double angle, Image img, FieldViewModel link)
         {
+            GameStateSingleton.GetInstance().Reload();
             reduceRocket(link);
-
             fieldViewModel = link;
             SoundPlayer soundPlayer = new SoundPlayer();
             soundPlayer.Stream = Properties.Resources.boom1;

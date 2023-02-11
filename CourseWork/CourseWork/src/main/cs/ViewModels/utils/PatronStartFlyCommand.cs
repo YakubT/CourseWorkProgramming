@@ -43,7 +43,7 @@ namespace CourseWork.src.main.cs.ViewModels.utils
             FrameworkElement o = (FrameworkElement)img;
             CanvasUtility.addToGrid(o, grid);
             patron.StartFly(receiver.Angle, img, receiver);
-            GameStateSingleton.GetInstance().Reload();
+            
         }
     }
 }
