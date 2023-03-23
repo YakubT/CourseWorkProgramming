@@ -34,3 +34,4 @@ C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgram
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\Glory to Ukraine.application
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\Glory to Ukraine.exe
 C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\Glory to Ukraine.pdb
+C:\Users\Anatoly\Documents\Лаби\Програмування\CourseWorkProgramming\CourseWork\CourseWork\obj\Debug\Glory to Ukraine.TrustInfo.xml

@@ -21,13 +21,13 @@ namespace CourseWork
 {
     public partial class Field : Window
     {
-       public Field()
-       {
+        public Field()
+        {
             InitializeComponent();
             DataContext = new FieldViewModel(this);
 
         }
 
-        
+
     }
 }
