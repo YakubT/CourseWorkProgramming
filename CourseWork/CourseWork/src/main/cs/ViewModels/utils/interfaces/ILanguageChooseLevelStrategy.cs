@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CourseWork.src.main.cs.ViewModels.utils.interfaces
 {
-    public interface ILanguageChooseLevelState:ILanguageImplementor<ChooseLevelViewModel>
+    public interface ILanguageChooseLevelStrategy:ILanguageImplementor<ChooseLevelViewModel>
     {
         
     }

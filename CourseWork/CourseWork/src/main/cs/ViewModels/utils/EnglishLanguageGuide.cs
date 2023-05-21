@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CourseWork.src.main.cs.ViewModels.utils
 {
-    public class EnglishLanguageGuide : IGuideChangeLanguageState
+    public class EnglishLanguageGuide : IGuideChangeLanguageStrategy
     {
         public void UpdateLanguage(GuideViewModel ViewModel)
         {

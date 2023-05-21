@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseWork.src.main.cs.ViewModels.interfaces
 {
-    public interface IGuideChangeLanguageState:ILanguageImplementor<GuideViewModel>
+    public interface IGuideChangeLanguageStrategy:ILanguageImplementor<GuideViewModel>
     {
     }
 }

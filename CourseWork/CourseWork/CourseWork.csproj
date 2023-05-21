@@ -160,7 +160,7 @@
     <Compile Include="src\main\cs\Models\Patron3.cs" />
     <Compile Include="src\main\cs\Models\Plain2.cs" />
     <Compile Include="src\main\cs\Models\utility\CanvasUtility.cs" />
-    <Compile Include="src\main\cs\Models\interfaces\FlyDirectionState.cs" />
+    <Compile Include="src\main\cs\Models\interfaces\FlyDirectionStrategy.cs" />
     <Compile Include="src\main\cs\Models\LeftFlyDirectionState.cs" />
     <Compile Include="src\main\cs\Models\AbstractPatron.cs" />
     <Compile Include="src\main\cs\Models\Patron1.cs" />

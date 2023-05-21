@@ -4,7 +4,7 @@ using CourseWork.src.main.cs.ViewModels.intefaces;
 
 namespace CourseWork.src.main.cs.ViewModels
 {
-    public class MainEnglishLanguageImplementor : IMainViewModelLanguageState
+    public class MainEnglishLanguageImplementor : IMainViewModelLanguageStrategy
     {
         public void UpdateLanguage(MainWindowViewModel mainWindowViewModel)
         {

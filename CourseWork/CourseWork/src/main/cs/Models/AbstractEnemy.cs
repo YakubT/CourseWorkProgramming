@@ -18,7 +18,7 @@ namespace CourseWork.src.main.cs.Models
     {
         protected DispatcherTimer timer = new DispatcherTimer();
 
-        protected FlyDirectionState[] flyDirectionState;
+        protected FlyDirectionStrategy[] flyDirectionState;
 
         public BitmapImage sprite;
 
@@ -54,9 +54,9 @@ namespace CourseWork.src.main.cs.Models
 
         public AbstractEnemy()
         {
-            flyDirectionState = new FlyDirectionState[2];
-            flyDirectionState[0] = new LeftFlyDirectionState();
-            flyDirectionState[1] = new RightFlyDirectionState();
+            flyDirectionState = new FlyDirectionStrategy[2];
+            flyDirectionState[0] = new LeftFlyDirectionStrategy();
+            flyDirectionState[1] = new RightFlyDirectionStrategy();
 
         }
 

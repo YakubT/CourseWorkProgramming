@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CourseWork.src.main.cs.ViewModels.utils
 {
-    public class ChooseLevelEnglishLanguageImplementor : ILanguageChooseLevelState
+    public class ChooseLevelEnglishLanguageImplementor : ILanguageChooseLevelStrategy
     {
         public void UpdateLanguage(ChooseLevelViewModel ViewModel)
         {

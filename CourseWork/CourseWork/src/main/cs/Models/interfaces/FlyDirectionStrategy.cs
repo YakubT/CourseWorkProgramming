@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace CourseWork.src.main.cs.Models
 {
-    public interface FlyDirectionState
+    public interface FlyDirectionStrategy
     {
         void StartFlyPreprocessing(AbstractEnemy plain);
     }

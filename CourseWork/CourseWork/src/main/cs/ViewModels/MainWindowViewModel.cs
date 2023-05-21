@@ -22,7 +22,7 @@ namespace CourseWork.src.main.cs.ViewModels
 
         private string buttonGuideText;
 
-        private Dictionary<string, IMainViewModelLanguageState> dictionary = new Dictionary<string, IMainViewModelLanguageState>();
+        private Dictionary<string, IMainViewModelLanguageStrategy> dictionary = new Dictionary<string, IMainViewModelLanguageStrategy>();
 
         public UkrainianLabelClickCommand Label1Click { get; }
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CourseWork.src.main.cs.ViewModels
 {
-    public class MainUkrainianLanguageImplementor : IMainViewModelLanguageState
+    public class MainUkrainianLanguageImplementor : IMainViewModelLanguageStrategy
     {
         public void UpdateLanguage(MainWindowViewModel mainWindowViewModel)
         {

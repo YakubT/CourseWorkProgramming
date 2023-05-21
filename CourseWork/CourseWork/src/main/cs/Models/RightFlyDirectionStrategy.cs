@@ -8,13 +8,13 @@ using System.Windows.Media.Imaging;
 
 namespace CourseWork.src.main.cs.Models
 {
-    public class LeftFlyDirectionState : FlyDirectionState
+    public class RightFlyDirectionStrategy : FlyDirectionStrategy
     {
         public void StartFlyPreprocessing(AbstractEnemy plain)
         {
-            plain.PlainPutLeft();
-            plain.sprite = plain.sprite1;
+            plain.AntiSpeed();
+            plain.PlainPutRight();
+            plain.sprite = plain.spriteMirror;
         }
-
     }
 }

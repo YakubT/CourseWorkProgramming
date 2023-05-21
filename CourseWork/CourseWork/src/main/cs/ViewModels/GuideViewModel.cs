@@ -20,7 +20,7 @@ namespace CourseWork.src.main.cs.ViewModels
 
         private Window window;
 
-        private Dictionary<string,IGuideChangeLanguageState> dictionary= new Dictionary<string,IGuideChangeLanguageState>(); 
+        private Dictionary<string,IGuideChangeLanguageStrategy> dictionary= new Dictionary<string,IGuideChangeLanguageStrategy>(); 
 
         public Window Window { get=>window; }
 

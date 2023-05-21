@@ -12,7 +12,7 @@ namespace CourseWork.src.main.cs.ViewModels
 {
     public class ChooseLevelViewModel : BaseViewModel, ICloseableWindow
     {
-        private Dictionary<string, ILanguageChooseLevelState> dictionary = new Dictionary<string, ILanguageChooseLevelState>();
+        private Dictionary<string, ILanguageChooseLevelStrategy> dictionary = new Dictionary<string, ILanguageChooseLevelStrategy>();
 
         private ILevelState[] levelStates = new ILevelState[4];
 
