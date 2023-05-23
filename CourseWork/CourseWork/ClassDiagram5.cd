@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CourseWork.src.main.cs.ViewModels.MainWindowViewModel">
+    <Position X="1.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAAAAQEgAAEAYAAAAABAAAACQAAgAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.MainEnglishLanguageImplementor">
+    <Position X="8.5" Y="3.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\MainEnglishLanguageImplementor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.MainUkrainianLanguageImplementor">
+    <Position X="4.5" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\MainUkrainianLanguageImplementor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="CourseWork.src.main.cs.ViewModels.intefaces.IMainViewModelLanguageStrategy" Collapsed="true">
+    <Position X="6" Y="2.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\interfaces\IMainViewModelLanguageStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CourseWork.src.main.cs.ViewModels.interfaces.ILanguageImplementor&lt;T&gt;">
+    <Position X="6.25" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\interfaces\ILanguageImplementor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

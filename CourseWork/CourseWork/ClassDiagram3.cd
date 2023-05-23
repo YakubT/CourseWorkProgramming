@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="CourseWork.src.main.cs.Models.CreatorProxyPatron">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorProxyPatron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorProxyPatron1">
+    <Position X="2.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorProxyPatron1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorProxyPatron2">
+    <Position X="4.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorProxyPatron2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorProxyPatron3">
+    <Position X="7" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorProxyPatron3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.ProxyPatron1" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\ProxyPatron1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.ProxyPatron2" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\ProxyPatron2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.ProxyPatron3" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\ProxyPatron3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="CourseWork.src.main.cs.Models.interfaces.IPatron">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\interfaces\IPatron.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

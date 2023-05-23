@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.RestartCommand">
+    <Position X="0.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAACAAQAAEAAAAAAAAAEAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.AbsrtactRestartStrategy">
+    <Position X="6.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\AbsrtactRestartStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.RestartStrategy0">
+    <Position X="3.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartStrategy0.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.RestartStrategy1">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartStrategy1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.RestartStrategy2">
+    <Position X="7.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartStrategy2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.RestartStrategy3">
+    <Position X="9.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartStrategy3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

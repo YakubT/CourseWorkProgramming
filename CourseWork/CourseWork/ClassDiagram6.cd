@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CourseWork.src.main.cs.Models.LeftFlyDirectionStrategy">
+    <Position X="3.75" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\LeftFlyDirectionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.RightFlyDirectionStrategy">
+    <Position X="7" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\RightFlyDirectionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.AbstractEnemy">
+    <Position X="0.5" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAQgARAKBAAAAAQAQAgwAHABoBAAIQAAgAABKAgABAk=</HashCode>
+      <FileName>src\main\cs\Models\AbstractEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CourseWork.src.main.cs.Models.FlyDirectionStrategy">
+    <Position X="5" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\interfaces\FlyDirectionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

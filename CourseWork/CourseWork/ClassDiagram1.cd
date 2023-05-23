@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CourseWork.src.main.cs.Models.AbstractDron">
+    <Position X="1.25" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\AbstractDron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.AbstractEnemy">
+    <Position X="4.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAQgARAKBAAAAAQAQAgwAHABoBAAIQAAgAABKAgABAk=</HashCode>
+      <FileName>src\main\cs\Models\AbstractEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Dron1">
+    <Position X="1.25" Y="10.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>src\main\cs\Models\Dron1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.AbstractPlain">
+    <Position X="7.25" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACAAQAAA=</HashCode>
+      <FileName>src\main\cs\Models\AbstractPlain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Plain1">
+    <Position X="6" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>src\main\cs\Models\Plain1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Plain2">
+    <Position X="9" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>src\main\cs\Models\Plain2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

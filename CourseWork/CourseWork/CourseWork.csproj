@@ -118,9 +118,9 @@
     <Compile Include="src\main\cs\Models\ProxyPatron1.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron2.cs" />
     <Compile Include="src\main\cs\Models\ProxyPatron3.cs" />
-    <Compile Include="src\main\cs\ViewModels\utils\RestartState3.cs" />
-    <Compile Include="src\main\cs\ViewModels\utils\RestartState2.cs" />
-    <Compile Include="src\main\cs\ViewModels\utils\AbsrtactRestartState.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\RestartStrategy3.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\RestartStrategy2.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\AbsrtactRestartStrategy.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\EnLanguageField.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\interfaces\ILanguageField.cs" />
@@ -135,8 +135,8 @@
     <Compile Include="src\main\cs\ViewModels\utils\LevelState2.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\LevelState1.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\RestartCommand.cs" />
-    <Compile Include="src\main\cs\ViewModels\utils\RestartState0.cs" />
-    <Compile Include="src\main\cs\ViewModels\utils\RestartState1.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\RestartStrategy0.cs" />
+    <Compile Include="src\main\cs\ViewModels\utils\RestartStrategy1.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\ResumeCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\ShuttdownCommand.cs" />
     <Compile Include="src\main\cs\ViewModels\utils\StartTrainingCommand.cs" />
@@ -233,6 +233,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="ClassDiagram5.cd" />
+    <None Include="ClassDiagram6.cd" />
+    <None Include="ClassDiagram7.cd" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
