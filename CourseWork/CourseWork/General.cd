@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CourseWork.src.main.cs.Models.AbstractPatron">
+    <Position X="13.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAABAAIESQAaAAwEEQRIAQAAQAAAEAAAAgAAAA=</HashCode>
+      <FileName>src\main\cs\Models\AbstractPatron.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorDron">
+    <Position X="8.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorDron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorEmeny">
+    <Position X="10.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorPlain1">
+    <Position X="10.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorPlain1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorPlain2">
+    <Position X="13" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorPlain2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorProxyPatron" Collapsed="true">
+    <Position X="3" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorProxyPatron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorProxyPatron1" Collapsed="true">
+    <Position X="5.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorProxyPatron1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorProxyPatron2" Collapsed="true">
+    <Position X="1" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorProxyPatron2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.CreatorProxyPatron3" Collapsed="true">
+    <Position X="3" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\CreatorProxyPatron3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.FlyWeightSprite">
+    <Position X="29.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\FlyWeightSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.GameStateSingleton">
+    <Position X="33" Y="10" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAIAARAAAAAAABABCAAoACAACAAAAAgA=</HashCode>
+      <FileName>src\main\cs\Models\GameStateSingleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.HealthBar" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>src\main\cs\Models\HealthBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.LeftFlyDirectionStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\LeftFlyDirectionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Patron1">
+    <Position X="13.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\Patron1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Patron2">
+    <Position X="16" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\Patron2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Patron3">
+    <Position X="11.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\Patron3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.ProxyPatron1" BaseTypeListCollapsed="true">
+    <Position X="31.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\ProxyPatron1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.ProxyPatron2" BaseTypeListCollapsed="true">
+    <Position X="31.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\ProxyPatron2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.ProxyPatron3" BaseTypeListCollapsed="true">
+    <Position X="29" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\ProxyPatron3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.RightFlyDirectionStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\RightFlyDirectionStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Vector" Collapsed="true">
+    <Position X="21" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>src\main\cs\Models\Vector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.utility.CanvasUtility">
+    <Position X="32.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\utility\CanvasUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.utility.PhysicalConstants" Collapsed="true">
+    <Position X="21" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\utility\PhysicalConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.utility.GlobalConstants">
+    <Position X="30.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\utility\GlobalConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.utility.PropertiesUtil" Collapsed="true">
+    <Position X="24.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAACAAAAIAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\utility\PropertiesUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.BaseViewModel">
+    <Position X="19.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.ChooseLevelViewModel">
+    <Position X="16.25" Y="12" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAgADACAAAyAgAAAiAAAAkAAAAAAAAAgAACAgAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\ChooseLevelViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.FieldViewModel">
+    <Position X="18.75" Y="12" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="CourseWork.src.main.cs.ViewModels.FieldViewModel.PauseEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>src\main\cs\ViewModels\FieldViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>wCOoycAFMWfYIgQgECqEBgANFAfAI0B7gdiYaAhUHAg=</HashCode>
+      <FileName>src\main\cs\ViewModels\FieldViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.GuideViewModel">
+    <Position X="20.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAgAAAAEAAAAAAAIAAAACgAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\GuideViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.MainWindowViewModel">
+    <Position X="23" Y="12" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAAAAQEgAAEAYAAAAABAAAACQAAgAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.MainEnglishLanguageImplementor" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\MainEnglishLanguageImplementor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.MainUkrainianLanguageImplementor" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\MainUkrainianLanguageImplementor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.PlayClickCommand" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\PlayClickCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.RestartStrategy2" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartStrategy2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.RestartStrategy3" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartStrategy3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.UkrainianLabelClickCommand" BaseTypeListCollapsed="true">
+    <Position X="34" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\UkrainianLabelClickCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.AbsrtactRestartStrategy" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\AbsrtactRestartStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.BackButtonClickCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\BackButtonClickCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.ChangeWeaponCommand" BaseTypeListCollapsed="true">
+    <Position X="24" Y="6.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\ChangeWeaponCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.ChooseLevelEnglishLanguageImplementor" BaseTypeListCollapsed="true">
+    <Position X="30" Y="6.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\ChooseLevelEnglishLanguageImplementor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.ChooseLevelUkrainianLanguageImplementor" BaseTypeListCollapsed="true">
+    <Position X="30" Y="3.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\ChooseLevelUkrainianLanguageImplementor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.EnglishLabelClickCommand" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\EnglishLabelClickCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.EnglishLanguageGuide" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\EnglishLanguageGuide.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.EnLanguageField" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="1.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\EnLanguageField.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.GuideClickCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\GuideClickCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.GunRotateCommand" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\GunRotateCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.Level1Click" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\Level1Click.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.Level2Click" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\Level2Click .cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.Level3Click" BaseTypeListCollapsed="true">
+    <Position X="28" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\Level3Click.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.LevelState0" BaseTypeListCollapsed="true">
+    <Position X="16" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\LevelState0.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.LevelState1" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\LevelState1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.LevelState2" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\LevelState2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.LevelState3" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\LevelState3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.PatronStartFlyCommand" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\PatronStartFlyCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.PauseCommand" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\PauseCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.RestartCommand" BaseTypeListCollapsed="true">
+    <Position X="20" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAACAAQAAEAAAAAAAAAEAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.RestartStrategy0" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartStrategy0.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.RestartStrategy1" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\RestartStrategy1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.ResumeCommand" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\ResumeCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.ShuttdownCommand" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\ShuttdownCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.StartTrainingCommand" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\StartTrainingCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.UkrainianLanguageGuide" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\UkrainianLanguageGuide.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.ViewModels.utils.UkrLanguageField" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\UkrLanguageField.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Views.ChooseLevel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Views\ChooseLevel.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Views.Guide" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Views\Guide.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Views.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Views\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.Field" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Views\Field.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.AbstractDron">
+    <Position X="5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\AbstractDron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.AbstractPlain">
+    <Position X="10.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACAAQAAA=</HashCode>
+      <FileName>src\main\cs\Models\AbstractPlain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Dron1">
+    <Position X="5" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>src\main\cs\Models\Dron1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Plain1">
+    <Position X="9.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>src\main\cs\Models\Plain1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.Plain2">
+    <Position X="11.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>src\main\cs\Models\Plain2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.AbstractEnemy">
+    <Position X="7.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQgARAKBAAAAAQAQAgwAHABoBAAIQAAgAABKAgABAk=</HashCode>
+      <FileName>src\main\cs\Models\AbstractEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CourseWork.src.main.cs.Models.FlyDirectionStrategy" Collapsed="true">
+    <Position X="24" Y="9" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\interfaces\FlyDirectionStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CourseWork.src.main.cs.Models.interfaces.IPatron">
+    <Position X="28.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\Models\interfaces\IPatron.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CourseWork.src.main.cs.ViewModels.utils.interfaces.ICloseableWindow">
+    <Position X="18.25" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\interfaces\ICloseableWindow.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CourseWork.src.main.cs.ViewModels.utils.interfaces.ILanguageChooseLevelStrategy" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\interfaces\ILanguageChooseLevelStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CourseWork.src.main.cs.ViewModels.utils.interfaces.ILanguageField" Collapsed="true">
+    <Position X="4" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\interfaces\ILanguageField.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CourseWork.src.main.cs.ViewModels.utils.interfaces.ILevelState" Collapsed="true">
+    <Position X="21" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\interfaces\ILevelState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CourseWork.src.main.cs.ViewModels.interfaces.IGuideChangeLanguageStrategy" Collapsed="true">
+    <Position X="6.25" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\interfaces\IGuideChangeLanguageStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CourseWork.src.main.cs.ViewModels.interfaces.ILanguageImplementor&lt;T&gt;">
+    <Position X="4.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\interfaces\ILanguageImplementor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CourseWork.src.main.cs.ViewModels.intefaces.IMainViewModelLanguageStrategy" Collapsed="true">
+    <Position X="9.75" Y="2.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\main\cs\ViewModels\utils\interfaces\IMainViewModelLanguageStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

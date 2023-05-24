@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CourseWork.src.main.cs.ViewModels.FieldViewModel">
+    <Position X="0.5" Y="2" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="CourseWork.src.main.cs.ViewModels.FieldViewModel.PauseEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>src\main\cs\ViewModels\FieldViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>wCOoycAFMWfYIgQgECqEBgANFAfAI0B7gdiYaAhUHAg=</HashCode>
+      <FileName>src\main\cs\ViewModels\FieldViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.AbstractEnemy">
+    <Position X="7" Y="0.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>CAQgARAKBAAAAAQAQAgwAHABoBAAIQAAgAABKAgABAk=</HashCode>
+      <FileName>src\main\cs\Models\AbstractEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourseWork.src.main.cs.Models.AbstractPatron">
+    <Position X="3.75" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAABAAIESQAaAAwEEQRIAQAAQAAAEAAAAgAAAA=</HashCode>
+      <FileName>src\main\cs\Models\AbstractPatron.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -240,6 +240,9 @@
     <None Include="ClassDiagram5.cd" />
     <None Include="ClassDiagram6.cd" />
     <None Include="ClassDiagram7.cd" />
+    <None Include="ClassDiagram8.cd" />
+    <None Include="ClassDiagram9.cd" />
+    <None Include="General.cd" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

@@ -19,18 +19,18 @@ using System.Windows.Threading;
 
 namespace CourseWork.src.main.cs.ViewModels
 {
-   
-    public class FieldViewModel : BaseViewModel,ICloseableWindow
+
+    public class FieldViewModel : BaseViewModel, ICloseableWindow
     {
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
-        public delegate void PauseEventHandler (FieldViewModel field);
+        public delegate void PauseEventHandler(FieldViewModel field);
 
         public event PauseEventHandler PauseEvent;
 
         public event PauseEventHandler ResumeEvent;
 
-        private Dictionary <string,ILanguageField> bridge = new Dictionary<string, ILanguageField>();
+        private Dictionary<string, ILanguageField> bridge = new Dictionary<string, ILanguageField>();
 
         public FlyWeightSprite[] flyWeightSprites = {new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket1.png", UriKind.Relative))),
             new FlyWeightSprite(new BitmapImage(new Uri("/src/main/resources/img/rockets/ppo_rocket2.png", UriKind.Relative))),
@@ -47,7 +47,7 @@ namespace CourseWork.src.main.cs.ViewModels
         public List<AbstractPatron> patrons = new List<AbstractPatron>();
 
         private Window window;
-        public GunRotateCommand RotateGunCommand { get;}
+        public GunRotateCommand RotateGunCommand { get; }
 
         public PatronStartFlyCommand PatronStartFly { get; }
 
@@ -170,7 +170,7 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public string GoToMenuBtnContent
         {
-            get =>  goToMenuBtnContent;
+            get => goToMenuBtnContent;
             set
             {
                 goToMenuBtnContent = value;
@@ -387,7 +387,7 @@ namespace CourseWork.src.main.cs.ViewModels
             get => startContent;
             set
             {
-                startContent= value;
+                startContent = value;
                 OnPropertyChanged(nameof(StartContent));
             }
         }
@@ -475,7 +475,7 @@ namespace CourseWork.src.main.cs.ViewModels
             }
         }
 
-       
+
         public void UpdateLanguge()
         {
             string s = "";
@@ -515,14 +515,14 @@ namespace CourseWork.src.main.cs.ViewModels
             MessageVisibility = "Hidden";
 
         }
-        
+
         public void StartTraining()
         {
             PatronInfoVisibility = "Hidden";
             StartVisibility = "Hidden";
             FontSize = 0.5 * (window.ActualHeight / GlobalConstants.rowCount);
             const double time = GameStateSingleton.reloadTime;
-            LabelContent = new PropertiesUtil(GlobalConstants.file).getValue("language").Equals("UA") ? "Інтервал між пострілами - " +time.ToString() + " с." : "The interval between shots is " + time.ToString()+ " s.";
+            LabelContent = new PropertiesUtil(GlobalConstants.file).getValue("language").Equals("UA") ? "Інтервал між пострілами - " + time.ToString() + " с." : "The interval between shots is " + time.ToString() + " s.";
             dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
             CreatorEmeny[] creators = new CreatorEmeny[3];
             creators[0] = new CreatorPlain1();
@@ -554,21 +554,22 @@ namespace CourseWork.src.main.cs.ViewModels
             Refresh();
         }
 
-        public void StartEnemy (AbstractEnemy plain, int time)
+        public void StartEnemy(AbstractEnemy plain, int time)
         {
-            
-            DispatcherTimer dispatcherTimer3 = new DispatcherTimer();
-                dispatcherTimer3.Interval = TimeSpan.FromSeconds(time);
-                dispatcherTimer3.Tick += (s, e) =>
-                {
-                    if (!GameStateSingleton.GetInstance().Ispause) {
-                        plain.Fly();
-                        dispatcherTimer3.Stop();
-                    }
-                       
-                };
 
-                dispatcherTimer3.Start();
+            DispatcherTimer dispatcherTimer3 = new DispatcherTimer();
+            dispatcherTimer3.Interval = TimeSpan.FromSeconds(time);
+            dispatcherTimer3.Tick += (s, e) =>
+            {
+                if (!GameStateSingleton.GetInstance().Ispause)
+                {
+                    plain.Fly();
+                    dispatcherTimer3.Stop();
+                }
+
+            };
+
+            dispatcherTimer3.Start();
         }
 
         public void Refresh()
@@ -596,11 +597,11 @@ namespace CourseWork.src.main.cs.ViewModels
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(8);
             timer.Tick += (o, s) =>
-           {
-              
-               StartVisibility = "Hidden";
-               timer.Stop();
-           };
+            {
+
+                StartVisibility = "Hidden";
+                timer.Stop();
+            };
             timer.Start();
 
         }
@@ -611,10 +612,10 @@ namespace CourseWork.src.main.cs.ViewModels
             DispatcherTimer timer2 = new DispatcherTimer();
             timer2.Interval = TimeSpan.FromSeconds(1);
             timer2.Tick += (o, s) =>
-              {
-                  MessageVisibility = "Visible";
-                  timer2.Stop();
-              };
+            {
+                MessageVisibility = "Visible";
+                timer2.Stop();
+            };
             timer2.Start();
             timer.Interval = TimeSpan.FromSeconds(7);
             timer.Tick += (o, s) =>
@@ -638,8 +639,8 @@ namespace CourseWork.src.main.cs.ViewModels
                 timer2.Stop();
             };
             timer.Interval = TimeSpan.FromSeconds(time);
-            timer.Tick +=(s,a)=> {
-               
+            timer.Tick += (s, a) => {
+
                 GameStateSingleton gameState = GameStateSingleton.GetInstance();
                 bool f = true;
                 const int cnt_Types_of_plains = 3;
@@ -661,7 +662,7 @@ namespace CourseWork.src.main.cs.ViewModels
                         propertiesUtil.setValue("level", level.ToString());
                     }
                     timer2.Start();
-                    
+
                 }
                 else
                 {
@@ -670,7 +671,7 @@ namespace CourseWork.src.main.cs.ViewModels
                 timer.Stop();
             };
             timer.Start();
-          
+
         }
         public void StartLevel1()
         {
@@ -680,9 +681,9 @@ namespace CourseWork.src.main.cs.ViewModels
             gameStateSingleton.cntMaxRockets[0] = gameStateSingleton.cntRockets[0] = 10;
             gameStateSingleton.cntMaxRockets[1] = gameStateSingleton.cntRockets[1] = 6;
             gameStateSingleton.cntMaxRockets[2] = gameStateSingleton.cntRockets[2] = 2;
-            Rocket1MaxCnt = Rocket1Cnt = " "+gameStateSingleton.cntRockets[0].ToString();
-            Rocket2MaxCnt = Rocket2Cnt = " "+gameStateSingleton.cntRockets[1].ToString();
-            Rocket3MaxCnt = Rocket3Cnt = " "+gameStateSingleton.cntRockets[2].ToString();
+            Rocket1MaxCnt = Rocket1Cnt = " " + gameStateSingleton.cntRockets[0].ToString();
+            Rocket2MaxCnt = Rocket2Cnt = " " + gameStateSingleton.cntRockets[1].ToString();
+            Rocket3MaxCnt = Rocket3Cnt = " " + gameStateSingleton.cntRockets[2].ToString();
             gameStateSingleton.cntMaxPlains[1] = 8;
             gameStateSingleton.cntKilledPlains[1] = 0;
             gameStateSingleton.cntKilledPlains[0] = 0;
@@ -690,25 +691,25 @@ namespace CourseWork.src.main.cs.ViewModels
             gameStateSingleton.cntMaxPlains[0] = 0;
             gameStateSingleton.cntMaxPlains[2] = 0;
             Plain2MaxCnt = " " + gameStateSingleton.cntMaxPlains[1].ToString();
-            Plain1Cnt = Plain3Cnt =  Plain2Cnt = Plain1MaxCnt = Plain3MaxCnt =  " 0";
+            Plain1Cnt = Plain3Cnt = Plain2Cnt = Plain1MaxCnt = Plain3MaxCnt = " 0";
             Refresh();
             Start();
             SendMessage();
             Plain1 plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 18;
-            plain1.IsFromRight=false;
-            StartEnemy(plain1,11);
+            plain1.IsFromRight = false;
+            StartEnemy(plain1, 11);
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 19;
             plain1.IsFromRight = false;
-            StartEnemy(plain1,15);
+            StartEnemy(plain1, 15);
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 18;
             plain1.IsFromRight = true;
-            StartEnemy(plain1,22);
+            StartEnemy(plain1, 22);
             plain1 = new Plain1();
             plain1.viewModel = this;
             plain1.HeightOfFly = 21;
@@ -736,9 +737,9 @@ namespace CourseWork.src.main.cs.ViewModels
             plain1.HeightOfFly = 22;
             plain1.IsFromRight = true;
             StartEnemy(plain1, 39);
-            GiveGameResult(45,1);
+            GiveGameResult(45, 1);
         }
-        
+
 
         public void StartLevel2()
         {
@@ -760,7 +761,7 @@ namespace CourseWork.src.main.cs.ViewModels
             Plain2MaxCnt = " " + gameStateSingleton.cntMaxPlains[1].ToString();
             Plain1MaxCnt = " " + gameStateSingleton.cntMaxPlains[0].ToString();
             Plain3MaxCnt = " " + gameStateSingleton.cntMaxPlains[2].ToString();
-            Plain1Cnt = Plain3Cnt = Plain2Cnt  = " 0";
+            Plain1Cnt = Plain3Cnt = Plain2Cnt = " 0";
             Refresh();
             Start();
             SendMessage();
@@ -943,11 +944,11 @@ namespace CourseWork.src.main.cs.ViewModels
             StartEnemy(plain1, 85);
 
             GiveGameResult(92, 3);
-        } 
+        }
 
-        public double Soriented(Models.Vector a,Models.Vector b, Models.Vector c)
+        public double Soriented(Models.Vector a, Models.Vector b, Models.Vector c)
         {
-            return (a.X - b.X) * (b.Y + a.Y) / 2.0+(c.X - a.X) * (c.Y + a.Y) / 2.0+ (b.X - c.X) * (b.Y + c.Y) / 2.0;
+            return (a.X - b.X) * (b.Y + a.Y) / 2.0 + (c.X - a.X) * (c.Y + a.Y) / 2.0 + (b.X - c.X) * (b.Y + c.Y) / 2.0;
         }
 
         public bool intersect(Models.Vector v1, Models.Vector v2, Models.Vector v3, Models.Vector v4, Models.Vector v5, Models.Vector v6)
@@ -962,7 +963,7 @@ namespace CourseWork.src.main.cs.ViewModels
             {
                 return true;
             }
-           
+
             if ((Soriented(v1, v3, v5)) * (Soriented(v2, v3, v5)) <= 0 && (Soriented(v3, v1, v2)) * (Soriented(v5, v1, v2)) <= 0)
             {
 
@@ -996,21 +997,21 @@ namespace CourseWork.src.main.cs.ViewModels
             v4.Y = abstractPlain.Coordinates.Y * window.ActualHeight / GlobalConstants.rowCount;
             v5.X = (abstractPlain.Coordinates.X) * window.ActualWidth / GlobalConstants.columnCount;
             v5.Y = (abstractPlain.Coordinates.Y - abstractPlain.Height) * window.ActualHeight / GlobalConstants.rowCount;
-            v6.X = (abstractPlain.Coordinates.X+abstractPlain.Width) * window.ActualWidth / GlobalConstants.columnCount;
+            v6.X = (abstractPlain.Coordinates.X + abstractPlain.Width) * window.ActualWidth / GlobalConstants.columnCount;
             v6.Y = (abstractPlain.Coordinates.Y - abstractPlain.Height) * window.ActualHeight / GlobalConstants.rowCount;
             Models.Vector vec = new Models.Vector(v2.X - v1.X, v2.Y - v1.Y);
-            Models.Vector perp = new Models.Vector(v2.Y - v1.Y, -v2.X + v1.X) * abstractPatron.Width*0.5* (1.0 / Math.Sqrt((v2.Y - v1.Y) * (v2.Y - v1.Y) + (v2.X - v1.X) * (v2.X - v1.X))) * (window.ActualWidth / 24.0);
+            Models.Vector perp = new Models.Vector(v2.Y - v1.Y, -v2.X + v1.X) * abstractPatron.Width * 0.5 * (1.0 / Math.Sqrt((v2.Y - v1.Y) * (v2.Y - v1.Y) + (v2.X - v1.X) * (v2.X - v1.X))) * (window.ActualWidth / 24.0);
             Models.Vector v1copy, v2copy;
-            
-            for (double i=-2;i<=1;i+=0.05)
+
+            for (double i = -2; i <= 1; i += 0.05)
             {
                 v1copy = v1 + (perp * i);
                 v2copy = v2 + (perp * i);
-                if (intersect(v1copy, v2copy, v3, v4, v5, v6)) 
+                if (intersect(v1copy, v2copy, v3, v4, v5, v6))
                     return true;
             }
             return false;
-         
+
         }
 
         public Window Window { get => window; }
@@ -1028,7 +1029,7 @@ namespace CourseWork.src.main.cs.ViewModels
 
         public void Resume()
         {
-            if (ResumeEvent!=null)
+            if (ResumeEvent != null)
             {
                 ResumeEvent.Invoke(this);
             }
@@ -1036,7 +1037,7 @@ namespace CourseWork.src.main.cs.ViewModels
             gameStateSingleton.Ispause = false;
             dispatcherTimer.Start();
         }
-       
+
     }
 
 }
